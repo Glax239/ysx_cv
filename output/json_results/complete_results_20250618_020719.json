@@ -1,0 +1,1266 @@
+{
+  "timestamp": "2025-06-18T02:07:19.827051",
+  "image_path": "text_demo_image.jpg",
+  "extraction_results": {
+    "barcodes": [],
+    "nutrition_info": {
+      "energy": null,
+      "protein": null,
+      "fat": null,
+      "carbohydrate": null,
+      "sodium": null,
+      "sugar": null,
+      "raw_texts": [
+        "Product:",
+        "Altay? Ace:\n\nTo) ee",
+        "Gorcode:",
+        "SAL @-.",
+        "SEPP ea paonn"
+      ]
+    },
+    "brand_info": {},
+    "text_info": [
+      {
+        "text": "Product:",
+        "bbox": [
+          0,
+          0,
+          130,
+          37
+        ],
+        "confidence": 0.8,
+        "engine": "tesseract_simple"
+      },
+      {
+        "text": "Altay? Ace:\n\nTo) ee",
+        "bbox": [
+          0,
+          0,
+          185,
+          39
+        ],
+        "confidence": 0.8,
+        "engine": "tesseract_simple"
+      },
+      {
+        "text": "Gorcode:",
+        "bbox": [
+          0,
+          0,
+          110,
+          33
+        ],
+        "confidence": 0.8,
+        "engine": "tesseract_simple"
+      },
+      {
+        "text": "SAL @-.",
+        "bbox": [
+          0,
+          0,
+          68,
+          33
+        ],
+        "confidence": 0.8,
+        "engine": "tesseract_simple"
+      },
+      {
+        "text": "SEPP ea paonn",
+        "bbox": [
+          0,
+          0,
+          183,
+          35
+        ],
+        "confidence": 0.8,
+        "engine": "tesseract_simple"
+      }
+    ],
+    "extraction_summary": {
+      "barcode_count": 0,
+      "has_nutrition_info": true,
+      "brand_identified": false,
+      "text_regions_count": 5
+    }
+  },
+  "detection_results": {
+    "products": [],
+    "regions": [],
+    "brands": [],
+    "texts": [
+      {
+        "bbox": [
+          61,
+          106,
+          181,
+          133
+        ],
+        "confidence": 0.8653687834739685,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          70,
+          333,
+          140,
+          358
+        ],
+        "confidence": 0.8611335754394531,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          51,
+          21,
+          162,
+          53
+        ],
+        "confidence": 0.853182315826416,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          184,
+          22,
+          328,
+          53
+        ],
+        "confidence": 0.8467583656311035,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          174,
+          152,
+          232,
+          173
+        ],
+        "confidence": 0.8388299942016602,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          349,
+          22,
+          563,
+          62
+        ],
+        "confidence": 0.8302159309387207,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          503,
+          160,
+          678,
+          189
+        ],
+        "confidence": 0.8295190334320068,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          583,
+          22,
+          687,
+          53
+        ],
+        "confidence": 0.8122389316558838,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          585,
+          279,
+          678,
+          309
+        ],
+        "confidence": 0.8095909357070923,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          691,
+          279,
+          748,
+          303
+        ],
+        "confidence": 0.7963348627090454,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          198,
+          104,
+          375,
+          133
+        ],
+        "confidence": 0.7953225374221802,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          155,
+          333,
+          214,
+          357
+        ],
+        "confidence": 0.7880104780197144,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          71,
+          212,
+          154,
+          233
+        ],
+        "confidence": 0.7838278412818909,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          615,
+          313,
+          719,
+          336
+        ],
+        "confidence": 0.7826590538024902,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          70,
+          153,
+          161,
+          174
+        ],
+        "confidence": 0.7771285176277161,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          81,
+          411,
+          181,
+          434
+        ],
+        "confidence": 0.7727859020233154,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          71,
+          184,
+          151,
+          207
+        ],
+        "confidence": 0.7626343965530396,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          170,
+          303,
+          244,
+          328
+        ],
+        "confidence": 0.762491762638092,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          539,
+          314,
+          605,
+          333
+        ],
+        "confidence": 0.7600274682044983,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          192,
+          411,
+          250,
+          434
+        ],
+        "confidence": 0.746751606464386,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          166,
+          213,
+          214,
+          237
+        ],
+        "confidence": 0.7362152934074402,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          71,
+          271,
+          220,
+          296
+        ],
+        "confidence": 0.7348703145980835,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          70,
+          505,
+          104,
+          527
+        ],
+        "confidence": 0.7310292720794678,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          401,
+          360,
+          470,
+          383
+        ],
+        "confidence": 0.7090049982070923,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          411,
+          161,
+          491,
+          183
+        ],
+        "confidence": 0.7070247530937195,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          161,
+          183,
+          203,
+          202
+        ],
+        "confidence": 0.7058640122413635,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          113,
+          504,
+          160,
+          522
+        ],
+        "confidence": 0.7023905515670776,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          71,
+          302,
+          158,
+          323
+        ],
+        "confidence": 0.6782174706459045,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          502,
+          193,
+          567,
+          215
+        ],
+        "confidence": 0.6683350801467896,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          410,
+          194,
+          492,
+          213
+        ],
+        "confidence": 0.6448695063591003,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          234,
+          504,
+          258,
+          523
+        ],
+        "confidence": 0.6378595232963562,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          86,
+          442,
+          261,
+          463
+        ],
+        "confidence": 0.6329335570335388,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          214,
+          183,
+          237,
+          203
+        ],
+        "confidence": 0.6186970472335815,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          299,
+          504,
+          333,
+          526
+        ],
+        "confidence": 0.617542564868927,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          343,
+          504,
+          391,
+          522
+        ],
+        "confidence": 0.6152280569076538,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          464,
+          505,
+          488,
+          523
+        ],
+        "confidence": 0.6069576144218445,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          400,
+          279,
+          573,
+          304
+        ],
+        "confidence": 0.59732985496521,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          235,
+          273,
+          295,
+          296
+        ],
+        "confidence": 0.5965206623077393,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          83,
+          244,
+          111,
+          262
+        ],
+        "confidence": 0.5712331533432007,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          170,
+          504,
+          218,
+          522
+        ],
+        "confidence": 0.5443941354751587,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          124,
+          243,
+          171,
+          264
+        ],
+        "confidence": 0.5338541865348816,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          402,
+          314,
+          530,
+          333
+        ],
+        "confidence": 0.5161181688308716,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          482,
+          359,
+          555,
+          385
+        ],
+        "confidence": 0.49885204434394836,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          400,
+          504,
+          448,
+          523
+        ],
+        "confidence": 0.36511263251304626,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          272,
+          505,
+          295,
+          523
+        ],
+        "confidence": 0.3078695833683014,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      }
+    ],
+    "hierarchical_results": [],
+    "all_detections": [
+      {
+        "bbox": [
+          61,
+          106,
+          181,
+          133
+        ],
+        "confidence": 0.8653687834739685,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          70,
+          333,
+          140,
+          358
+        ],
+        "confidence": 0.8611335754394531,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          51,
+          21,
+          162,
+          53
+        ],
+        "confidence": 0.853182315826416,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          184,
+          22,
+          328,
+          53
+        ],
+        "confidence": 0.8467583656311035,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          174,
+          152,
+          232,
+          173
+        ],
+        "confidence": 0.8388299942016602,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          349,
+          22,
+          563,
+          62
+        ],
+        "confidence": 0.8302159309387207,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          503,
+          160,
+          678,
+          189
+        ],
+        "confidence": 0.8295190334320068,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          583,
+          22,
+          687,
+          53
+        ],
+        "confidence": 0.8122389316558838,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          585,
+          279,
+          678,
+          309
+        ],
+        "confidence": 0.8095909357070923,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          691,
+          279,
+          748,
+          303
+        ],
+        "confidence": 0.7963348627090454,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          198,
+          104,
+          375,
+          133
+        ],
+        "confidence": 0.7953225374221802,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          155,
+          333,
+          214,
+          357
+        ],
+        "confidence": 0.7880104780197144,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          71,
+          212,
+          154,
+          233
+        ],
+        "confidence": 0.7838278412818909,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          615,
+          313,
+          719,
+          336
+        ],
+        "confidence": 0.7826590538024902,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          70,
+          153,
+          161,
+          174
+        ],
+        "confidence": 0.7771285176277161,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          81,
+          411,
+          181,
+          434
+        ],
+        "confidence": 0.7727859020233154,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          71,
+          184,
+          151,
+          207
+        ],
+        "confidence": 0.7626343965530396,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          170,
+          303,
+          244,
+          328
+        ],
+        "confidence": 0.762491762638092,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          539,
+          314,
+          605,
+          333
+        ],
+        "confidence": 0.7600274682044983,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          192,
+          411,
+          250,
+          434
+        ],
+        "confidence": 0.746751606464386,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          166,
+          213,
+          214,
+          237
+        ],
+        "confidence": 0.7362152934074402,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          71,
+          271,
+          220,
+          296
+        ],
+        "confidence": 0.7348703145980835,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          70,
+          505,
+          104,
+          527
+        ],
+        "confidence": 0.7310292720794678,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          401,
+          360,
+          470,
+          383
+        ],
+        "confidence": 0.7090049982070923,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          411,
+          161,
+          491,
+          183
+        ],
+        "confidence": 0.7070247530937195,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          161,
+          183,
+          203,
+          202
+        ],
+        "confidence": 0.7058640122413635,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          113,
+          504,
+          160,
+          522
+        ],
+        "confidence": 0.7023905515670776,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          71,
+          302,
+          158,
+          323
+        ],
+        "confidence": 0.6782174706459045,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          502,
+          193,
+          567,
+          215
+        ],
+        "confidence": 0.6683350801467896,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          410,
+          194,
+          492,
+          213
+        ],
+        "confidence": 0.6448695063591003,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          234,
+          504,
+          258,
+          523
+        ],
+        "confidence": 0.6378595232963562,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          86,
+          442,
+          261,
+          463
+        ],
+        "confidence": 0.6329335570335388,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          214,
+          183,
+          237,
+          203
+        ],
+        "confidence": 0.6186970472335815,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          299,
+          504,
+          333,
+          526
+        ],
+        "confidence": 0.617542564868927,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          343,
+          504,
+          391,
+          522
+        ],
+        "confidence": 0.6152280569076538,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          464,
+          505,
+          488,
+          523
+        ],
+        "confidence": 0.6069576144218445,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          400,
+          279,
+          573,
+          304
+        ],
+        "confidence": 0.59732985496521,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          235,
+          273,
+          295,
+          296
+        ],
+        "confidence": 0.5965206623077393,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          83,
+          244,
+          111,
+          262
+        ],
+        "confidence": 0.5712331533432007,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          170,
+          504,
+          218,
+          522
+        ],
+        "confidence": 0.5443941354751587,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          124,
+          243,
+          171,
+          264
+        ],
+        "confidence": 0.5338541865348816,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          402,
+          314,
+          530,
+          333
+        ],
+        "confidence": 0.5161181688308716,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          482,
+          359,
+          555,
+          385
+        ],
+        "confidence": 0.49885204434394836,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          400,
+          504,
+          448,
+          523
+        ],
+        "confidence": 0.36511263251304626,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          272,
+          505,
+          295,
+          523
+        ],
+        "confidence": 0.3078695833683014,
+        "class_id": 0,
+        "class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      }
+    ]
+  }
+}

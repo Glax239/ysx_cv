@@ -1,0 +1,43 @@
+# 智能商品识别系统依赖包
+# Smart Product Recognition System Dependencies
+
+# 深度学习和计算机视觉
+ultralytics>=8.0.0
+opencv-python>=4.8.0
+numpy>=1.21.0
+Pillow>=9.0.0
+
+# OCR和条形码识别
+pytesseract>=0.3.10
+pyzbar>=0.1.9
+paddlepaddle>=2.4.0
+paddleocr>=2.6.0
+
+# GUI开发
+tkinter-tooltip>=2.0.0
+customtkinter>=5.0.0
+
+# 数据处理和分析
+pandas>=1.5.0
+matplotlib>=3.6.0
+seaborn>=0.11.0
+
+# 工具库
+tqdm>=4.64.0
+loguru>=0.6.0
+pyyaml>=6.0
+
+# 图像处理增强
+scikit-image>=0.19.0
+imutils>=0.5.4
+
+# 特征匹配（用于品牌Logo识别）
+opencv-contrib-python>=4.8.0
+
+# 系统工具
+psutil>=5.9.0
+pathlib2>=2.3.0
+
+# 可选：如果需要GPU加速
+# torch>=1.13.0
+# torchvision>=0.14.0
