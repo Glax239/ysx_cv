@@ -1,0 +1,34 @@
+2025-06-20 00:04:50,750 - gui.pyqt5_main_window - INFO - 已设置窗口图标: F:\F Download\cv_test\assets\icons\app_icon_32x32.png
+2025-06-20 00:04:51,482 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: F:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 00:04:51,483 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 00:04:53,812 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 00:05:00,080 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 00:05:00,080 - gui.pyqt5_main_window - INFO - 已加载图像: e64b6eb793dce6a8a7826aa4d0b975a.jpg
+2025-06-20 00:05:07,850 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 00:05:07,851 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 00:05:08,027 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 00:05:08,411 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 00:05:27,954 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 00:05:27,955 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 00:06:43,368 - gui.pyqt5_main_window - INFO - 已设置窗口图标: F:\F Download\cv_test\assets\icons\app_icon_32x32.png
+2025-06-20 00:06:44,045 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: F:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 00:06:44,047 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 00:06:45,583 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 00:06:45,583 - gui.pyqt5_main_window - INFO - 已加载图像: e64b6eb793dce6a8a7826aa4d0b975a.jpg
+2025-06-20 00:06:46,390 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 00:06:53,529 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 00:06:53,530 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 00:06:53,657 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 00:06:54,037 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 00:07:13,845 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 00:07:13,845 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 00:42:03,448 - gui.pyqt5_main_window - INFO - 已加载ICO图标: F:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 00:42:03,448 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 00:42:04,289 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: F:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 00:42:04,290 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 00:42:06,801 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 00:42:25,420 - gui.pyqt5_main_window - INFO - 已加载ICO图标: F:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 00:42:25,420 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 00:42:26,195 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: F:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 00:42:26,197 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 00:42:28,588 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成

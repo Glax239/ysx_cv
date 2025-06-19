@@ -124,7 +124,7 @@ class SimpleInformationExtractor:
             
             # 使用Tesseract提取文本
             try:
-                text = pytesseract.image_to_string(processed_image, lang='eng+chi_sim')
+                text = pytesseract.image_to_string(processed_image, lang='chi_sim+eng')
                 
                 if text.strip():
                     return [{
@@ -185,13 +185,14 @@ class SimpleInformationExtractor:
                 processed_img = self._preprocess_text_region(text_region_img)
                 
                 # 使用Tesseract进行OCR识别
-                # 配置OCR参数以提高准确性
-                custom_config = r'--oem 3 --psm 6 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz中国英文数字!@#$%^&*()_+-=[]{}|;:,.<>?/~ '
-                
-                # 提取文本
+                # 优化OCR参数以提高中文识别准确性
+                # 移除字符白名单限制，允许识别所有中文字符
+                custom_config = r'--oem 3 --psm 6'
+
+                # 提取文本 - 优先使用中文简体，然后是英文
                 text = pytesseract.image_to_string(
-                    processed_img, 
-                    lang='eng+chi_sim',
+                    processed_img,
+                    lang='chi_sim+eng',  # 调整语言优先级，中文优先
                     config=custom_config
                 ).strip()
                 
@@ -200,7 +201,7 @@ class SimpleInformationExtractor:
                     data = pytesseract.image_to_data(
                         processed_img,
                         config=custom_config,
-                        lang='eng+chi_sim',
+                        lang='chi_sim+eng',  # 保持与上面一致的语言优先级
                         output_type=pytesseract.Output.DICT
                     )
                     

@@ -43,8 +43,9 @@ IMAGE_PROCESSING_CONFIG = {
 # OCR配置
 OCR_CONFIG = {
     'tesseract_config': '--oem 3 --psm 6',
-    'languages': 'eng+chi_sim',  # 英文和简体中文
-    'confidence_threshold': 60
+    'languages': 'chi_sim+eng',  # 中文优先，然后英文
+    'confidence_threshold': 50,  # 降低阈值以提高中文识别率
+    'chinese_support': True  # 启用中文支持
 }
 
 # 条形码配置

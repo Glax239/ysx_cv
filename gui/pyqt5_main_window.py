@@ -23,7 +23,7 @@ from PyQt5.QtWidgets import (
     QMessageBox, QStatusBar, QFrame, QScrollArea, QTableWidget, 
     QTableWidgetItem, QHeaderView, QGroupBox, QSizePolicy, QButtonGroup, QDialog
 )
-from PyQt5.QtCore import Qt, QThread, pyqtSignal, QTimer, QSize, QTextCodec, QMimeData, QUrl
+from PyQt5.QtCore import Qt, QThread, pyqtSignal, QTimer, QSize, QTextCodec, QMimeData, QUrl, QPropertyAnimation, QEasingCurve, QRect
 from PyQt5.QtGui import QPixmap, QFont, QIcon, QPalette, QColor, QImage, QFontDatabase, QDragEnterEvent, QDropEvent, QKeyEvent
 
 # 添加项目根目录到Python路径
@@ -248,16 +248,26 @@ class PyQt5MainWindow(QMainWindow):
     def setup_window_icon(self):
         """设置窗口图标"""
         try:
-            # 尝试加载应用图标
-            icon_path = Path(__file__).parent.parent / "assets" / "icons" / "app_icon_32x32.png"
-            if icon_path.exists():
-                icon = QIcon(str(icon_path))
+            # 优先尝试加载ICO文件（Windows任务栏支持更好）
+            ico_path = Path(__file__).parent.parent / "assets" / "icons" / "app_icon_32x32.ico"
+            png_path = Path(__file__).parent.parent / "assets" / "icons" / "app_icon_32x32.png"
+
+            icon = None
+            if ico_path.exists():
+                icon = QIcon(str(ico_path))
+                self.logger.info(f"已加载ICO图标: {ico_path}")
+            elif png_path.exists():
+                icon = QIcon(str(png_path))
+                self.logger.info(f"已加载PNG图标: {png_path}")
+
+            if icon:
+                # 设置窗口图标
                 self.setWindowIcon(icon)
-                # 同时设置应用程序图标（用于任务栏）
+                # 设置应用程序图标（用于任务栏）
                 QApplication.instance().setWindowIcon(icon)
-                self.logger.info(f"已设置窗口图标: {icon_path}")
+                self.logger.info("已设置窗口和应用程序图标")
             else:
-                self.logger.warning(f"图标文件不存在: {icon_path}")
+                self.logger.warning("未找到可用的图标文件")
         except Exception as e:
             self.logger.error(f"设置窗口图标失败: {e}")
         
@@ -322,6 +332,7 @@ class PyQt5MainWindow(QMainWindow):
                 min-height: 32px;
                 min-width: 100px;
                 text-align: center;
+                transition: all 0.3s ease;  /* 添加过渡动画 */
             }
             QPushButton#btn_open {
                 background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
@@ -630,6 +641,11 @@ class PyQt5MainWindow(QMainWindow):
         self.progress_bar.setMinimumHeight(45)
         self.progress_bar.setMinimumWidth(300)
         self.progress_bar.setMaximumHeight(45)
+
+        # 为进度条添加透明度动画
+        self.progress_animation = QPropertyAnimation(self.progress_bar, b"windowOpacity")
+        self.progress_animation.setDuration(300)  # 300ms动画时长
+        self.progress_animation.setEasingCurve(QEasingCurve.InOutQuad)
         # 设置进度条样式，确保可见性
         self.progress_bar.setStyleSheet("""
             QProgressBar {
@@ -690,11 +706,15 @@ class PyQt5MainWindow(QMainWindow):
 
         # 进度条区域
         progress_label = QLabel("⏳ 处理状态:")
-        progress_label.setFont(QFont("Microsoft YaHei", 18, QFont.Bold))
+        progress_label.setFont(QFont("Microsoft YaHei", 22, QFont.Bold))
+        progress_label.setFixedSize(button_size)  # 与其他按钮保持相同大小
+        progress_label.setAlignment(Qt.AlignCenter)  # 居中对齐
         progress_label.setStyleSheet("""
             color: #6c757d;
-            padding: 8px 12px;
-            border-radius: 6px;
+            background-color: #f8f9fa;
+            padding: 12px 18px;
+            border-radius: 10px;
+            border: 3px solid #dee2e6;
         """)
         toolbar_layout.addWidget(progress_label)
         toolbar_layout.addWidget(self.progress_bar)
@@ -1081,12 +1101,12 @@ class PyQt5MainWindow(QMainWindow):
             icon_label.setAlignment(Qt.AlignCenter)
 
             label = QLabel(label_text)
-            label.setFont(QFont("Microsoft YaHei", 18, QFont.Bold))
+            label.setFont(QFont("Microsoft YaHei", 14, QFont.Bold))  # 调小字体
             label.setAlignment(Qt.AlignCenter)
             label.setStyleSheet("color: #495057;")
 
             value_label = QLabel("0")
-            value_label.setFont(QFont("Microsoft YaHei", 16, QFont.Bold))
+            value_label.setFont(QFont("Microsoft YaHei", 13, QFont.Bold))  # 调小字体
             value_label.setAlignment(Qt.AlignCenter)
             value_label.setWordWrap(True)  # 启用自动换行
             value_label.setMinimumHeight(80)  # 设置最小高度以容纳多行文本
@@ -1169,6 +1189,21 @@ class PyQt5MainWindow(QMainWindow):
         """更新状态栏"""
         self.status_bar.showMessage(message)
         self.logger.info(message)
+
+    def show_progress_bar_animated(self):
+        """带动画显示进度条"""
+        self.progress_bar.setVisible(True)
+        self.progress_bar.setWindowOpacity(0.0)
+        self.progress_animation.setStartValue(0.0)
+        self.progress_animation.setEndValue(1.0)
+        self.progress_animation.start()
+
+    def hide_progress_bar_animated(self):
+        """带动画隐藏进度条"""
+        self.progress_animation.setStartValue(1.0)
+        self.progress_animation.setEndValue(0.0)
+        self.progress_animation.finished.connect(lambda: self.progress_bar.setVisible(False))
+        self.progress_animation.start()
 
     def open_image(self):
         """打开图像文件"""
@@ -1313,9 +1348,22 @@ class PyQt5MainWindow(QMainWindow):
             q_image = QImage(display_image.data, width, height, bytes_per_line, QImage.Format_RGB888)
             pixmap = QPixmap.fromImage(q_image)
 
-            # 设置到标签，使用适应大小的方式避免缩放问题
-            self.image_label.setPixmap(pixmap)
-            self.image_label.setScaledContents(True)  # 改为True，让图像适应标签大小
+            # 设置到标签，保持宽高比不变形
+            # 获取标签大小
+            label_size = self.image_label.size()
+
+            # 计算保持宽高比的缩放
+            if label_size.width() > 0 and label_size.height() > 0:
+                scaled_pixmap = pixmap.scaled(
+                    label_size,
+                    Qt.KeepAspectRatio,  # 保持宽高比
+                    Qt.SmoothTransformation  # 平滑缩放
+                )
+                self.image_label.setPixmap(scaled_pixmap)
+            else:
+                self.image_label.setPixmap(pixmap)
+
+            self.image_label.setScaledContents(False)  # 不拉伸内容
             self.image_label.setAlignment(Qt.AlignCenter)
 
         except Exception as e:
@@ -1367,8 +1415,8 @@ class PyQt5MainWindow(QMainWindow):
             # 禁用检测按钮
             self.btn_detect.setEnabled(False)
 
-            # 显示进度条
-            self.progress_bar.setVisible(True)
+            # 显示进度条（带动画）
+            self.show_progress_bar_animated()
             self.progress_bar.setRange(0, 0)  # 不确定进度
             self.progress_bar.setValue(0)
             self.logger.info("进度条已显示")
@@ -1422,8 +1470,8 @@ class PyQt5MainWindow(QMainWindow):
             self.logger.error(f"处理检测结果失败: {e}")
             QMessageBox.critical(self, "错误", f"处理检测结果失败:\n{e}")
         finally:
-            # 隐藏进度条，启用检测按钮
-            self.progress_bar.setVisible(False)
+            # 隐藏进度条（带动画），启用检测按钮
+            self.hide_progress_bar_animated()
             self.btn_detect.setEnabled(True)
             self.logger.info("进度条已隐藏")
 
@@ -1432,8 +1480,8 @@ class PyQt5MainWindow(QMainWindow):
         self.logger.error(f"检测过程出错: {error_message}")
         QMessageBox.critical(self, "检测错误", f"检测过程出错:\n{error_message}")
 
-        # 隐藏进度条，启用检测按钮
-        self.progress_bar.setVisible(False)
+        # 隐藏进度条（带动画），启用检测按钮
+        self.hide_progress_bar_animated()
         self.btn_detect.setEnabled(True)
         self.logger.info("检测错误，进度条已隐藏")
 
@@ -2022,7 +2070,8 @@ class PyQt5MainWindow(QMainWindow):
         """显示健康分析结果"""
         dialog = QDialog(self)
         dialog.setWindowTitle("🏥 健康分析结果")
-        dialog.setMinimumSize(700, 500)
+        dialog.setMinimumSize(1000, 800)  # 增大初始窗口大小
+        dialog.resize(1200, 900)  # 设置默认大小
         
         layout = QVBoxLayout(dialog)
         
@@ -2141,21 +2190,33 @@ def main():
     
     # 设置应用程序级别的图标（用于任务栏）
     try:
-        # 获取ICO文件路径（Windows任务栏）
+        # 优先使用ICO文件（Windows任务栏支持更好）
         ico_path = Path(__file__).parent.parent / "assets" / "icons" / "app_icon_32x32.ico"
+        png_path = Path(__file__).parent.parent / "assets" / "icons" / "app_icon_32x32.png"
+
+        app_icon = None
         if ico_path.exists():
             app_icon = QIcon(str(ico_path))
-        else:
-            # 回退到PNG文件
-            png_path = Path(__file__).parent.parent / "assets" / "icons" / "app_icon_32x32.png"
-            if png_path.exists():
-                app_icon = QIcon(str(png_path))
-            else:
-                app_icon = None
-        
+            print(f"✓ 已加载ICO应用程序图标: {ico_path}")
+        elif png_path.exists():
+            app_icon = QIcon(str(png_path))
+            print(f"✓ 已加载PNG应用程序图标: {png_path}")
+
         if app_icon:
+            # 设置应用程序图标
             app.setWindowIcon(app_icon)
-            print(f"✓ 已设置应用程序图标")
+            # 在Windows上，还需要设置任务栏图标
+            if sys.platform == "win32":
+                try:
+                    import ctypes
+                    # 设置任务栏图标
+                    myappid = 'smart.product.analysis.2.0'  # 应用程序ID
+                    ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+                except Exception as e:
+                    print(f"⚠ 设置任务栏图标失败: {e}")
+            print(f"✓ 已设置应用程序和任务栏图标")
+        else:
+            print("⚠ 未找到可用的图标文件")
     except Exception as e:
         print(f"⚠ 设置应用程序图标失败: {e}")
 
