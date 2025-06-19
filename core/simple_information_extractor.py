@@ -303,10 +303,13 @@ class SimpleInformationExtractor:
         try:
             # 提取条形码信息（从检测到的区域）
             for region in detection_results.get('regions', []):
-                if 'barcode' in region['class_name'].lower():
+                # 检查是否为条形码区域（支持中文和英文）
+                class_name = region['class_name'].lower()
+                if 'barcode' in class_name or '条形码' in class_name:
                     region_image = self.image_processor.crop_region(image, region['bbox'])
                     barcodes = self.extract_barcode(region_image)
                     comprehensive_info['barcodes'].extend(barcodes)
+                    self.logger.info(f"在条形码区域 '{region['class_name']}' 中检测到 {len(barcodes)} 个条形码")
             
             # 如果没有检测到条形码区域，尝试全图检测
             if not comprehensive_info['barcodes']:

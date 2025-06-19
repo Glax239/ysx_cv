@@ -32,3 +32,105 @@
 2025-06-20 00:42:26,195 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: F:\F Download\cv_test\assets\icons\status_icon_16x16.png
 2025-06-20 00:42:26,197 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
 2025-06-20 00:42:28,588 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 00:43:01,927 - gui.pyqt5_main_window - INFO - 已加载ICO图标: F:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 00:43:01,927 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 00:43:02,601 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: F:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 00:43:02,602 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 00:43:05,148 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 00:43:37,718 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 00:43:37,718 - gui.pyqt5_main_window - INFO - 已加载图像: e64b6eb793dce6a8a7826aa4d0b975a.jpg
+2025-06-20 00:43:48,647 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 00:43:48,649 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 00:43:48,762 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 00:43:49,155 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 00:44:09,746 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 00:44:09,746 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 00:44:46,335 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 00:45:05,213 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 01:04:43,653 - gui.pyqt5_main_window - INFO - 已加载ICO图标: F:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 01:04:43,653 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 01:04:44,255 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: F:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 01:04:44,256 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 01:04:46,785 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 01:04:53,708 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:04:53,708 - gui.pyqt5_main_window - INFO - 已加载图像: e64b6eb793dce6a8a7826aa4d0b975a.jpg
+2025-06-20 01:04:56,449 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 01:04:56,450 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 01:04:56,610 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 01:04:56,990 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 01:05:17,263 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 01:05:17,263 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 01:05:36,325 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 01:05:36,325 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 01:05:53,296 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 01:05:53,296 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:06:13,429 - gui.pyqt5_main_window - INFO - 已加载ICO图标: F:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 01:06:13,430 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 01:06:14,010 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: F:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 01:06:14,011 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 01:06:16,310 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 01:07:00,447 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:07:00,447 - gui.pyqt5_main_window - INFO - 已加载图像: 0_JfGKDcJp2nYQEglk_png_jpg.rf.074806f91537131ba182b1f492be7b58.jpg
+2025-06-20 01:07:02,022 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:07:02,022 - gui.pyqt5_main_window - INFO - 已加载图像: 01-event-sterling-banner-1_png_jpg.rf.295863df4e334bc754612c3cbe8f6e4f.jpg
+2025-06-20 01:07:02,866 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:07:02,866 - gui.pyqt5_main_window - INFO - 已加载图像: 01-event-sterling-banner-1_png_jpg.rf.72f008fd4f4e1b59762033fb202c1e2a.jpg
+2025-06-20 01:07:05,680 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:07:05,680 - gui.pyqt5_main_window - INFO - 已加载图像: 01-event-sterling-banner-1_png_jpg.rf.95c1fc232fa1d83d7dc4f51d006adb7b.jpg
+2025-06-20 01:07:07,763 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:07:07,763 - gui.pyqt5_main_window - INFO - 已加载图像: 0282925037198-01_N95-2592x1944_scaledTo640x480bilinear_jpg.rf.07713d3c9762150fbf3500510fce7343.jpg
+2025-06-20 01:07:11,694 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 01:07:11,696 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 01:07:11,885 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 01:07:11,893 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 01:07:14,485 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 01:07:14,485 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 01:07:27,152 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 01:07:27,153 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 01:07:33,951 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 01:07:33,951 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:13:17,012 - gui.pyqt5_main_window - INFO - 已加载ICO图标: F:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 01:13:17,012 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 01:13:17,735 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: F:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 01:13:17,737 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 01:13:20,135 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 01:14:12,012 - gui.pyqt5_main_window - INFO - 已加载ICO图标: F:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 01:14:12,012 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 01:14:12,575 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: F:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 01:14:12,576 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 01:14:14,876 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 01:15:20,717 - gui.pyqt5_main_window - INFO - 已加载ICO图标: F:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 01:15:20,717 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 01:15:21,380 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: F:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 01:15:21,381 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 01:15:23,682 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 01:15:35,773 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:15:35,774 - gui.pyqt5_main_window - INFO - 已加载图像: COCO_train2014_000000000109.jpg
+2025-06-20 01:15:37,059 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 01:15:37,061 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 01:15:37,213 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 01:15:37,220 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 01:15:39,344 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 01:15:39,344 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 01:16:15,022 - gui.pyqt5_main_window - INFO - 已加载ICO图标: F:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 01:16:15,023 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 01:16:15,571 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: F:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 01:16:15,573 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 01:16:17,875 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 01:17:14,816 - gui.pyqt5_main_window - INFO - 已加载ICO图标: F:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 01:17:14,816 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 01:17:15,414 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: F:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 01:17:15,415 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 01:17:17,620 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 01:17:39,358 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:17:39,358 - gui.pyqt5_main_window - INFO - 已加载图像: IMG20241003103524_jpg.rf.66b2e356a7144d7b9fa10d6ced3505fb.jpg
+2025-06-20 01:17:40,851 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 01:17:40,852 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 01:17:41,009 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 01:17:41,048 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 01:17:43,745 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 01:17:43,745 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 01:17:54,693 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 01:17:54,693 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 01:18:10,193 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 01:18:10,194 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏

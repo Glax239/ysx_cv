@@ -226,13 +226,13 @@ class SimpleDetectionEngine:
                 label = f'{class_name} {confidence:.2f}'
                 
                 # 使用中文字体渲染器绘制文本
-                font_size = 20
-                
+                font_size = 32  # 增大字体大小从20到32
+
                 # 绘制标签背景和文本
                 result_image = draw_chinese_text_on_image(
                     result_image,
                     label,
-                    (x1, max(y1 - 25, 0)),
+                    (x1, max(y1 - 40, 0)),  # 增大文字位置偏移从25到40
                     font_size=font_size,
                     color=(255, 255, 255),  # 白色文字
                     background_color=color  # 使用检测框同色背景

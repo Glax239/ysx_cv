@@ -18,17 +18,24 @@ class ProductNameMapper:
     def __init__(self, mapping_file: str = None):
         """
         初始化名称映射器
-        
+
         Args:
             mapping_file: 映射文件路径，默认使用项目根目录下的product_name_mapping.json
         """
         self.logger = logging.getLogger(__name__)
-        
+
         # 设置默认映射文件路径
         if mapping_file is None:
             project_root = Path(__file__).parent.parent
-            mapping_file = project_root / "product_name_mapping.json"
-        
+            # 优先使用config目录中的映射文件
+            config_mapping_file = project_root / "config" / "product_name_mapping.json"
+            if config_mapping_file.exists():
+                mapping_file = config_mapping_file
+                self.logger.info(f"使用config目录中的映射文件: {config_mapping_file}")
+            else:
+                mapping_file = project_root / "product_name_mapping.json"
+                self.logger.info(f"使用根目录中的映射文件: {mapping_file}")
+
         self.mapping_file = mapping_file
         self.mappings = {}
         self.load_mappings()
@@ -36,7 +43,7 @@ class ProductNameMapper:
     def load_mappings(self) -> bool:
         """
         加载名称映射配置
-        
+
         Returns:
             是否成功加载映射配置
         """
@@ -45,6 +52,9 @@ class ProductNameMapper:
                 with open(self.mapping_file, 'r', encoding='utf-8') as f:
                     self.mappings = json.load(f)
                 self.logger.info(f"成功加载名称映射配置: {self.mapping_file}")
+
+                # 尝试加载并合并其他位置的映射文件
+                self._merge_additional_mappings()
                 return True
             else:
                 self.logger.warning(f"映射文件不存在: {self.mapping_file}")
@@ -54,6 +64,39 @@ class ProductNameMapper:
             self.logger.error(f"加载名称映射配置失败: {e}")
             self._create_default_mappings()
             return False
+
+    def _merge_additional_mappings(self):
+        """合并其他位置的映射文件"""
+        try:
+            project_root = Path(__file__).parent.parent
+
+            # 检查根目录和config目录中的映射文件
+            additional_files = [
+                project_root / "product_name_mapping.json",
+                project_root / "config" / "product_name_mapping.json"
+            ]
+
+            for additional_file in additional_files:
+                if additional_file.exists() and str(additional_file) != str(self.mapping_file):
+                    try:
+                        with open(additional_file, 'r', encoding='utf-8') as f:
+                            additional_mappings = json.load(f)
+
+                        # 合并映射配置
+                        for model_name, mappings in additional_mappings.items():
+                            if model_name not in self.mappings:
+                                self.mappings[model_name] = {}
+
+                            # 合并映射，新的映射会覆盖旧的
+                            self.mappings[model_name].update(mappings)
+
+                        self.logger.info(f"成功合并映射文件: {additional_file}")
+
+                    except Exception as e:
+                        self.logger.warning(f"合并映射文件失败 {additional_file}: {e}")
+
+        except Exception as e:
+            self.logger.error(f"合并额外映射文件时出错: {e}")
     
     def _create_default_mappings(self):
         """创建默认映射配置"""
@@ -170,6 +213,48 @@ class ProductNameMapper:
     def get_model_mappings(self, model_name: str) -> Dict:
         """获取指定模型的映射配置"""
         return self.mappings.get(model_name, {}).copy()
+
+    def import_config_mappings(self) -> bool:
+        """
+        导入config目录中的映射配置
+
+        Returns:
+            是否成功导入
+        """
+        try:
+            project_root = Path(__file__).parent.parent
+            config_mapping_file = project_root / "config" / "product_name_mapping.json"
+
+            if not config_mapping_file.exists():
+                self.logger.warning(f"config目录中的映射文件不存在: {config_mapping_file}")
+                return False
+
+            with open(config_mapping_file, 'r', encoding='utf-8') as f:
+                config_mappings = json.load(f)
+
+            # 合并映射配置
+            for model_name, mappings in config_mappings.items():
+                if model_name not in self.mappings:
+                    self.mappings[model_name] = {}
+
+                # 合并映射，config中的映射会覆盖现有的
+                old_count = len(self.mappings[model_name])
+                self.mappings[model_name].update(mappings)
+                new_count = len(self.mappings[model_name])
+
+                self.logger.info(f"模型 {model_name}: 导入 {len(mappings)} 个映射，总计 {new_count} 个映射")
+
+            # 保存合并后的映射
+            if self.save_mappings():
+                self.logger.info(f"成功导入并保存config目录中的映射配置")
+                return True
+            else:
+                self.logger.error("导入成功但保存失败")
+                return False
+
+        except Exception as e:
+            self.logger.error(f"导入config映射配置失败: {e}")
+            return False
     
     def apply_mappings_to_detections(self, detections: list) -> list:
         """

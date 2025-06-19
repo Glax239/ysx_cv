@@ -80,8 +80,8 @@ for result in results:
         image = draw_chinese_text_on_image(
             image,
             label,
-            (x1, max(y1 - 30, 0)),
-            font_size=20,
+            (x1, max(y1 - 45, 0)),  # 增大文字位置偏移从30到45
+            font_size=32,  # 增大字体大小从20到32
             color=(255, 255, 255),  # 白色文字
             background_color=tuple(color)  # 使用检测框同色背景
         )

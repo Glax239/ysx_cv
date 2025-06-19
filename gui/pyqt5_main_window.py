@@ -606,7 +606,7 @@ class PyQt5MainWindow(QMainWindow):
         
         # 应用场景选择 - 改为两个按钮
         scenario_label = QLabel("🎯 应用场景:")
-        scenario_label.setFont(QFont("Microsoft YaHei", 22, QFont.Bold))
+        scenario_label.setFont(QFont("Microsoft YaHei", 12, QFont.Bold))
         scenario_label.setStyleSheet("""
             color: #007bff;
             background-color: #e7f1ff;
@@ -706,13 +706,14 @@ class PyQt5MainWindow(QMainWindow):
 
         # 进度条区域
         progress_label = QLabel("⏳ 处理状态:")
-        progress_label.setFont(QFont("Microsoft YaHei", 22, QFont.Bold))
-        progress_label.setFixedSize(button_size)  # 与其他按钮保持相同大小
+        progress_label.setFont(QFont("Microsoft YaHei", 12, QFont.Bold))  # 调小字体
+        #progress_label.setFixedHeight(50)  # 只固定高度，让宽度自适应
+        progress_label.setMinimumWidth(120)  # 设置最小宽度
         progress_label.setAlignment(Qt.AlignCenter)  # 居中对齐
         progress_label.setStyleSheet("""
             color: #6c757d;
             background-color: #f8f9fa;
-            padding: 12px 18px;
+            padding: 8px 12px;
             border-radius: 10px;
             border: 3px solid #dee2e6;
         """)
@@ -2034,10 +2035,16 @@ class PyQt5MainWindow(QMainWindow):
             self.health_worker.finished.connect(self.on_health_analysis_finished)
             self.health_worker.error.connect(self.on_health_analysis_error)
             
-            # 禁用按钮，显示进度
+            # 禁用按钮，显示进度条和状态
             self.btn_health_analysis.setEnabled(False)
+
+            # 显示进度条（带动画）
+            self.show_progress_bar_animated()
+            self.progress_bar.setRange(0, 0)  # 不确定进度
+            self.progress_bar.setValue(0)
             self.update_status("正在进行健康分析...")
-            
+            self.logger.info("健康分析进度条已显示")
+
             self.health_worker.start()
             
         except Exception as e:
@@ -2058,13 +2065,20 @@ class PyQt5MainWindow(QMainWindow):
             self.logger.error(f"处理健康分析结果失败: {e}")
             QMessageBox.critical(self, "错误", f"处理健康分析结果失败:\n{e}")
         finally:
+            # 隐藏进度条（带动画），启用按钮
+            self.hide_progress_bar_animated()
             self.btn_health_analysis.setEnabled(True)
+            self.logger.info("健康分析完成，进度条已隐藏")
             
     def on_health_analysis_error(self, error_message):
         """健康分析错误回调"""
         self.logger.error(f"健康分析出错: {error_message}")
         QMessageBox.critical(self, "健康分析错误", f"健康分析出错:\n{error_message}")
+
+        # 隐藏进度条（带动画），启用按钮
+        self.hide_progress_bar_animated()
         self.btn_health_analysis.setEnabled(True)
+        self.logger.info("健康分析错误，进度条已隐藏")
         
     def show_health_analysis_results(self, results):
         """显示健康分析结果"""
