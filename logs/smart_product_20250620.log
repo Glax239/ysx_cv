@@ -1,0 +1,177 @@
+2025-06-20 01:46:03 - core.gemini_health_analyzer - INFO - Gemini健康分析器初始化完成，状态: 启用
+2025-06-20 01:46:09 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 01:46:09 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1700
+2025-06-20 01:46:09 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "SUgars", "corrected": "Sugars", "reason": "拼写错误"},
+    {"original": "35moq", "corrected": "35g", "reason": "推测为克数单位"},
+    {"original": "510mq", "corrected": "510mg", "reason": "推测为毫克单位"},
+    {"original": "320mc", "corrected": "320mg", "reason": "推测为毫克单位"},
+    {"original": "Og", "corrected": "0g", "reason": "字符识别错误"},
+    {"original": "Pipe", "corrected": "?", "reason": "无法识别，可能是OCR错误"},
+    {"original": "9¢", "corrected": "9g", "reason": "推测为
+2025-06-20 01:46:09 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1700
+2025-06-20 01:46:09 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "SUgars", "corrected": "Sugars", "reason": "拼写错误"},
+    {"original": "35moq", "corrected": "35g", "reason": "推测为克数单位"},
+    {"original": "510mq", "cor
+2025-06-20 01:46:09 - core.gemini_health_analyzer - INFO - 找到JSON字符串，长度: 63
+2025-06-20 01:46:09 - core.gemini_health_analyzer - INFO - JSON字符串: {"original": "SUgars", "corrected": "Sugars", "reason": "拼写错误"}
+2025-06-20 01:46:09 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['original', 'corrected', 'reason']
+2025-06-20 01:48:00 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 01:48:00 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1925
+2025-06-20 01:48:00 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "SUgars", "corrected": "Sugars", "reason": "拼写错误"},
+    {"original": "35moq", "corrected": "35g", "reason": "推测为克(g)的单位错误"},
+    {"original": "510mq", "corrected": "510mg", "reason": "推测为毫克(mg)的单位错误"},
+    {"original": "320mc", "corrected": "320mg", "reason": "推测为毫克(mg)的单位错误"},
+    {"original": "{227g]", "corrected": "227g", "reason": "括号冗余"},
+    {"original": "Pipe", "corrected": "?", "reason": "无法识别含义，可能是OCR错误"},
+    {"original": "9¢", "correct
+2025-06-20 01:48:00 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1925
+2025-06-20 01:48:00 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "SUgars", "corrected": "Sugars", "reason": "拼写错误"},
+    {"original": "35moq", "corrected": "35g", "reason": "推测为克(g)的单位错误"},
+    {"original": "510mq",
+2025-06-20 01:48:00 - core.gemini_health_analyzer - INFO - 找到JSON字符串，长度: 63
+2025-06-20 01:48:00 - core.gemini_health_analyzer - INFO - JSON字符串: {"original": "SUgars", "corrected": "Sugars", "reason": "拼写错误"}
+2025-06-20 01:48:00 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['original', 'corrected', 'reason']
+2025-06-20 01:50:53 - core.gemini_health_analyzer - INFO - Gemini健康分析器初始化完成，状态: 启用
+2025-06-20 01:51:00 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 01:51:00 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1714
+2025-06-20 01:51:00 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "SUgars", "corrected": "Sugars", "reason": "拼写错误"},
+    {"original": "35moq", "corrected": "35g", "reason": "推测为克数单位"},
+    {"original": "510mq", "corrected": "510mg", "reason": "推测为毫克单位"},
+    {"original": "320mc", "corrected": "320mg", "reason": "推测为毫克单位"},
+    {"original": "Og", "corrected": "0g", "reason": "字符识别错误，应为0克"},
+    {"original": "‘Og", "corrected": "0g", "reason": "字符识别错误，应为0克"},
+    {"original": "Pipe", "corrected": "?", "reason": 
+2025-06-20 01:51:00 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1714
+2025-06-20 01:51:00 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "SUgars", "corrected": "Sugars", "reason": "拼写错误"},
+    {"original": "35moq", "corrected": "35g", "reason": "推测为克数单位"},
+    {"original": "510mq", "cor
+2025-06-20 01:51:00 - core.gemini_health_analyzer - INFO - 从代码块中找到JSON字符串，长度: 1511
+2025-06-20 01:51:00 - core.gemini_health_analyzer - INFO - JSON字符串前300字符: {
+  "ocr_corrections": [
+    {"original": "SUgars", "corrected": "Sugars", "reason": "拼写错误"},
+    {"original": "35moq", "corrected": "35g", "reason": "推测为克数单位"},
+    {"original": "510mq", "corrected": "510mg", "reason": "推测为毫克单位"},
+    {"original": "320mc", "corrected": "320mg", "reason": "推测为毫克单位"}
+2025-06-20 01:51:00 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['ocr_corrections', 'detected_ingredients', 'nutrition_facts', 'overall_score', 'analysis', 'recommendations', 'health_warnings']
+2025-06-20 02:10:40 - core.gemini_health_analyzer - INFO - Gemini健康分析器初始化完成，状态: 启用
+2025-06-20 02:10:47 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 02:10:47 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1578
+2025-06-20 02:10:47 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "SUgars", "corrected": "Sugars", "reason": "拼写错误"},
+    {"original": "35moq", "corrected": "35mg", "reason": "推测为毫克(mg), OCR识别错误"},
+    {"original": "320mc", "corrected": "32g", "reason": "推测为克(g), OCR识别错误"},
+    {"original": "510mq", "corrected": "510mg", "reason": "推测为毫克(mg), OCR识别错误"},
+    {"original": "De6GIr", "corrected": "Serving size", "reason": "上下文推断，应为'Serving size'"},
+    {"original": "9¢", "corrected": "9g", "reason": "推测为克(g), OCR识别
+2025-06-20 02:10:47 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1578
+2025-06-20 02:10:47 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "SUgars", "corrected": "Sugars", "reason": "拼写错误"},
+    {"original": "35moq", "corrected": "35mg", "reason": "推测为毫克(mg), OCR识别错误"},
+    {"original": "
+2025-06-20 02:10:47 - core.gemini_health_analyzer - INFO - 从代码块中找到JSON字符串，长度: 1565
+2025-06-20 02:10:47 - core.gemini_health_analyzer - INFO - JSON字符串前300字符: {
+  "ocr_corrections": [
+    {"original": "SUgars", "corrected": "Sugars", "reason": "拼写错误"},
+    {"original": "35moq", "corrected": "35mg", "reason": "推测为毫克(mg), OCR识别错误"},
+    {"original": "320mc", "corrected": "32g", "reason": "推测为克(g), OCR识别错误"},
+    {"original": "510mq", "corrected": "510mg", "
+2025-06-20 02:10:47 - core.gemini_health_analyzer - ERROR - JSON解析失败: Expecting value: line 14 column 3 (char 735)，尝试文本解析
+2025-06-20 02:25:29 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 02:25:29 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1320
+2025-06-20 02:25:29 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "AO", "corrected": "40", "reason": "根据上下文，'Calories from Fat' 后面的数值应为热量值，推测为40而非AO"},
+    {"original": "OZz", "corrected": "oz", "reason": "单位应为盎司(oz), OCR识别错误"},
+    {"original": "Te", "corrected": "3g", "reason": "根据上下文，'Fiber' 后面应为纤维含量，推测为3g而非Te"},
+    {"original": "Aq", "corrected": "2g", "reason": "根据上下文，'Total Sugars' 后面应为糖分含量，推测为2g而非Aq"},
+    {"original": "39,", "corrected": "3.9", "reason": "纤维含量应为小数，推测为3.9而非39"},
+    {"original": "T%", "
+2025-06-20 02:25:29 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1320
+2025-06-20 02:25:29 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "AO", "corrected": "40", "reason": "根据上下文，'Calories from Fat' 后面的数值应为热量值，推测为40而非AO"},
+    {"original": "OZz", "corrected": "oz", "reason": "单位应为盎司(oz)
+2025-06-20 02:25:29 - core.gemini_health_analyzer - INFO - 从代码块中找到JSON字符串，长度: 1307
+2025-06-20 02:25:29 - core.gemini_health_analyzer - INFO - JSON字符串前300字符: {
+  "ocr_corrections": [
+    {"original": "AO", "corrected": "40", "reason": "根据上下文，'Calories from Fat' 后面的数值应为热量值，推测为40而非AO"},
+    {"original": "OZz", "corrected": "oz", "reason": "单位应为盎司(oz), OCR识别错误"},
+    {"original": "Te", "corrected": "3g", "reason": "根据上下文，'Fiber' 后面应为纤维含量，推测为3g而非Te"},
+    {"
+2025-06-20 02:25:29 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['ocr_corrections', 'detected_ingredients', 'nutrition_facts', 'overall_score', 'analysis', 'recommendations', 'health_warnings']
+2025-06-20 02:51:17 - core.gemini_health_analyzer - INFO - Gemini健康分析器初始化完成，状态: 启用
+2025-06-20 02:51:24 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 02:51:24 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1655
+2025-06-20 02:51:24 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "AO", "corrected": "40", "reason": "根据上下文，'Calories from Fat' 后面应该是数值，'AO' 可能是'40' 的OCR识别错误"},
+    {"original": "OZz", "corrected": "oz", "reason": "单位'盎司'的拼写错误"},
+    {"original": "Te", "corrected": "3g", "reason": "根据上下文，'Fiber' 后面应该是数值，'Te' 可能是'3g' 的OCR识别错误"},
+    {"original": "Aq", "corrected": "6g", "reason": "根据上下文，'Total Sugars' 后面应该是数值，'Aq' 可能是'6g' 的OCR识别错误，但由于'6g'已存在，此处可能为重复或错误"},
+    {"original": "《9", "corrected": "g", "reason": "可能是'g
+2025-06-20 02:51:24 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1655
+2025-06-20 02:51:24 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "AO", "corrected": "40", "reason": "根据上下文，'Calories from Fat' 后面应该是数值，'AO' 可能是'40' 的OCR识别错误"},
+    {"original": "OZz", "corrected": "oz", "reason": "单
+2025-06-20 02:51:24 - core.gemini_health_analyzer - INFO - 从代码块中找到JSON字符串，长度: 1642
+2025-06-20 02:51:24 - core.gemini_health_analyzer - INFO - JSON字符串前300字符: {
+  "ocr_corrections": [
+    {"original": "AO", "corrected": "40", "reason": "根据上下文，'Calories from Fat' 后面应该是数值，'AO' 可能是'40' 的OCR识别错误"},
+    {"original": "OZz", "corrected": "oz", "reason": "单位'盎司'的拼写错误"},
+    {"original": "Te", "corrected": "3g", "reason": "根据上下文，'Fiber' 后面应该是数值，'Te' 可能是'3g' 的OCR识别
+2025-06-20 02:51:24 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['ocr_corrections', 'detected_ingredients', 'nutrition_facts', 'overall_score', 'analysis', 'recommendations', 'health_warnings']
+2025-06-20 03:03:32 - core.gemini_health_analyzer - INFO - Gemini健康分析器初始化完成，状态: 启用
+2025-06-20 03:03:38 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 03:03:38 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1209
+2025-06-20 03:03:38 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "AO", "corrected": "0", "reason": "根据上下文，'Calories from Fat' 后面应为数值，'AO' 应为 OCR 识别错误。"},
+    {"original": "OZz", "corrected": "oz", "reason": "单位 'OZz' 应为 'oz' (盎司)"},
+    {"original": "Te", "corrected": "g", "reason": "'Dietary Fiber' 后面应为单位 'g' (克)，'Te' 应为 OCR 识别错误。"},
+    {"original": "Aq", "corrected": "g", "reason": "'Sugars' 后面应为单位 'g' (克)，'Aq' 应为 OCR 识别错误。"}
+  ],
+  "detected_ingredients": [],
+  "nutrition_facts": {
+    "calories": "120",
+ 
+2025-06-20 03:03:38 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1209
+2025-06-20 03:03:38 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "AO", "corrected": "0", "reason": "根据上下文，'Calories from Fat' 后面应为数值，'AO' 应为 OCR 识别错误。"},
+    {"original": "OZz", "corrected": "oz", "reason": "单位 'OZz
+2025-06-20 03:03:38 - core.gemini_health_analyzer - INFO - 从代码块中找到JSON字符串，长度: 1196
+2025-06-20 03:03:38 - core.gemini_health_analyzer - INFO - JSON字符串前300字符: {
+  "ocr_corrections": [
+    {"original": "AO", "corrected": "0", "reason": "根据上下文，'Calories from Fat' 后面应为数值，'AO' 应为 OCR 识别错误。"},
+    {"original": "OZz", "corrected": "oz", "reason": "单位 'OZz' 应为 'oz' (盎司)"},
+    {"original": "Te", "corrected": "g", "reason": "'Dietary Fiber' 后面应为单位 'g' (克)，'Te' 应为
+2025-06-20 03:03:38 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['ocr_corrections', 'detected_ingredients', 'nutrition_facts', 'overall_score', 'analysis', 'recommendations', 'health_warnings']

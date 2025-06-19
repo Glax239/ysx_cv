@@ -11,6 +11,11 @@ from typing import List, Dict, Tuple, Optional
 import logging
 from pathlib import Path
 import time
+import sys
+import os
+
+# 添加项目根目录到Python路径
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from config import MODEL_PATHS, DETECTION_CONFIG
 from utils.name_mapper import get_global_mapper
@@ -226,7 +231,7 @@ class SimpleDetectionEngine:
                 label = f'{class_name} {confidence:.2f}'
                 
                 # 使用中文字体渲染器绘制文本
-                font_size = 32  # 增大字体大小从20到32
+                font_size = 18  # 调小字体大小以减少标注文字占用空间
 
                 # 绘制标签背景和文本
                 result_image = draw_chinese_text_on_image(

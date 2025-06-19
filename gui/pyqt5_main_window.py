@@ -2027,11 +2027,23 @@ class PyQt5MainWindow(QMainWindow):
                     text_data.append({
                         'text': text_info.get('text', ''),
                         'bbox': text_info.get('bbox', []),
-                        'confidence': text_info.get('confidence', 0)
+                        'confidence': text_info.get('confidence', 0),
+                        'source': 'ocr'  # 标记数据来源
+                    })
+            
+            # 提取YOLO检测的文本区域信息
+            yolo_text_data = []
+            if self.detection_results and 'texts' in self.detection_results:
+                for text_region in self.detection_results['texts']:
+                    yolo_text_data.append({
+                        'bbox': text_region.get('bbox', []),
+                        'confidence': text_region.get('confidence', 0),
+                        'class_name': text_region.get('class_name', 'text'),
+                        'source': 'yolo'  # 标记数据来源
                     })
                     
-            # 启动健康分析线程
-            self.health_worker = HealthAnalysisWorker(self.gemini_analyzer, text_data, self.current_image_path)
+            # 启动健康分析线程，传递OCR和YOLO数据
+            self.health_worker = HealthAnalysisWorker(self.gemini_analyzer, text_data, self.current_image_path, yolo_text_data)
             self.health_worker.finished.connect(self.on_health_analysis_finished)
             self.health_worker.error.connect(self.on_health_analysis_error)
             
@@ -2082,6 +2094,10 @@ class PyQt5MainWindow(QMainWindow):
         
     def show_health_analysis_results(self, results):
         """显示健康分析结果"""
+        # 添加调试日志
+        self.logger.info(f"健康分析结果类型: {type(results)}")
+        self.logger.info(f"健康分析结果内容: {results}")
+        
         dialog = QDialog(self)
         dialog.setWindowTitle("🏥 健康分析结果")
         dialog.setMinimumSize(1000, 800)  # 增大初始窗口大小
@@ -2097,10 +2113,32 @@ class PyQt5MainWindow(QMainWindow):
         formatted_text = "🏥 产品健康分析报告\n"
         formatted_text += "=" * 50 + "\n\n"
         
+        # 添加状态信息
+        if results and 'status' in results:
+            formatted_text += f"📋 分析状态: {results['status']}\n\n"
+        
+        # 处理错误情况
+        if not results or results.get('status') == 'error':
+            formatted_text += "❌ 分析失败\n\n"
+            if results and 'message' in results:
+                formatted_text += f"错误信息: {results['message']}\n\n"
+            formatted_text += "调试信息:\n"
+            formatted_text += f"结果对象: {results}\n\n"
+        elif results.get('status') == 'disabled':
+            formatted_text += "⚠️ 健康分析功能未启用\n\n"
+            if results and 'message' in results:
+                formatted_text += f"说明: {results['message']}\n\n"
+        else:
+            # 正常情况下也显示一些调试信息
+            formatted_text += "🔍 调试信息:\n"
+            formatted_text += f"包含的字段: {list(results.keys()) if results else 'None'}\n\n"
+        
         if 'overall_score' in results and results['overall_score'] is not None:
             score = results['overall_score']
             score_emoji = "🟢" if score >= 7 else "🟡" if score >= 4 else "🔴"
             formatted_text += f"📊 总体健康评分: {score_emoji} {score}/10\n\n"
+        else:
+            formatted_text += "📊 总体健康评分: 未获取到评分数据\n\n"
         
         # OCR错误纠正
         if 'ocr_corrections' in results and results['ocr_corrections']:
@@ -2179,16 +2217,21 @@ class HealthAnalysisWorker(QThread):
     finished = pyqtSignal(dict)
     error = pyqtSignal(str)
     
-    def __init__(self, gemini_analyzer, text_data, image_path):
+    def __init__(self, gemini_analyzer, text_data, image_path, yolo_text_data=None):
         super().__init__()
         self.gemini_analyzer = gemini_analyzer
         self.text_data = text_data
         self.image_path = image_path
+        self.yolo_text_data = yolo_text_data or []
         
     def run(self):
         try:
-            # 调用Gemini进行健康分析
-            results = self.gemini_analyzer.analyze_product_health(self.text_data, self.image_path)
+            # 调用Gemini进行健康分析，传递OCR和YOLO数据
+            results = self.gemini_analyzer.analyze_product_health(
+                self.text_data, 
+                self.image_path, 
+                yolo_text_data=self.yolo_text_data
+            )
             self.finished.emit(results)
         except Exception as e:
             self.error.emit(str(e))

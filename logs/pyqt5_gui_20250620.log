@@ -134,3 +134,313 @@
 2025-06-20 01:17:54,693 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
 2025-06-20 01:18:10,193 - gui.pyqt5_main_window - INFO - 健康分析完成
 2025-06-20 01:18:10,194 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:19:21,937 - gui.pyqt5_main_window - INFO - 已加载ICO图标: f:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 01:19:21,937 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 01:19:22,544 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: f:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 01:19:22,546 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 01:19:24,808 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 01:20:21,518 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:20:21,518 - gui.pyqt5_main_window - INFO - 已加载图像: IMG20241003102813_jpg.rf.8d35ee6804a3f5cdbdcbc488eecfb1f7.jpg
+2025-06-20 01:20:24,127 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 01:20:24,129 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 01:20:24,292 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 01:20:24,337 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 01:20:26,266 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 01:20:26,266 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 01:22:47,311 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:22:47,311 - gui.pyqt5_main_window - INFO - 已加载图像: f3c94fe8d0628214ff8adfad48ceb38.png
+2025-06-20 01:22:50,261 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 01:22:50,263 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 01:22:50,335 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 01:22:50,461 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 01:23:01,638 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 01:23:01,638 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 01:23:24,122 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 01:23:24,122 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 01:23:44,642 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 01:23:44,643 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:24:20,660 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:24:20,660 - gui.pyqt5_main_window - INFO - 已加载图像: f3c94fe8d0628214ff8adfad48ceb38.png
+2025-06-20 01:24:25,852 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 01:24:25,853 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 01:24:25,918 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 01:24:26,040 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 01:24:37,118 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 01:24:37,119 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 01:25:20,515 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 01:25:20,515 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 01:25:34,443 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 01:25:34,443 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:26:27,734 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:26:28,878 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:26:29,389 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:26:29,862 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:26:30,528 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:26:31,069 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:26:31,495 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:26:31,689 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:26:31,869 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:26:34,691 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:26:34,692 - gui.pyqt5_main_window - INFO - 已加载图像: a0c8a61de48ed0e3ed2f14335830064.png
+2025-06-20 01:26:38,123 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 01:26:38,125 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 01:26:38,181 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 01:26:38,193 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 01:26:39,616 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 01:26:39,616 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 01:30:08,167 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:30:08,167 - gui.pyqt5_main_window - INFO - 已加载图像: 6303a9e313b3773cfe8022f1e42fd02.png
+2025-06-20 01:30:09,584 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 01:30:09,586 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 01:30:09,686 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 01:30:09,792 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 01:30:16,005 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:30:16,887 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:30:19,825 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:30:19,825 - gui.pyqt5_main_window - INFO - 已加载图像: 1750353747197.jpg
+2025-06-20 01:30:21,229 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:30:21,229 - gui.pyqt5_main_window - INFO - 已加载图像: 1750353747162.jpg
+2025-06-20 01:30:22,600 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 01:30:22,601 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 01:31:05,928 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 01:31:05,928 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 01:31:20,425 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 01:31:20,426 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:31:21,577 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 01:31:21,577 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 01:31:34,203 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 01:31:34,203 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:31:53,587 - gui.pyqt5_main_window - INFO - 已加载ICO图标: f:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 01:31:53,587 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 01:31:54,194 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: f:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 01:31:54,195 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 01:31:56,493 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 01:31:59,473 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:31:59,473 - gui.pyqt5_main_window - INFO - 已加载图像: 6303a9e313b3773cfe8022f1e42fd02.png
+2025-06-20 01:32:02,033 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 01:32:02,034 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 01:32:02,165 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 01:32:02,279 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 01:32:14,745 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 01:32:14,745 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 01:32:33,280 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 01:32:33,280 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 01:32:48,697 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 01:32:48,697 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:33:00,905 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 01:33:00,905 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 01:33:08,816 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 01:33:08,816 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:33:13,201 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:33:13,202 - gui.pyqt5_main_window - INFO - 已加载图像: e64b6eb793dce6a8a7826aa4d0b975a.jpg
+2025-06-20 01:33:17,042 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 01:33:17,044 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 01:33:17,145 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 01:33:17,517 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 01:33:37,413 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 01:33:37,414 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 01:34:00,260 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 01:34:00,260 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 01:34:19,907 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 01:34:19,908 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:34:41,515 - gui.pyqt5_main_window - INFO - 已加载ICO图标: f:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 01:34:41,515 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 01:34:42,126 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: f:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 01:34:42,127 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 01:34:44,510 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 01:35:26,015 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:35:26,016 - gui.pyqt5_main_window - INFO - 已加载图像: 624f4a16e69a7034be37b4610dba386.png
+2025-06-20 01:35:27,510 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 01:35:27,512 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 01:35:27,679 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 01:35:27,739 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 01:35:55,684 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 01:35:55,684 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 01:36:32,283 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 01:36:32,283 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 01:37:01,263 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 01:37:01,263 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:38:22,880 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 01:38:22,880 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 01:38:37,136 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 01:38:37,136 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:39:48,261 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:39:49,319 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 01:39:49,321 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 01:39:49,410 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 01:39:49,472 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 01:40:18,840 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 01:40:18,840 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 01:40:57,260 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 01:40:57,260 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 01:41:05,497 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 01:41:05,497 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:41:14,061 - __main__ - INFO - 已加载ICO图标: f:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 01:41:14,061 - __main__ - INFO - 已设置窗口和应用程序图标
+2025-06-20 01:41:14,733 - __main__ - INFO - 已设置状态栏图标: f:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 01:41:14,734 - __main__ - INFO - 正在初始化检测引擎...
+2025-06-20 01:41:17,420 - __main__ - INFO - 检测引擎初始化完成
+2025-06-20 01:42:30,552 - gui.pyqt5_main_window - INFO - 已加载ICO图标: f:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 01:42:30,552 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 01:42:31,151 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: f:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 01:42:31,152 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 01:42:33,535 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 01:42:41,973 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 01:42:41,973 - gui.pyqt5_main_window - INFO - 已加载图像: 624f4a16e69a7034be37b4610dba386.png
+2025-06-20 01:42:44,377 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 01:42:44,379 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 01:42:44,527 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 01:42:44,589 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 01:43:12,730 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 01:43:12,730 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 01:43:18,303 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 01:43:18,303 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 01:43:25,586 - gui.pyqt5_main_window - INFO - 健康分析结果类型: <class 'dict'>
+2025-06-20 01:43:25,586 - gui.pyqt5_main_window - INFO - 健康分析结果内容: {'status': 'success', 'timestamp': '2025-06-20T01:43:25.586014', 'overall_score': None, 'analysis': None, 'recommendations': None, 'detected_ingredients': [], 'nutrition_facts': {}, 'ocr_corrections': [], 'health_warnings': []}
+2025-06-20 01:43:43,520 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 01:43:43,520 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:44:52,129 - __main__ - INFO - 已加载ICO图标: f:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 01:44:52,130 - __main__ - INFO - 已设置窗口和应用程序图标
+2025-06-20 01:44:52,900 - __main__ - INFO - 已设置状态栏图标: f:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 01:44:52,902 - __main__ - INFO - 正在初始化检测引擎...
+2025-06-20 01:44:55,307 - __main__ - INFO - 检测引擎初始化完成
+2025-06-20 01:45:14,708 - __main__ - INFO - 结果已清除
+2025-06-20 01:45:14,708 - __main__ - INFO - 已加载图像: 624f4a16e69a7034be37b4610dba386.png
+2025-06-20 01:45:15,524 - __main__ - INFO - 进度条已显示
+2025-06-20 01:45:15,525 - __main__ - INFO - 正在进行商品检测...
+2025-06-20 01:45:15,680 - __main__ - INFO - 正在绘制检测结果...
+2025-06-20 01:45:15,745 - __main__ - INFO - 正在提取信息...
+2025-06-20 01:45:44,854 - __main__ - INFO - 检测完成
+2025-06-20 01:45:44,855 - __main__ - INFO - 进度条已隐藏
+2025-06-20 01:46:03,567 - __main__ - INFO - 正在进行健康分析...
+2025-06-20 01:46:03,568 - __main__ - INFO - 健康分析进度条已显示
+2025-06-20 01:46:09,931 - __main__ - INFO - 健康分析结果类型: <class 'dict'>
+2025-06-20 01:46:09,931 - __main__ - INFO - 健康分析结果内容: {'status': 'success', 'timestamp': '2025-06-20T01:46:09.930289', 'overall_score': None, 'analysis': None, 'recommendations': None, 'detected_ingredients': [], 'nutrition_facts': {}, 'ocr_corrections': [], 'health_warnings': []}
+2025-06-20 01:46:18,473 - __main__ - INFO - 健康分析完成
+2025-06-20 01:46:18,473 - __main__ - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:47:53,554 - __main__ - INFO - 正在进行健康分析...
+2025-06-20 01:47:53,555 - __main__ - INFO - 健康分析进度条已显示
+2025-06-20 01:48:00,629 - __main__ - INFO - 健康分析结果类型: <class 'dict'>
+2025-06-20 01:48:00,629 - __main__ - INFO - 健康分析结果内容: {'status': 'success', 'timestamp': '2025-06-20T01:48:00.629007', 'overall_score': None, 'analysis': None, 'recommendations': None, 'detected_ingredients': [], 'nutrition_facts': {}, 'ocr_corrections': [], 'health_warnings': []}
+2025-06-20 01:48:07,187 - __main__ - INFO - 健康分析完成
+2025-06-20 01:48:07,187 - __main__ - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 01:49:27,458 - __main__ - INFO - 已加载ICO图标: f:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 01:49:27,458 - __main__ - INFO - 已设置窗口和应用程序图标
+2025-06-20 01:49:28,295 - __main__ - INFO - 已设置状态栏图标: f:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 01:49:28,296 - __main__ - INFO - 正在初始化检测引擎...
+2025-06-20 01:49:30,741 - __main__ - INFO - 检测引擎初始化完成
+2025-06-20 01:49:38,421 - __main__ - INFO - 结果已清除
+2025-06-20 01:49:38,421 - __main__ - INFO - 已加载图像: 624f4a16e69a7034be37b4610dba386.png
+2025-06-20 01:49:39,345 - __main__ - INFO - 进度条已显示
+2025-06-20 01:49:39,347 - __main__ - INFO - 正在进行商品检测...
+2025-06-20 01:49:39,511 - __main__ - INFO - 正在绘制检测结果...
+2025-06-20 01:49:39,583 - __main__ - INFO - 正在提取信息...
+2025-06-20 01:50:08,065 - __main__ - INFO - 检测完成
+2025-06-20 01:50:08,065 - __main__ - INFO - 进度条已隐藏
+2025-06-20 01:50:53,988 - __main__ - INFO - 正在进行健康分析...
+2025-06-20 01:50:53,988 - __main__ - INFO - 健康分析进度条已显示
+2025-06-20 01:51:00,417 - __main__ - INFO - 健康分析结果类型: <class 'dict'>
+2025-06-20 01:51:00,418 - __main__ - INFO - 健康分析结果内容: {'status': 'success', 'timestamp': '2025-06-20T01:51:00.417680', 'overall_score': 2, 'analysis': '该产品热量极高（930卡路里），糖分含量惊人（156克），远超每日推荐摄入量。脂肪含量（4.5克）信息有限，无法判断其类型（饱和脂肪、不饱和脂肪等），但需要进一步确认。蛋白质含量（320毫克）过低。钠含量缺失，无法评估。总的来说，该产品的营养成分比例严重失衡，健康风险极高。高热量、高糖饮食可能导致肥胖、糖尿病、心血管疾病等多种健康问题。', 'recommendations': ['避免食用此类高热量、高糖产品。', '选择低糖、低脂、高纤维、富含蛋白质和维生素的食物。', '控制每日总热量摄入，保持均衡饮食。', '多喝水，增加运动量。'], 'detected_ingredients': [], 'nutrition_facts': {'calories': '930', 'protein': '320mg', 'fat': '4.5g', 'carbohydrates': '340g', 'sodium': '?', 'sugar': '156g'}, 'ocr_corrections': [{'original': 'SUgars', 'corrected': 'Sugars', 'reason': '拼写错误'}, {'original': '35moq', 'corrected': '35g', 'reason': '推测为克数单位'}, {'original': '510mq', 'corrected': '510mg', 'reason': '推测为毫克单位'}, {'original': '320mc', 'corrected': '320mg', 'reason': '推测为毫克单位'}, {'original': 'Og', 'corrected': '0g', 'reason': '字符识别错误，应为0克'}, {'original': '‘Og', 'corrected': '0g', 'reason': '字符识别错误，应为0克'}, {'original': 'Pipe', 'corrected': '?', 'reason': '无法识别，可能为OCR错误'}, {'original': '9¢', 'corrected': '9g', 'reason': '推测为克数单位'}, {'original': 'De6GIr', 'corrected': '?', 'reason': '无法识别，可能为OCR错误'}, {'original': 'Ag', 'corrected': '?', 'reason': '无法识别，可能为OCR错误'}, {'original': '{227g]', 'corrected': '227g', 'reason': '去除多余的括号'}, {'original': '4.50', 'corrected': '4.5g', 'reason': '推测为克数单位'}], 'health_warnings': ['该产品糖分含量极高，长期食用可能导致肥胖、糖尿病等健康问题。', '该产品热量极高，不适合作为日常饮食的一部分。', '部分营养信息缺失，建议查看完整营养成分表。']}
+2025-06-20 02:02:00,581 - __main__ - INFO - 健康分析完成
+2025-06-20 02:02:00,581 - __main__ - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 02:02:07,277 - __main__ - INFO - 已加载ICO图标: f:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 02:02:07,277 - __main__ - INFO - 已设置窗口和应用程序图标
+2025-06-20 02:02:07,918 - __main__ - INFO - 已设置状态栏图标: f:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 02:02:07,919 - __main__ - INFO - 正在初始化检测引擎...
+2025-06-20 02:02:10,235 - __main__ - INFO - 检测引擎初始化完成
+2025-06-20 02:09:44,601 - __main__ - INFO - 结果已清除
+2025-06-20 02:09:44,601 - __main__ - INFO - 已加载图像: 624f4a16e69a7034be37b4610dba386.png
+2025-06-20 02:09:45,836 - __main__ - INFO - 进度条已显示
+2025-06-20 02:09:45,837 - __main__ - INFO - 正在进行商品检测...
+2025-06-20 02:09:46,011 - __main__ - INFO - 正在绘制检测结果...
+2025-06-20 02:09:46,096 - __main__ - INFO - 正在提取信息...
+2025-06-20 02:10:15,461 - __main__ - INFO - 检测完成
+2025-06-20 02:10:15,461 - __main__ - INFO - 进度条已隐藏
+2025-06-20 02:10:40,289 - __main__ - INFO - 正在进行健康分析...
+2025-06-20 02:10:40,289 - __main__ - INFO - 健康分析进度条已显示
+2025-06-20 02:10:47,324 - __main__ - INFO - 健康分析结果类型: <class 'dict'>
+2025-06-20 02:10:47,325 - __main__ - INFO - 健康分析结果内容: {'status': 'success', 'timestamp': '2025-06-20T02:10:47.324247', 'overall_score': 5, 'analysis': '```json\n{\n  "ocr_corrections": [\n    {"original": "SUgars", "corrected": "Sugars", "reason": "拼写错误"},\n    {"original": "35moq", "corrected": "35mg", "reason": "推测为毫克(mg), OCR识别错误"},\n    {"original": "320mc", "corrected": "32g", "reason": "推测为克(g), OCR识别错误"},\n    {"original": "510mq", "corrected": "510mg", "reason": "推测为毫克(mg), OCR识别错误"},\n    {"original": "De6GIr", "corrected": "Serving size", "reason": "上下文推断，应为\'Serving size\'"},\n    {"original": "9¢", "corrected": "9g", "reason": "推测为克(g), OCR识别错误，\'¢\'可能为\'g\'的变形"},\n    {"original": "‘Og", "corrected": "0g", "reason": "推测为0克(g), OCR识别错误"},\n    {"original": "Pipe", "corrected": "Per", "reason": "上下文推断，应为\'Per\'，表示每份"},\n    {"original": "Ag", "corrected": "g", "reason": "冗余字符，应仅为\'g\'"},\n\n\n  ],\n  "detected_ingredients": [],\n  "nutrition_facts": {\n    "calories": "930",\n    "protein": "32g",\n    "fat": "4.5g (推测)",\n    "carbohydrates": "340g",\n    "sodium": "数据缺失",\n    "sugar": "156g (其中添加糖156g)"\n  },\n  "overall_score": 2,\n  "analysis": "该产品营养成分信息严重不完整，但从已知信息来看，健康程度极低。单份热量高达930卡路里，远超每日推荐摄入量。碳水化合物含量极高(340g)，且添加糖含量高达156g，这会显著增加血糖和胰岛素水平，增加患慢性疾病的风险，例如肥胖、糖尿病和心血管疾病。脂肪含量虽然未知，但考虑到高热量和高碳水化合物，推测脂肪含量也可能偏高。蛋白质含量32g相对较高，但不足以弥补其他营养成分的不足。钠含量缺失，无法评估其对血压的影响。缺乏维生素、矿物质等微量营养素的信息，也表明该产品营养价值低。总而言之，该产品营养成分比例严重失衡，极度不健康，不建议食用。",\n  "recommendations": [\n    "避免食用此类高热量、高糖、高碳水化合物的食品。",\n    "选择营养均衡、低糖、低钠、低反式脂肪的食物，例如水果、蔬菜、全谷物、瘦肉蛋白和低脂乳制品。",\n    "阅读食品标签，关注营养成分表中的关键信息，例如热量、脂肪、糖和钠的含量。",\n    "咨询注册营养师或医生，制定个性化的健康饮食计划。"\n  ],\n  "health_warnings": [\n    "高糖分摄入可能导致肥胖、糖尿病、心血管疾病等慢性疾病。",\n    "高热量摄入可能导致体重增加和肥胖。",\n    "缺乏关键营养素信息，无法评估其对整体健康的长期影响。"\n  ]\n}\n```\n', 'recommendations': [], 'detected_ingredients': [], 'nutrition_facts': {}, 'ocr_corrections': [], 'health_warnings': []}
+2025-06-20 02:11:50,631 - __main__ - INFO - 健康分析完成
+2025-06-20 02:11:50,632 - __main__ - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 02:12:06,114 - __main__ - INFO - 结果已清除
+2025-06-20 02:12:06,114 - __main__ - INFO - 已加载图像: 1750353747197.jpg
+2025-06-20 02:12:07,382 - __main__ - INFO - 结果已清除
+2025-06-20 02:12:07,382 - __main__ - INFO - 已加载图像: 1750353747162.jpg
+2025-06-20 02:12:09,471 - __main__ - INFO - 结果已清除
+2025-06-20 02:12:09,471 - __main__ - INFO - 已加载图像: 1750353747197.jpg
+2025-06-20 02:12:10,316 - __main__ - INFO - 结果已清除
+2025-06-20 02:12:10,316 - __main__ - INFO - 已加载图像: 1750353980704.jpg
+2025-06-20 02:12:11,350 - __main__ - INFO - 结果已清除
+2025-06-20 02:12:11,350 - __main__ - INFO - 已加载图像: 1750353980716.jpg
+2025-06-20 02:12:11,920 - __main__ - INFO - 结果已清除
+2025-06-20 02:12:11,920 - __main__ - INFO - 已加载图像: 1750354175637.jpg
+2025-06-20 02:22:57,871 - __main__ - INFO - 进度条已显示
+2025-06-20 02:22:57,873 - __main__ - INFO - 正在进行商品检测...
+2025-06-20 02:22:57,968 - __main__ - INFO - 正在绘制检测结果...
+2025-06-20 02:22:58,025 - __main__ - INFO - 正在提取信息...
+2025-06-20 02:23:26,314 - __main__ - INFO - 检测完成
+2025-06-20 02:23:26,314 - __main__ - INFO - 进度条已隐藏
+2025-06-20 02:23:39,281 - __main__ - INFO - 结果已清除
+2025-06-20 02:23:39,281 - __main__ - INFO - 已加载图像: f76766c2d9c10a936bae843df1e5ecf.png
+2025-06-20 02:23:43,358 - __main__ - INFO - 进度条已显示
+2025-06-20 02:23:43,360 - __main__ - INFO - 正在进行商品检测...
+2025-06-20 02:23:43,461 - __main__ - INFO - 正在绘制检测结果...
+2025-06-20 02:23:43,631 - __main__ - INFO - 正在提取信息...
+2025-06-20 02:24:17,821 - __main__ - INFO - 检测完成
+2025-06-20 02:24:17,821 - __main__ - INFO - 进度条已隐藏
+2025-06-20 02:25:22,983 - __main__ - INFO - 正在进行健康分析...
+2025-06-20 02:25:22,983 - __main__ - INFO - 健康分析进度条已显示
+2025-06-20 02:25:29,234 - __main__ - INFO - 健康分析结果类型: <class 'dict'>
+2025-06-20 02:25:29,234 - __main__ - INFO - 健康分析结果内容: {'status': 'success', 'timestamp': '2025-06-20T02:25:29.233329', 'overall_score': 3, 'analysis': '这份营养成分表显示该产品每份（3.5盎司，99克）含有120卡路里，4.5克脂肪，159克碳水化合物，620毫克钠和2克糖。3.9克纤维含量相对较高，但高碳水化合物、高钠和高脂肪含量令人担忧。缺少蛋白质含量信息，无法完整评估营养价值。高钠含量会增加患高血压的风险，高脂肪和高碳水化合物含量可能导致体重增加和血糖控制问题。  由于缺少关于添加剂、防腐剂和人工色素的信息，无法完全评估其对健康的潜在影响。', 'recommendations': ['减少该产品的摄入量，因为它高脂肪、高钠和高碳水化合物。', '选择更健康的选择，例如水果、蔬菜、全谷物和瘦肉蛋白。', '仔细阅读完整的配料表，以了解添加剂、防腐剂和人工色素的成分。'], 'detected_ingredients': [], 'nutrition_facts': {'calories': '120', 'protein': None, 'fat': '4.5g', 'carbohydrates': '159g', 'sodium': '620mg', 'sugar': '2g'}, 'ocr_corrections': [{'original': 'AO', 'corrected': '40', 'reason': "根据上下文，'Calories from Fat' 后面的数值应为热量值，推测为40而非AO"}, {'original': 'OZz', 'corrected': 'oz', 'reason': '单位应为盎司(oz), OCR识别错误'}, {'original': 'Te', 'corrected': '3g', 'reason': "根据上下文，'Fiber' 后面应为纤维含量，推测为3g而非Te"}, {'original': 'Aq', 'corrected': '2g', 'reason': "根据上下文，'Total Sugars' 后面应为糖分含量，推测为2g而非Aq"}, {'original': '39,', 'corrected': '3.9', 'reason': '纤维含量应为小数，推测为3.9而非39'}, {'original': 'T%', 'corrected': '5%', 'reason': '根据Total Fat 的百分比3%，推测此处应为5%'}, {'original': '《9', 'corrected': 'g', 'reason': '推测为克(g)的单位符号，OCR识别错误'}], 'health_warnings': ['高钠含量可能导致高血压。', '高脂肪和高碳水化合物含量可能导致体重增加和血糖控制问题。', '缺乏蛋白质信息，无法全面评估营养价值。']}
+2025-06-20 02:38:46,118 - __main__ - INFO - 健康分析完成
+2025-06-20 02:38:46,118 - __main__ - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 02:48:16,130 - gui.pyqt5_main_window - INFO - 已加载ICO图标: f:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 02:48:16,130 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 02:48:17,720 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: f:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 02:48:17,721 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 02:48:20,301 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 02:49:07,354 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 02:49:07,354 - gui.pyqt5_main_window - INFO - 已加载图像: IMG20241003103255_jpg.rf.35b2b9371325d355b7b8fe52abfbec77.jpg
+2025-06-20 02:49:08,553 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 02:49:08,554 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 02:49:08,716 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 02:49:08,742 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 02:49:13,364 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 02:49:13,364 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 02:49:41,965 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 02:49:41,966 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0005_jpg.rf.6ba45a13264c50ebd26a1a981eba8751.jpg
+2025-06-20 02:49:42,485 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 02:49:42,485 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0005_jpg.rf.c6ccff39030f89d825df467a1891e279.jpg
+2025-06-20 02:49:54,908 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 02:49:54,908 - gui.pyqt5_main_window - INFO - 已加载图像: f76766c2d9c10a936bae843df1e5ecf.png
+2025-06-20 02:49:57,444 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 02:49:57,445 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 02:49:57,555 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 02:49:57,714 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 02:50:31,357 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 02:50:31,357 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 02:51:17,505 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 02:51:17,505 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 02:51:24,750 - gui.pyqt5_main_window - INFO - 健康分析结果类型: <class 'dict'>
+2025-06-20 02:51:24,750 - gui.pyqt5_main_window - INFO - 健康分析结果内容: {'status': 'success', 'timestamp': '2025-06-20T02:51:24.750063', 'overall_score': 3, 'analysis': '这份营养成分表信息不完整，缺少蛋白质含量以及部分成分的具体信息（例如，没有列出饱和脂肪和反式脂肪的具体克数，仅给出百分比）。然而，根据现有数据，该产品健康程度较低。\n\n主要问题在于：\n\n* **高碳水化合物含量 (159g):**  这对于单份食物来说非常高，可能导致血糖波动和体重增加。需要进一步了解碳水化合物的类型（例如，是否主要来自精制碳水化合物）。\n* **高钠含量 (620mg):**  超过每日建议摄入量的26%，长期高钠摄入会增加患高血压的风险。\n* **高脂肪含量 (4.5g):**  虽然没有具体说明饱和脂肪和反式脂肪的含量，但总脂肪含量相对较高，需要进一步了解其构成。\n* **糖分含量 (6g):**  糖分含量中等，但需要结合其他信息判断其对健康的影响。\n* **纤维含量 (3.9g):** 纤维含量相对较好，有助于消化和肠道健康。\n\n缺少的信息包括蛋白质含量，以及饱和脂肪和反式脂肪的具体克数，这些信息对于全面评估产品的健康程度至关重要。此外，成分列表的缺失也限制了对潜在添加剂、防腐剂和人工色素的评估。', 'recommendations': ['建议查看完整的产品成分列表，了解所有添加剂、防腐剂和人工色素。', '控制该产品的摄入量，避免过量摄入碳水化合物、钠和脂肪。', '选择更健康的食物替代品，例如富含蛋白质和纤维，低钠低糖低脂肪的食物。', '如果需要补充能量，选择更健康的方式，例如水果、蔬菜、全谷物等。'], 'detected_ingredients': [], 'nutrition_facts': {'calories': '120', 'protein': None, 'fat': '4.5g', 'carbohydrates': '159g', 'sodium': '620mg', 'sugar': '6g'}, 'ocr_corrections': [{'original': 'AO', 'corrected': '40', 'reason': "根据上下文，'Calories from Fat' 后面应该是数值，'AO' 可能是'40' 的OCR识别错误"}, {'original': 'OZz', 'corrected': 'oz', 'reason': "单位'盎司'的拼写错误"}, {'original': 'Te', 'corrected': '3g', 'reason': "根据上下文，'Fiber' 后面应该是数值，'Te' 可能是'3g' 的OCR识别错误"}, {'original': 'Aq', 'corrected': '6g', 'reason': "根据上下文，'Total Sugars' 后面应该是数值，'Aq' 可能是'6g' 的OCR识别错误，但由于'6g'已存在，此处可能为重复或错误"}, {'original': '《9', 'corrected': 'g', 'reason': "可能是'g' (克) 的OCR识别错误"}, {'original': '39,', 'corrected': '3.9', 'reason': "Fiber 含量应为小数，'39,' 可能是'3.9' 的OCR识别错误"}], 'health_warnings': ['高钠含量可能增加高血压风险。', '高碳水化合物含量可能导致血糖波动和体重增加。', '高脂肪含量可能增加心血管疾病风险（需进一步了解脂肪构成）。', '信息不完整，无法进行全面的健康评估。']}
+2025-06-20 02:52:48,771 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 02:52:48,772 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 03:02:07,939 - gui.pyqt5_main_window - INFO - 已加载ICO图标: f:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 03:02:07,939 - gui.pyqt5_main_window - INFO - 已设置窗口和应用程序图标
+2025-06-20 03:02:08,681 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: f:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 03:02:08,683 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-20 03:02:12,188 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-20 03:02:31,346 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-20 03:02:31,347 - gui.pyqt5_main_window - INFO - 已加载图像: f76766c2d9c10a936bae843df1e5ecf.png
+2025-06-20 03:02:34,285 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-20 03:02:34,287 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-20 03:02:34,457 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-20 03:02:34,651 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-20 03:03:09,066 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-20 03:03:09,066 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-20 03:03:32,615 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-20 03:03:32,615 - gui.pyqt5_main_window - INFO - 健康分析进度条已显示
+2025-06-20 03:03:38,147 - gui.pyqt5_main_window - INFO - 健康分析结果类型: <class 'dict'>
+2025-06-20 03:03:38,147 - gui.pyqt5_main_window - INFO - 健康分析结果内容: {'status': 'success', 'timestamp': '2025-06-20T03:03:38.147151', 'overall_score': 4, 'analysis': '这份营养成分表显示该产品热量中等，蛋白质含量尚可。然而，脂肪含量较高（4.5g），饱和脂肪（0.5g）和钠含量（620mg）也偏高，这可能会增加患心血管疾病的风险。碳水化合物含量极高（159g），需要进一步了解其来源（例如，是否主要来自精制碳水化合物）。糖分含量由于OCR识别错误无法确定，但需要关注。  该产品不含显著量的反式脂肪，这是一个积极因素。由于缺少关于成分的具体信息，无法评估添加剂、防腐剂和人工色素等。', 'recommendations': ['控制食用量，避免摄入过多的脂肪和钠。', '选择更健康的替代品，例如低脂、低钠的产品。', '关注糖分含量，选择低糖或无糖产品。', '阅读完整配料表，了解成分信息，选择更天然、少加工的产品。', '如果经常食用此类产品，建议咨询医生或注册营养师，评估其对您健康的影响。'], 'detected_ingredients': [], 'nutrition_facts': {'calories': '120', 'protein': '6g', 'fat': '4.5g', 'carbohydrates': '159g', 'sodium': '620mg', 'sugar': 'g (数值缺失)'}, 'ocr_corrections': [{'original': 'AO', 'corrected': '0', 'reason': "根据上下文，'Calories from Fat' 后面应为数值，'AO' 应为 OCR 识别错误。"}, {'original': 'OZz', 'corrected': 'oz', 'reason': "单位 'OZz' 应为 'oz' (盎司)"}, {'original': 'Te', 'corrected': 'g', 'reason': "'Dietary Fiber' 后面应为单位 'g' (克)，'Te' 应为 OCR 识别错误。"}, {'original': 'Aq', 'corrected': 'g', 'reason': "'Sugars' 后面应为单位 'g' (克)，'Aq' 应为 OCR 识别错误。"}], 'health_warnings': ['高脂肪和高钠含量可能增加患心血管疾病的风险。', '高碳水化合物含量可能导致血糖波动，尤其如果主要来自精制碳水化合物。', '糖分含量不明，需要进一步了解。', '缺乏成分信息，无法完全评估潜在的健康风险。']}
+2025-06-20 03:04:23,519 - gui.pyqt5_main_window - INFO - 健康分析完成
+2025-06-20 03:04:23,520 - gui.pyqt5_main_window - INFO - 健康分析完成，进度条已隐藏

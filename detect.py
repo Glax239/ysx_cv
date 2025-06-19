@@ -81,7 +81,7 @@ for result in results:
             image,
             label,
             (x1, max(y1 - 45, 0)),  # 增大文字位置偏移从30到45
-            font_size=32,  # 增大字体大小从20到32
+            font_size=18,  # 调小字体大小以减少标注文字占用空间
             color=(255, 255, 255),  # 白色文字
             background_color=tuple(color)  # 使用检测框同色背景
         )
