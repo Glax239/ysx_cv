@@ -14,6 +14,7 @@ import logging
 from datetime import datetime
 import threading
 from typing import Dict, List, Any
+import glob
 
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
@@ -22,8 +23,8 @@ from PyQt5.QtWidgets import (
     QMessageBox, QStatusBar, QFrame, QScrollArea, QTableWidget, 
     QTableWidgetItem, QHeaderView, QGroupBox, QSizePolicy, QButtonGroup, QDialog
 )
-from PyQt5.QtCore import Qt, QThread, pyqtSignal, QTimer, QSize, QTextCodec
-from PyQt5.QtGui import QPixmap, QFont, QIcon, QPalette, QColor, QImage, QFontDatabase
+from PyQt5.QtCore import Qt, QThread, pyqtSignal, QTimer, QSize, QTextCodec, QMimeData, QUrl
+from PyQt5.QtGui import QPixmap, QFont, QIcon, QPalette, QColor, QImage, QFontDatabase, QDragEnterEvent, QDropEvent, QKeyEvent
 
 # 添加项目根目录到Python路径
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -34,6 +35,99 @@ from core.simple_information_extractor import SimpleInformationExtractor
 from core.image_processor import ImageProcessor
 from core.gemini_health_analyzer import GeminiHealthAnalyzer
 from utils.text_output import TextOutputManager
+
+class DragDropImageLabel(QLabel):
+    """支持拖拽功能的图像标签"""
+    imageDropped = pyqtSignal(str)  # 图像拖拽信号
+    
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setAcceptDrops(True)
+        self.setStyleSheet("""
+            QLabel {
+                border: 4px dashed #c0c0c0;
+                background-color: white;
+                min-height: 800px;
+                font-size: 24px;
+                color: #6c757d;
+                border-radius: 12px;
+                padding: 20px;
+            }
+            QLabel:hover {
+                border-color: #007bff;
+                background-color: #f8f9fa;
+            }
+        """)
+        self.setText("📷 请选择图像文件\n\n点击'打开图像'按钮开始\n或直接拖拽图像文件到此处")
+    
+    def dragEnterEvent(self, event: QDragEnterEvent):
+        """拖拽进入事件"""
+        if event.mimeData().hasUrls():
+            urls = event.mimeData().urls()
+            if len(urls) == 1:
+                file_path = urls[0].toLocalFile()
+                if self.is_image_file(file_path):
+                    event.acceptProposedAction()
+                    self.setStyleSheet("""
+                        QLabel {
+                            border: 4px solid #28a745;
+                            background-color: #e8f5e9;
+                            min-height: 800px;
+                            font-size: 24px;
+                            color: #155724;
+                            border-radius: 12px;
+                            padding: 20px;
+                        }
+                    """)
+                    return
+        event.ignore()
+    
+    def dragLeaveEvent(self, event):
+        """拖拽离开事件"""
+        self.setStyleSheet("""
+            QLabel {
+                border: 4px dashed #c0c0c0;
+                background-color: white;
+                min-height: 800px;
+                font-size: 24px;
+                color: #6c757d;
+                border-radius: 12px;
+                padding: 20px;
+            }
+            QLabel:hover {
+                border-color: #007bff;
+                background-color: #f8f9fa;
+            }
+        """)
+    
+    def dropEvent(self, event: QDropEvent):
+        """拖拽放下事件"""
+        if event.mimeData().hasUrls():
+            urls = event.mimeData().urls()
+            if len(urls) == 1:
+                file_path = urls[0].toLocalFile()
+                if self.is_image_file(file_path):
+                    self.imageDropped.emit(file_path)
+                    event.acceptProposedAction()
+                    # 恢复正常样式
+                    self.setStyleSheet("""
+                        QLabel {
+                            border: 4px solid #c0c0c0;
+                            background-color: white;
+                            min-height: 800px;
+                            font-size: 24px;
+                            color: #6c757d;
+                            border-radius: 12px;
+                            padding: 20px;
+                        }
+                    """)
+                    return
+        event.ignore()
+    
+    def is_image_file(self, file_path):
+        """检查是否为图像文件"""
+        image_extensions = {'.jpg', '.jpeg', '.png', '.bmp', '.tiff', '.gif', '.webp'}
+        return Path(file_path).suffix.lower() in image_extensions
 
 class DetectionWorker(QThread):
     """检测工作线程"""
@@ -146,6 +240,10 @@ class PyQt5MainWindow(QMainWindow):
         self.health_analysis_results = None  # 健康分析结果
         self.zoom_factor = 1.0
         self.current_scenario = "personal_shopping"  # 默认场景
+        
+        # 图像切换相关变量
+        self.image_list = []  # 当前文件夹中的图像列表
+        self.current_image_index = 0  # 当前图像在列表中的索引
         
     def setup_window_icon(self):
         """设置窗口图标"""
@@ -643,21 +741,69 @@ class PyQt5MainWindow(QMainWindow):
         image_layout.setContentsMargins(10, 30, 10, 10)
         image_layout.setSpacing(10)
         
-        # 图像显示标签
-        self.image_label = QLabel()
-        self.image_label.setAlignment(Qt.AlignCenter)
-        self.image_label.setStyleSheet("""
-            QLabel {
-                border: 4px solid #c0c0c0;
-                background-color: white;
-                min-height: 800px;
-                font-size: 24px;
-                color: #6c757d;
-                border-radius: 12px;
-                padding: 20px;
+        # 图像显示区域布局（添加左右切换按钮）
+        image_display_layout = QHBoxLayout()
+        image_display_layout.setSpacing(10)
+        
+        # 左切换按钮
+        self.btn_prev_image = QPushButton("◀")
+        self.btn_prev_image.setMaximumWidth(60)
+        self.btn_prev_image.setMinimumHeight(100)
+        self.btn_prev_image.setEnabled(False)
+        self.btn_prev_image.setStyleSheet("""
+            QPushButton {
+                font-size: 32px;
+                font-weight: bold;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                padding: 10px;
+            }
+            QPushButton:hover {
+                background-color: #0056b3;
+            }
+            QPushButton:disabled {
+                background-color: #cccccc;
+                color: #666666;
             }
         """)
-        self.image_label.setText("📷 请选择图像文件\n\n点击'打开图像'按钮开始")
+        self.btn_prev_image.clicked.connect(self.previous_image)
+        
+        # 图像显示标签（使用自定义的拖拽标签）
+        self.image_label = DragDropImageLabel()
+        self.image_label.setAlignment(Qt.AlignCenter)
+        self.image_label.imageDropped.connect(self.load_image_from_path)
+        
+        # 右切换按钮
+        self.btn_next_image = QPushButton("▶")
+        self.btn_next_image.setMaximumWidth(60)
+        self.btn_next_image.setMinimumHeight(100)
+        self.btn_next_image.setEnabled(False)
+        self.btn_next_image.setStyleSheet("""
+            QPushButton {
+                font-size: 32px;
+                font-weight: bold;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                padding: 10px;
+            }
+            QPushButton:hover {
+                background-color: #0056b3;
+            }
+            QPushButton:disabled {
+                background-color: #cccccc;
+                color: #666666;
+            }
+        """)
+        self.btn_next_image.clicked.connect(self.next_image)
+        
+        # 添加到图像显示布局
+        image_display_layout.addWidget(self.btn_prev_image, 0)
+        image_display_layout.addWidget(self.image_label, 1)
+        image_display_layout.addWidget(self.btn_next_image, 0)
         
         # 图像控制按钮
         controls_layout = QHBoxLayout()
@@ -684,8 +830,19 @@ class PyQt5MainWindow(QMainWindow):
         controls_layout.addWidget(self.btn_original_size)
         controls_layout.addStretch(1)
         
-        image_layout.addWidget(self.image_label, 1)  # 给图像标签更多空间
-        image_layout.addLayout(controls_layout, 0)   # 控制按钮固定高度
+        # 图像信息标签
+        self.image_info_label = QLabel("")
+        self.image_info_label.setStyleSheet("""
+            QLabel {
+                font-size: 18px;
+                color: #666666;
+                padding: 5px;
+            }
+        """)
+        
+        image_layout.addLayout(image_display_layout, 1)  # 给图像显示区域更多空间
+        image_layout.addWidget(self.image_info_label, 0)  # 图像信息
+        image_layout.addLayout(controls_layout, 0)       # 控制按钮固定高度
         
         parent_splitter.addWidget(image_frame)
         
@@ -1019,33 +1176,112 @@ class PyQt5MainWindow(QMainWindow):
             self,
             "选择图像文件",
             "",
-            "图像文件 (*.jpg *.jpeg *.png *.bmp *.tiff *.gif);;所有文件 (*.*)"
+            "图像文件 (*.jpg *.jpeg *.png *.bmp *.tiff *.gif *.webp);;所有文件 (*.*)"
         )
 
         if file_path:
+            self.load_image_from_path(file_path)
+
+    def load_image_from_path(self, file_path):
+        """从指定路径加载图像（支持拖拽调用）"""
+        try:
+            # 读取图像
+            self.current_image = cv2.imread(file_path)
+            if self.current_image is None:
+                raise ValueError("无法读取图像文件")
+
+            self.current_image_path = file_path
+
+            # 更新图像列表和索引
+            self.update_image_list(file_path)
+
+            # 显示图像
+            self.display_image(self.current_image)
+
+            # 启用相关按钮
+            if self.detection_engine is not None:
+                self.btn_detect.setEnabled(True)
+
+            # 清除之前的结果
+            self.clear_results()
+
+            self.update_status(f"已加载图像: {Path(file_path).name}")
+
+        except Exception as e:
+            self.logger.error(f"加载图像失败: {e}")
+            QMessageBox.critical(self, "错误", f"加载图像失败:\n{e}")
+
+    def update_image_list(self, current_file_path):
+        """更新图像列表"""
+        try:
+            current_dir = Path(current_file_path).parent
+            image_extensions = ['*.jpg', '*.jpeg', '*.png', '*.bmp', '*.tiff', '*.gif', '*.webp']
+            
+            # 收集所有图像文件
+            self.image_list = []
+            for ext in image_extensions:
+                self.image_list.extend(glob.glob(str(current_dir / ext)))
+                self.image_list.extend(glob.glob(str(current_dir / ext.upper())))
+            
+            # 排序并去重
+            self.image_list = sorted(list(set(self.image_list)))
+            
+            # 找到当前图像的索引
             try:
-                # 读取图像
-                self.current_image = cv2.imread(file_path)
-                if self.current_image is None:
-                    raise ValueError("无法读取图像文件")
+                self.current_image_index = self.image_list.index(current_file_path)
+            except ValueError:
+                self.current_image_index = 0
+            
+            # 更新切换按钮状态
+            self.update_navigation_buttons()
+            
+            # 更新图像信息
+            self.update_image_info()
+            
+        except Exception as e:
+            self.logger.error(f"更新图像列表失败: {e}")
+            self.image_list = [current_file_path]
+            self.current_image_index = 0
 
-                self.current_image_path = file_path
+    def update_navigation_buttons(self):
+        """更新导航按钮状态"""
+        has_multiple_images = len(self.image_list) > 1
+        self.btn_prev_image.setEnabled(has_multiple_images and self.current_image_index > 0)
+        self.btn_next_image.setEnabled(has_multiple_images and self.current_image_index < len(self.image_list) - 1)
 
-                # 显示图像
-                self.display_image(self.current_image)
+    def update_image_info(self):
+        """更新图像信息显示"""
+        if self.image_list:
+            current_name = Path(self.image_list[self.current_image_index]).name
+            total_count = len(self.image_list)
+            current_num = self.current_image_index + 1
+            info_text = f"📁 {current_name} ({current_num}/{total_count})"
+            
+            if self.current_image is not None:
+                height, width = self.current_image.shape[:2]
+                info_text += f" | 📏 {width}×{height}"
+            
+            self.image_info_label.setText(info_text)
+        else:
+            self.image_info_label.setText("")
 
-                # 启用相关按钮
-                if self.detection_engine is not None:
-                    self.btn_detect.setEnabled(True)
+    def previous_image(self):
+        """切换到上一张图像"""
+        if self.current_image_index > 0:
+            self.current_image_index -= 1
+            self.load_image_by_index(self.current_image_index)
 
-                # 清除之前的结果
-                self.clear_results()
+    def next_image(self):
+        """切换到下一张图像"""
+        if self.current_image_index < len(self.image_list) - 1:
+            self.current_image_index += 1
+            self.load_image_by_index(self.current_image_index)
 
-                self.update_status(f"已加载图像: {Path(file_path).name}")
-
-            except Exception as e:
-                self.logger.error(f"打开图像失败: {e}")
-                QMessageBox.critical(self, "错误", f"打开图像失败:\n{e}")
+    def load_image_by_index(self, index):
+        """根据索引加载图像"""
+        if 0 <= index < len(self.image_list):
+            file_path = self.image_list[index]
+            self.load_image_from_path(file_path)
 
     def display_image(self, image):
         """显示图像"""
@@ -1856,6 +2092,24 @@ class PyQt5MainWindow(QMainWindow):
         layout.addWidget(close_btn)
         
         dialog.exec_()
+
+    def keyPressEvent(self, event: QKeyEvent):
+        """处理键盘事件"""
+        if event.key() == Qt.Key_Left:
+            # 左箭头键：上一张图片
+            if self.btn_prev_image.isEnabled():
+                self.previous_image()
+        elif event.key() == Qt.Key_Right:
+            # 右箭头键：下一张图片
+            if self.btn_next_image.isEnabled():
+                self.next_image()
+        elif event.key() == Qt.Key_Space:
+            # 空格键：开始检测
+            if self.btn_detect.isEnabled():
+                self.start_detection()
+        else:
+            # 其他键盘事件交给父类处理
+            super().keyPressEvent(event)
 
 class HealthAnalysisWorker(QThread):
     """健康分析工作线程"""
