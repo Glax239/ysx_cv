@@ -20,10 +20,10 @@ from PyQt5.QtWidgets import (
     QGridLayout, QSplitter, QTabWidget, QTreeWidget, QTreeWidgetItem,
     QTextEdit, QLabel, QPushButton, QComboBox, QProgressBar, QFileDialog,
     QMessageBox, QStatusBar, QFrame, QScrollArea, QTableWidget, 
-    QTableWidgetItem, QHeaderView, QGroupBox, QSizePolicy, QButtonGroup
+    QTableWidgetItem, QHeaderView, QGroupBox, QSizePolicy, QButtonGroup, QDialog
 )
-from PyQt5.QtCore import Qt, QThread, pyqtSignal, QTimer, QSize
-from PyQt5.QtGui import QPixmap, QFont, QIcon, QPalette, QColor, QImage
+from PyQt5.QtCore import Qt, QThread, pyqtSignal, QTimer, QSize, QTextCodec
+from PyQt5.QtGui import QPixmap, QFont, QIcon, QPalette, QColor, QImage, QFontDatabase
 
 # 添加项目根目录到Python路径
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -32,6 +32,7 @@ from config import GUI_CONFIG, OUTPUT_CONFIG
 from core.simple_detection_engine import SimpleDetectionEngine
 from core.simple_information_extractor import SimpleInformationExtractor
 from core.image_processor import ImageProcessor
+from core.gemini_health_analyzer import GeminiHealthAnalyzer
 from utils.text_output import TextOutputManager
 
 class DetectionWorker(QThread):
@@ -84,6 +85,7 @@ class PyQt5MainWindow(QMainWindow):
     
     def __init__(self):
         super().__init__()
+        self.setup_font_and_encoding()  # 设置字体和编码
         self.setup_logging()
         self.init_variables()
         self.init_ui()
@@ -102,6 +104,37 @@ class PyQt5MainWindow(QMainWindow):
         self.logger.addHandler(handler)
         self.logger.setLevel(logging.INFO)
     
+    def setup_font_and_encoding(self):
+        """设置字体和编码以支持中文显示"""
+        # 设置文本编码
+        QTextCodec.setCodecForLocale(QTextCodec.codecForName("UTF-8"))
+        
+        # 加载中文字体
+        font_db = QFontDatabase()
+        
+        # 尝试加载系统中文字体
+        chinese_fonts = [
+            "Microsoft YaHei UI",
+            "Microsoft YaHei", 
+            "SimHei",
+            "SimSun",
+            "KaiTi",
+            "FangSong"
+        ]
+        
+        self.default_font = None
+        for font_name in chinese_fonts:
+            if font_db.families().count(font_name) > 0:
+                self.default_font = QFont(font_name, 12)
+                break
+        
+        if self.default_font is None:
+            # 如果没有找到中文字体，使用默认字体
+            self.default_font = QFont("Arial Unicode MS", 12)
+        
+        # 设置应用程序默认字体
+        QApplication.instance().setFont(self.default_font)
+    
     def init_variables(self):
         """初始化变量"""
         self.current_image = None
@@ -110,6 +143,8 @@ class PyQt5MainWindow(QMainWindow):
         self.extraction_results = None
         self.processed_image = None
         self.detection_engine = None
+        self.gemini_analyzer = None  # Gemini健康分析器
+        self.health_analysis_results = None  # 健康分析结果
         self.zoom_factor = 1.0
         self.current_scenario = "personal_shopping"  # 默认场景
         
@@ -414,24 +449,31 @@ class PyQt5MainWindow(QMainWindow):
         toolbar_layout.setSpacing(25)  # 增加按钮间距
         toolbar_layout.setContentsMargins(25, 18, 25, 18)  # 增加边距
         
+        # 统一按钮尺寸
+        button_size = QSize(180, 50)  # 统一按钮大小
+        
         # 文件操作按钮
         self.btn_open = QPushButton("📁 打开图像")
         self.btn_open.setObjectName("btn_open")
+        self.btn_open.setFixedSize(button_size)
         self.btn_open.clicked.connect(self.open_image)
         
         self.btn_save = QPushButton("💾 保存结果")
         self.btn_save.setObjectName("btn_save")
+        self.btn_save.setFixedSize(button_size)
         self.btn_save.clicked.connect(self.save_results)
         self.btn_save.setEnabled(False)
         
         # 检测操作按钮
         self.btn_detect = QPushButton("🚀 开始检测")
         self.btn_detect.setObjectName("btn_detect")
+        self.btn_detect.setFixedSize(button_size)
         self.btn_detect.clicked.connect(self.start_detection)
         self.btn_detect.setEnabled(False)
         
         self.btn_clear = QPushButton("🗑️ 清除结果")
         self.btn_clear.setObjectName("btn_clear")
+        self.btn_clear.setFixedSize(button_size)
         self.btn_clear.clicked.connect(self.clear_results)
         
         # 应用场景选择 - 改为两个按钮
@@ -450,12 +492,14 @@ class PyQt5MainWindow(QMainWindow):
         
         self.btn_personal_shopping = QPushButton("🛒 个人购物")
         self.btn_personal_shopping.setObjectName("scenario_btn")
+        self.btn_personal_shopping.setFixedSize(button_size)
         self.btn_personal_shopping.setCheckable(True)
         self.btn_personal_shopping.setChecked(True)  # 默认选中
         self.btn_personal_shopping.clicked.connect(lambda: self.set_scenario("personal_shopping"))
         
         self.btn_shelf_audit = QPushButton("📊 货架审计")
         self.btn_shelf_audit.setObjectName("scenario_btn")
+        self.btn_shelf_audit.setFixedSize(button_size)
         self.btn_shelf_audit.setCheckable(True)
         self.btn_shelf_audit.clicked.connect(lambda: self.set_scenario("shelf_audit"))
         
@@ -511,6 +555,14 @@ class PyQt5MainWindow(QMainWindow):
         
         toolbar_layout.addWidget(self.btn_detect)
         toolbar_layout.addWidget(self.btn_clear)
+        
+        # 健康分析按钮
+        self.btn_health_analysis = QPushButton("🏥 健康分析")
+        self.btn_health_analysis.setObjectName("btn_health_analysis")
+        self.btn_health_analysis.setFixedSize(button_size)
+        self.btn_health_analysis.clicked.connect(self.start_health_analysis)
+        self.btn_health_analysis.setEnabled(False)
+        toolbar_layout.addWidget(self.btn_health_analysis)
 
         # 添加分隔线
         separator3 = QFrame()
@@ -1093,8 +1145,9 @@ class PyQt5MainWindow(QMainWindow):
             self.update_ocr_display(extraction_results, detection_results)
             self.update_analysis_display(detection_results, extraction_results)
 
-            # 启用保存按钮
+            # 启用保存按钮和健康分析按钮
             self.btn_save.setEnabled(True)
+            self.btn_health_analysis.setEnabled(True)
 
             self.update_status("检测完成")
 
@@ -1626,10 +1679,171 @@ class PyQt5MainWindow(QMainWindow):
         self.extraction_results = None
         self.processed_image = None
 
-        # 禁用保存按钮
+        # 禁用保存按钮和健康分析按钮
         self.btn_save.setEnabled(False)
+        self.btn_health_analysis.setEnabled(False)
+        
+        # 清除健康分析结果
+        self.health_analysis_results = None
 
         self.update_status("结果已清除")
+
+    def start_health_analysis(self):
+        """开始健康分析"""
+        if not self.extraction_results:
+            QMessageBox.warning(self, "警告", "请先进行图像检测和OCR识别")
+            return
+            
+        try:
+            # 初始化Gemini分析器
+            if not self.gemini_analyzer:
+                self.gemini_analyzer = GeminiHealthAnalyzer()
+                
+            # 检查API可用性
+            if not self.gemini_analyzer.is_available():
+                QMessageBox.critical(self, "错误", "Gemini API不可用，请检查API密钥配置")
+                return
+                
+            # 提取OCR文本和坐标信息
+            text_data = []
+            if 'text_info' in self.extraction_results:
+                for text_info in self.extraction_results['text_info']:
+                    text_data.append({
+                        'text': text_info.get('text', ''),
+                        'bbox': text_info.get('bbox', []),
+                        'confidence': text_info.get('confidence', 0)
+                    })
+                    
+            # 启动健康分析线程
+            self.health_worker = HealthAnalysisWorker(self.gemini_analyzer, text_data, self.current_image_path)
+            self.health_worker.finished.connect(self.on_health_analysis_finished)
+            self.health_worker.error.connect(self.on_health_analysis_error)
+            
+            # 禁用按钮，显示进度
+            self.btn_health_analysis.setEnabled(False)
+            self.update_status("正在进行健康分析...")
+            
+            self.health_worker.start()
+            
+        except Exception as e:
+            self.logger.error(f"启动健康分析失败: {e}")
+            QMessageBox.critical(self, "错误", f"启动健康分析失败:\n{e}")
+            
+    def on_health_analysis_finished(self, analysis_results):
+        """健康分析完成回调"""
+        try:
+            self.health_analysis_results = analysis_results
+            
+            # 显示分析结果
+            self.show_health_analysis_results(analysis_results)
+            
+            self.update_status("健康分析完成")
+            
+        except Exception as e:
+            self.logger.error(f"处理健康分析结果失败: {e}")
+            QMessageBox.critical(self, "错误", f"处理健康分析结果失败:\n{e}")
+        finally:
+            self.btn_health_analysis.setEnabled(True)
+            
+    def on_health_analysis_error(self, error_message):
+        """健康分析错误回调"""
+        self.logger.error(f"健康分析出错: {error_message}")
+        QMessageBox.critical(self, "健康分析错误", f"健康分析出错:\n{error_message}")
+        self.btn_health_analysis.setEnabled(True)
+        
+    def show_health_analysis_results(self, results):
+        """显示健康分析结果"""
+        dialog = QDialog(self)
+        dialog.setWindowTitle("🏥 健康分析结果")
+        dialog.setMinimumSize(700, 500)
+        
+        layout = QVBoxLayout(dialog)
+        
+        # 创建文本显示区域
+        text_area = QTextEdit()
+        text_area.setReadOnly(True)
+        
+        # 格式化显示结果
+        formatted_text = "🏥 产品健康分析报告\n"
+        formatted_text += "=" * 50 + "\n\n"
+        
+        if 'overall_score' in results and results['overall_score'] is not None:
+            score = results['overall_score']
+            score_emoji = "🟢" if score >= 7 else "🟡" if score >= 4 else "🔴"
+            formatted_text += f"📊 总体健康评分: {score_emoji} {score}/10\n\n"
+        
+        # OCR错误纠正
+        if 'ocr_corrections' in results and results['ocr_corrections']:
+            formatted_text += "🔍 OCR错误纠正:\n"
+            for correction in results['ocr_corrections']:
+                if isinstance(correction, dict):
+                    original = correction.get('original', '')
+                    corrected = correction.get('corrected', '')
+                    formatted_text += f"  • '{original}' → '{corrected}'\n"
+                else:
+                    formatted_text += f"  • {correction}\n"
+            formatted_text += "\n"
+        
+        # 检测到的成分
+        if 'detected_ingredients' in results and results['detected_ingredients']:
+            formatted_text += "🧪 检测到的成分:\n"
+            for ingredient in results['detected_ingredients']:
+                formatted_text += f"  • {ingredient}\n"
+            formatted_text += "\n"
+        
+        # 营养成分
+        if 'nutrition_facts' in results and results['nutrition_facts']:
+            formatted_text += "📊 营养成分信息:\n"
+            for key, value in results['nutrition_facts'].items():
+                formatted_text += f"  • {key}: {value}\n"
+            formatted_text += "\n"
+            
+        if 'analysis' in results and results['analysis']:
+            formatted_text += f"📝 详细分析:\n{results['analysis']}\n\n"
+            
+        if 'recommendations' in results and results['recommendations']:
+            formatted_text += "💡 建议:\n"
+            if isinstance(results['recommendations'], list):
+                for rec in results['recommendations']:
+                    formatted_text += f"  • {rec}\n"
+            else:
+                formatted_text += f"{results['recommendations']}\n"
+            formatted_text += "\n"
+        
+        # 健康警告
+        if 'health_warnings' in results and results['health_warnings']:
+            formatted_text += "⚠️ 健康警告:\n"
+            for warning in results['health_warnings']:
+                formatted_text += f"  • {warning}\n"
+                
+        text_area.setPlainText(formatted_text)
+        layout.addWidget(text_area)
+        
+        # 添加关闭按钮
+        close_btn = QPushButton("关闭")
+        close_btn.clicked.connect(dialog.accept)
+        layout.addWidget(close_btn)
+        
+        dialog.exec_()
+
+class HealthAnalysisWorker(QThread):
+    """健康分析工作线程"""
+    finished = pyqtSignal(dict)
+    error = pyqtSignal(str)
+    
+    def __init__(self, gemini_analyzer, text_data, image_path):
+        super().__init__()
+        self.gemini_analyzer = gemini_analyzer
+        self.text_data = text_data
+        self.image_path = image_path
+        
+    def run(self):
+        try:
+            # 调用Gemini进行健康分析
+            results = self.gemini_analyzer.analyze_product_health(self.text_data, self.image_path)
+            self.finished.emit(results)
+        except Exception as e:
+            self.error.emit(str(e))
 
 def main():
     """主函数"""
