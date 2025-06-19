@@ -1,8 +1,0 @@
-﻿序号,识别文本,置信度,OCR引擎,位置X1,位置Y1,位置X2,位置Y2
-1,Product:,0.800,tesseract_simple,0,0,130,37
-2,"Altay? Ace:
-
-To) ee",0.800,tesseract_simple,0,0,185,39
-3,Gorcode:,0.800,tesseract_simple,0,0,110,33
-4,SAL @-.,0.800,tesseract_simple,0,0,68,33
-5,SEPP ea paonn,0.800,tesseract_simple,0,0,183,35
