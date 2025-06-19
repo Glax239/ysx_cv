@@ -2,3 +2,93 @@
 2025-06-19 21:16:09,209 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: F:\F Download\cv_test\assets\icons\status_icon_16x16.png
 2025-06-19 21:16:09,210 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
 2025-06-19 21:16:11,534 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-19 21:22:54,631 - gui.pyqt5_main_window - INFO - 已设置窗口图标: F:\F Download\cv_test\assets\icons\app_icon_32x32.png
+2025-06-19 21:22:55,434 - gui.pyqt5_main_window - INFO - 已设置状态栏图标: F:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-19 21:22:55,438 - gui.pyqt5_main_window - INFO - 正在初始化检测引擎...
+2025-06-19 21:22:57,864 - gui.pyqt5_main_window - INFO - 检测引擎初始化完成
+2025-06-19 21:23:44,895 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:23:44,896 - gui.pyqt5_main_window - INFO - 已加载图像: IMG20241003103228_jpg.rf.4fb93916f2304cec725a0c638b51a8f2.jpg
+2025-06-19 21:23:48,169 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:23:48,170 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0005_jpg.rf.6ba45a13264c50ebd26a1a981eba8751.jpg
+2025-06-19 21:23:48,902 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:23:48,902 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0005_jpg.rf.c6ccff39030f89d825df467a1891e279.jpg
+2025-06-19 21:23:49,861 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:23:49,861 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0012_jpg.rf.45e7832c3c30bddec84c18febc5cad58.jpg
+2025-06-19 21:23:51,308 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:23:51,308 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0012_jpg.rf.99d95e8fe61fcd87624b2924477abcd8.jpg
+2025-06-19 21:23:52,255 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:23:52,255 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0012_jpg.rf.f92938ac1e23007961e832d14ce62b10.jpg
+2025-06-19 21:23:54,988 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:23:54,988 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0014_jpg.rf.9ace282d8ae5be50aa311484ddc6b3fa.jpg
+2025-06-19 21:23:56,956 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:23:56,956 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0014_jpg.rf.c2e74961d686673572c10dad0b3d0177.jpg
+2025-06-19 21:23:58,957 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:23:58,958 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0016_jpg.rf.5e90e83d98e826ee6d2ed80342af2f68.jpg
+2025-06-19 21:24:00,195 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:00,195 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0016_jpg.rf.c1fa82b229a548b447a9727f9deb66dc.jpg
+2025-06-19 21:24:01,126 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:01,126 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0024_jpg.rf.3ef907838650a999feb623dc73613ab3.jpg
+2025-06-19 21:24:02,026 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:02,026 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0024_jpg.rf.6ee76ce96e3f4c9988e745485c2e2063.jpg
+2025-06-19 21:24:02,534 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:02,535 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0024_jpg.rf.6ffba27963d47a3cf91b3fc196f67a15.jpg
+2025-06-19 21:24:03,206 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:03,206 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0026_jpg.rf.aef7d9ec4581cf97d9ec8b0d0b81c44c.jpg
+2025-06-19 21:24:04,574 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:04,574 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0024_jpg.rf.6ffba27963d47a3cf91b3fc196f67a15.jpg
+2025-06-19 21:24:05,195 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:05,195 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0024_jpg.rf.6ee76ce96e3f4c9988e745485c2e2063.jpg
+2025-06-19 21:24:05,998 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:05,999 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0024_jpg.rf.3ef907838650a999feb623dc73613ab3.jpg
+2025-06-19 21:24:06,676 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:06,676 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0016_jpg.rf.c1fa82b229a548b447a9727f9deb66dc.jpg
+2025-06-19 21:24:07,227 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:07,227 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0016_jpg.rf.5e90e83d98e826ee6d2ed80342af2f68.jpg
+2025-06-19 21:24:07,793 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:07,793 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0014_jpg.rf.c2e74961d686673572c10dad0b3d0177.jpg
+2025-06-19 21:24:08,480 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:08,480 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0014_jpg.rf.9ace282d8ae5be50aa311484ddc6b3fa.jpg
+2025-06-19 21:24:08,780 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:08,780 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0012_jpg.rf.f92938ac1e23007961e832d14ce62b10.jpg
+2025-06-19 21:24:09,155 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:09,155 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0012_jpg.rf.99d95e8fe61fcd87624b2924477abcd8.jpg
+2025-06-19 21:24:09,403 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:09,403 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0012_jpg.rf.45e7832c3c30bddec84c18febc5cad58.jpg
+2025-06-19 21:24:09,646 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:09,647 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0005_jpg.rf.c6ccff39030f89d825df467a1891e279.jpg
+2025-06-19 21:24:09,989 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:09,990 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0005_jpg.rf.6ba45a13264c50ebd26a1a981eba8751.jpg
+2025-06-19 21:24:10,365 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:10,365 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0005_jpg.rf.2c4cd1f868e45e58a1a903519eba47fe.jpg
+2025-06-19 21:24:12,371 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:12,371 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0005_jpg.rf.6ba45a13264c50ebd26a1a981eba8751.jpg
+2025-06-19 21:24:12,721 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:12,721 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0005_jpg.rf.c6ccff39030f89d825df467a1891e279.jpg
+2025-06-19 21:24:13,021 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:13,022 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0012_jpg.rf.45e7832c3c30bddec84c18febc5cad58.jpg
+2025-06-19 21:24:13,399 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:13,399 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0012_jpg.rf.99d95e8fe61fcd87624b2924477abcd8.jpg
+2025-06-19 21:24:13,805 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:13,805 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0012_jpg.rf.f92938ac1e23007961e832d14ce62b10.jpg
+2025-06-19 21:24:14,363 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:14,363 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0014_jpg.rf.9ace282d8ae5be50aa311484ddc6b3fa.jpg
+2025-06-19 21:24:15,100 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:15,100 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0014_jpg.rf.c2e74961d686673572c10dad0b3d0177.jpg
+2025-06-19 21:24:15,523 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:15,523 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0016_jpg.rf.5e90e83d98e826ee6d2ed80342af2f68.jpg
+2025-06-19 21:24:17,208 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:17,208 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0016_jpg.rf.c1fa82b229a548b447a9727f9deb66dc.jpg
+2025-06-19 21:24:17,709 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:17,709 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0024_jpg.rf.3ef907838650a999feb623dc73613ab3.jpg
+2025-06-19 21:24:18,226 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:18,226 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0024_jpg.rf.6ee76ce96e3f4c9988e745485c2e2063.jpg
+2025-06-19 21:24:18,930 - gui.pyqt5_main_window - INFO - 结果已清除
+2025-06-19 21:24:18,930 - gui.pyqt5_main_window - INFO - 已加载图像: IMG-20241003-WA0024_jpg.rf.6ffba27963d47a3cf91b3fc196f67a15.jpg
+2025-06-19 21:24:24,939 - gui.pyqt5_main_window - INFO - 进度条已显示
+2025-06-19 21:24:24,940 - gui.pyqt5_main_window - INFO - 正在进行商品检测...
+2025-06-19 21:24:25,128 - gui.pyqt5_main_window - INFO - 正在绘制检测结果...
+2025-06-19 21:24:25,163 - gui.pyqt5_main_window - INFO - 正在提取信息...
+2025-06-19 21:24:30,715 - gui.pyqt5_main_window - INFO - 检测完成
+2025-06-19 21:24:30,715 - gui.pyqt5_main_window - INFO - 进度条已隐藏
+2025-06-19 21:24:50,107 - gui.pyqt5_main_window - INFO - 正在进行健康分析...
+2025-06-19 21:25:06,871 - gui.pyqt5_main_window - INFO - 健康分析完成
