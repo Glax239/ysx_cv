@@ -1,10 +1,11 @@
 import cv2
 import numpy as np
 from ultralytics import YOLO
+from utils.font_utils import draw_chinese_text_on_image
 
 # --- 1. 配置 ---
 # 加载你训练好的 YOLO 模型
-# MODEL_PATH = r'F:\F Download\cv_test\weight\selected_brands_best.pt'  # 品牌检测模型已移除
+MODEL_PATH = r'weight\product_detector_best.pt'  # 商品检测模型
 # 你想要进行检测的图片路径
 IMAGE_PATH = 'wafle.jpg'
 # 设置置信度阈值
@@ -75,9 +76,15 @@ for result in results:
         label_y1 = max(y1 - text_height - baseline, 0)
         label_y2 = y1
         cv2.rectangle(image, (x1, label_y1), (x1 + text_width, label_y2), color, -1)
-        
-        # 4. 绘制标签文本（使用白色字体以获得最佳对比度）
-        cv2.putText(image, label, (x1, y1 - baseline), font, font_scale, (255, 255, 255), font_thickness)
+          # 4. 使用中文字体渲染器绘制标签文本
+        image = draw_chinese_text_on_image(
+            image,
+            label,
+            (x1, max(y1 - 30, 0)),
+            font_size=20,
+            color=(255, 255, 255),  # 白色文字
+            background_color=tuple(color)  # 使用检测框同色背景
+        )
 
 # --- 6. 显示和保存图片 ---
 cv2.imwrite(OUTPUT_IMAGE_PATH, image)

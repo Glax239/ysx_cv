@@ -126,8 +126,7 @@ class PyQt5MainWindow(QMainWindow):
         for font_name in chinese_fonts:
             if font_db.families().count(font_name) > 0:
                 self.default_font = QFont(font_name, 12)
-                break
-        
+                break        
         if self.default_font is None:
             # 如果没有找到中文字体，使用默认字体
             self.default_font = QFont("Arial Unicode MS", 12)
@@ -148,9 +147,29 @@ class PyQt5MainWindow(QMainWindow):
         self.zoom_factor = 1.0
         self.current_scenario = "personal_shopping"  # 默认场景
         
+    def setup_window_icon(self):
+        """设置窗口图标"""
+        try:
+            # 尝试加载应用图标
+            icon_path = Path(__file__).parent.parent / "assets" / "icons" / "app_icon_32x32.png"
+            if icon_path.exists():
+                icon = QIcon(str(icon_path))
+                self.setWindowIcon(icon)
+                # 同时设置应用程序图标（用于任务栏）
+                QApplication.instance().setWindowIcon(icon)
+                self.logger.info(f"已设置窗口图标: {icon_path}")
+            else:
+                self.logger.warning(f"图标文件不存在: {icon_path}")
+        except Exception as e:
+            self.logger.error(f"设置窗口图标失败: {e}")
+        
     def init_ui(self):
         """初始化用户界面"""
         self.setWindowTitle(GUI_CONFIG['window_title'])
+        
+        # 设置应用图标
+        self.setup_window_icon()
+        
         # 设置合理的窗口尺寸，支持更好的伸缩性
         self.setGeometry(100, 100, 2000, 1300)
         self.setMinimumSize(2600, 1400)  # 设置合理的最小尺寸，支持小屏幕
@@ -935,17 +954,29 @@ class PyQt5MainWindow(QMainWindow):
         
         stats_container_layout.addLayout(stats_grid)
         analysis_layout.addWidget(stats_container)
-        
-        # 添加弹性空间
+          # 添加弹性空间
         analysis_layout.addStretch(1)
         
         self.tab_widget.addTab(analysis_widget, "📊 统计分析")
-        
+    
     def create_status_bar(self):
         """创建状态栏"""
         self.status_bar = QStatusBar()
         self.setStatusBar(self.status_bar)
-        self.status_bar.showMessage("就绪")
+        
+        # 添加状态栏图标
+        try:
+            status_icon_path = Path(__file__).parent.parent / "assets" / "icons" / "status_icon_16x16.png"
+            if status_icon_path.exists():
+                status_icon_label = QLabel()
+                status_icon_pixmap = QPixmap(str(status_icon_path))
+                status_icon_label.setPixmap(status_icon_pixmap)
+                self.status_bar.addPermanentWidget(status_icon_label)
+                self.logger.info(f"已设置状态栏图标: {status_icon_path}")
+        except Exception as e:
+            self.logger.error(f"设置状态栏图标失败: {e}")
+        
+        self.status_bar.showMessage("智能商品识别系统 - 就绪")
         
     def init_components(self):
         """初始化组件"""
@@ -1853,6 +1884,26 @@ def main():
     app.setApplicationName("智能商品识别系统")
     app.setApplicationVersion("2.0")
     app.setOrganizationName("Smart Product Analysis")
+    
+    # 设置应用程序级别的图标（用于任务栏）
+    try:
+        # 获取ICO文件路径（Windows任务栏）
+        ico_path = Path(__file__).parent.parent / "assets" / "icons" / "app_icon_32x32.ico"
+        if ico_path.exists():
+            app_icon = QIcon(str(ico_path))
+        else:
+            # 回退到PNG文件
+            png_path = Path(__file__).parent.parent / "assets" / "icons" / "app_icon_32x32.png"
+            if png_path.exists():
+                app_icon = QIcon(str(png_path))
+            else:
+                app_icon = None
+        
+        if app_icon:
+            app.setWindowIcon(app_icon)
+            print(f"✓ 已设置应用程序图标")
+    except Exception as e:
+        print(f"⚠ 设置应用程序图标失败: {e}")
 
     # 创建主窗口
     window = PyQt5MainWindow()

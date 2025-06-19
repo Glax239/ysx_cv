@@ -14,6 +14,7 @@ import time
 
 from config import MODEL_PATHS, DETECTION_CONFIG
 from utils.name_mapper import get_global_mapper
+from utils.font_utils import draw_chinese_text_on_image
 
 class SimpleDetectionEngine:
     """简化的检测引擎，专注于YOLO检测，避免PaddleOCR初始化问题"""
@@ -217,31 +218,25 @@ class SimpleDetectionEngine:
             
             # 选择颜色
             color = color_map.get(detection_type, (128, 128, 128))
-            
-            # 绘制边界框
+              # 绘制边界框
             cv2.rectangle(result_image, (x1, y1), (x2, y2), color, thickness)
             
             if draw_labels:
                 # 准备标签文本
                 label = f'{class_name} {confidence:.2f}'
                 
-                # 计算文本尺寸
-                font = cv2.FONT_HERSHEY_SIMPLEX
-                font_scale = 0.6
-                font_thickness = 1
-                (text_width, text_height), baseline = cv2.getTextSize(
-                    label, font, font_scale, font_thickness
+                # 使用中文字体渲染器绘制文本
+                font_size = 20
+                
+                # 绘制标签背景和文本
+                result_image = draw_chinese_text_on_image(
+                    result_image,
+                    label,
+                    (x1, max(y1 - 25, 0)),
+                    font_size=font_size,
+                    color=(255, 255, 255),  # 白色文字
+                    background_color=color  # 使用检测框同色背景
                 )
-                
-                # 绘制标签背景
-                label_y1 = max(y1 - text_height - baseline, 0)
-                label_y2 = y1
-                cv2.rectangle(result_image, (x1, label_y1), 
-                            (x1 + text_width, label_y2), color, -1)
-                
-                # 绘制标签文本
-                cv2.putText(result_image, label, (x1, y1 - baseline),
-                          font, font_scale, (255, 255, 255), font_thickness)
         
         return result_image
     
