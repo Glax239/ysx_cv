@@ -1,0 +1,1419 @@
+{
+  "batch_statistics": {
+    "total_images": 5,
+    "average_scores": {
+      "baseline": 0.0,
+      "enhanced": 0.0,
+      "repair": 0.0
+    },
+    "score_improvements": {
+      "baseline_to_enhanced": 0.0,
+      "baseline_to_repair": 0.0
+    },
+    "average_improvements": {
+      "confidence": 0.0,
+      "text_length": 0.0
+    },
+    "performance": {
+      "average_processing_time": 2.7622945308685303,
+      "total_processing_time": 13.811472654342651
+    },
+    "success_rate": 1.0
+  },
+  "detailed_results": [
+    {
+      "image_path": "test_images\\IMG20241003102238_jpg.rf.9a6966b52fc1c76446417f806008f465.jpg",
+      "image_info": {
+        "size": [
+          640,
+          640,
+          3
+        ],
+        "channels": 3
+      },
+      "baseline_ocr": {
+        "result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "statistics": {
+          "regions_detected": 0,
+          "total_text_length": 0,
+          "average_confidence": 0,
+          "processing_time": 0.45897388458251953
+        }
+      },
+      "enhanced_ocr": {
+        "result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          },
+          "text_regions": []
+        },
+        "statistics": {
+          "regions_detected": 0,
+          "total_text_length": 0,
+          "average_confidence": 0,
+          "chinese_char_count": 0,
+          "processing_time": 0.4387373924255371
+        }
+      },
+      "diagnostic": {
+        "image_path": "test_images\\IMG20241003102238_jpg.rf.9a6966b52fc1c76446417f806008f465.jpg",
+        "image_size": [
+          640,
+          640,
+          3
+        ],
+        "processing_time": 0.4652993679046631,
+        "quality_score": 75.0,
+        "issues_detected": 1,
+        "issues": [
+          {
+            "issue_type": "no_regions_detected",
+            "severity": "critical",
+            "description": "未检测到任何文本区域",
+            "suggested_fix": "检查YOLO模型配置，降低检测阈值",
+            "region_id": null,
+            "confidence_impact": 0.0
+          }
+        ],
+        "fixes": {
+          "immediate_fixes": [],
+          "parameter_adjustments": [],
+          "preprocessing_improvements": [],
+          "model_optimizations": []
+        },
+        "extraction_result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "timestamp": "2025-06-20 14:25:19"
+      },
+      "repair": {
+        "image_path": "test_images\\IMG20241003102238_jpg.rf.9a6966b52fc1c76446417f806008f465.jpg",
+        "original_result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "repaired_result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          },
+          "text_regions": [],
+          "repair_summary": {
+            "total_regions": 0,
+            "repaired_regions": 0,
+            "repair_methods_used": [],
+            "average_confidence_improvement": 0.0
+          },
+          "repair_time": 0.0
+        },
+        "comparison": {
+          "text_length_change": 0,
+          "confidence_improvement": 0,
+          "regions_repaired": 0,
+          "total_regions": 0,
+          "repair_rate": 0,
+          "improvement_percentage": 0.0
+        },
+        "timestamp": "2025-06-20 14:25:19"
+      },
+      "coordinate_validation": {
+        "image_path": "test_images\\IMG20241003102238_jpg.rf.9a6966b52fc1c76446417f806008f465.jpg",
+        "image_size": [
+          640,
+          640,
+          3
+        ],
+        "processing_time": 0.42682623863220215,
+        "coordinate_validation": {
+          "total_regions": 0,
+          "valid_coordinates": 0,
+          "coordinate_accuracy": 0,
+          "bbox_coverage": 0,
+          "precise_bbox_improvement": 0,
+          "coordinate_issues": [
+            "未检测到任何文本区域"
+          ]
+        },
+        "parsing_analysis": {
+          "total_text_length": 0,
+          "chinese_char_count": 0,
+          "english_char_count": 0,
+          "number_count": 0,
+          "special_char_count": 0,
+          "empty_regions": 0,
+          "low_confidence_regions": 0,
+          "parsing_success_rate": 0,
+          "average_confidence": 0,
+          "text_distribution": {},
+          "parsing_issues": [
+            "没有文本区域可分析"
+          ]
+        },
+        "extraction_result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "timestamp": "2025-06-20 14:25:20",
+        "visualization_path": "coordinate_validation_IMG20241003102238_jpg.rf.9a6966b52fc1c76446417f806008f465_1750400720.png"
+      },
+      "performance_comparison": {
+        "text_length_improvement": {
+          "baseline_to_enhanced": 0,
+          "enhanced_percentage": 0.0,
+          "repair_improvement": 0
+        },
+        "confidence_improvement": {
+          "baseline_to_enhanced": 0,
+          "enhanced_percentage": 0.0,
+          "repair_improvement": 0
+        },
+        "processing_time": {
+          "baseline": 0.45897388458251953,
+          "enhanced": 0.4387373924255371,
+          "time_overhead": -0.020236492156982422,
+          "overhead_percentage": -4.409072680766889
+        },
+        "chinese_recognition": {
+          "chinese_chars_detected": 0
+        }
+      },
+      "quality_assessment": {
+        "quality_scores": {
+          "baseline": 0.0,
+          "enhanced": 0.0,
+          "diagnostic": 75.0,
+          "repair": 0.0
+        },
+        "improvements": {
+          "baseline_to_enhanced": 0.0,
+          "baseline_to_repair": 0.0,
+          "enhanced_to_repair": 0.0
+        },
+        "issues_analysis": {
+          "total_issues": 1,
+          "issues_per_region": 1.0
+        },
+        "overall_assessment": "无明显改进"
+      },
+      "total_processing_time": 2.9599971771240234,
+      "timestamp": "2025-06-20 14:25:20"
+    },
+    {
+      "image_path": "test_images\\IMG20241003102813_jpg.rf.640cf5ba41570bb356529df237e8eff9.jpg",
+      "image_info": {
+        "size": [
+          640,
+          640,
+          3
+        ],
+        "channels": 3
+      },
+      "baseline_ocr": {
+        "result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "statistics": {
+          "regions_detected": 0,
+          "total_text_length": 0,
+          "average_confidence": 0,
+          "processing_time": 0.5194816589355469
+        }
+      },
+      "enhanced_ocr": {
+        "result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          },
+          "text_regions": []
+        },
+        "statistics": {
+          "regions_detected": 0,
+          "total_text_length": 0,
+          "average_confidence": 0,
+          "chinese_char_count": 0,
+          "processing_time": 0.4737884998321533
+        }
+      },
+      "diagnostic": {
+        "image_path": "test_images\\IMG20241003102813_jpg.rf.640cf5ba41570bb356529df237e8eff9.jpg",
+        "image_size": [
+          640,
+          640,
+          3
+        ],
+        "processing_time": 0.39023423194885254,
+        "quality_score": 75.0,
+        "issues_detected": 1,
+        "issues": [
+          {
+            "issue_type": "no_regions_detected",
+            "severity": "critical",
+            "description": "未检测到任何文本区域",
+            "suggested_fix": "检查YOLO模型配置，降低检测阈值",
+            "region_id": null,
+            "confidence_impact": 0.0
+          }
+        ],
+        "fixes": {
+          "immediate_fixes": [],
+          "parameter_adjustments": [],
+          "preprocessing_improvements": [],
+          "model_optimizations": []
+        },
+        "extraction_result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "timestamp": "2025-06-20 14:25:23"
+      },
+      "repair": {
+        "image_path": "test_images\\IMG20241003102813_jpg.rf.640cf5ba41570bb356529df237e8eff9.jpg",
+        "original_result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "repaired_result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          },
+          "text_regions": [],
+          "repair_summary": {
+            "total_regions": 0,
+            "repaired_regions": 0,
+            "repair_methods_used": [],
+            "average_confidence_improvement": 0.0
+          },
+          "repair_time": 0.0
+        },
+        "comparison": {
+          "text_length_change": 0,
+          "confidence_improvement": 0,
+          "regions_repaired": 0,
+          "total_regions": 0,
+          "repair_rate": 0,
+          "improvement_percentage": 0.0
+        },
+        "timestamp": "2025-06-20 14:25:23"
+      },
+      "coordinate_validation": {
+        "image_path": "test_images\\IMG20241003102813_jpg.rf.640cf5ba41570bb356529df237e8eff9.jpg",
+        "image_size": [
+          640,
+          640,
+          3
+        ],
+        "processing_time": 0.3964099884033203,
+        "coordinate_validation": {
+          "total_regions": 0,
+          "valid_coordinates": 0,
+          "coordinate_accuracy": 0,
+          "bbox_coverage": 0,
+          "precise_bbox_improvement": 0,
+          "coordinate_issues": [
+            "未检测到任何文本区域"
+          ]
+        },
+        "parsing_analysis": {
+          "total_text_length": 0,
+          "chinese_char_count": 0,
+          "english_char_count": 0,
+          "number_count": 0,
+          "special_char_count": 0,
+          "empty_regions": 0,
+          "low_confidence_regions": 0,
+          "parsing_success_rate": 0,
+          "average_confidence": 0,
+          "text_distribution": {},
+          "parsing_issues": [
+            "没有文本区域可分析"
+          ]
+        },
+        "extraction_result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "timestamp": "2025-06-20 14:25:24",
+        "visualization_path": "coordinate_validation_IMG20241003102813_jpg.rf.640cf5ba41570bb356529df237e8eff9_1750400724.png"
+      },
+      "performance_comparison": {
+        "text_length_improvement": {
+          "baseline_to_enhanced": 0,
+          "enhanced_percentage": 0.0,
+          "repair_improvement": 0
+        },
+        "confidence_improvement": {
+          "baseline_to_enhanced": 0,
+          "enhanced_percentage": 0.0,
+          "repair_improvement": 0
+        },
+        "processing_time": {
+          "baseline": 0.5194816589355469,
+          "enhanced": 0.4737884998321533,
+          "time_overhead": -0.045693159103393555,
+          "overhead_percentage": -8.795913833997899
+        },
+        "chinese_recognition": {
+          "chinese_chars_detected": 0
+        }
+      },
+      "quality_assessment": {
+        "quality_scores": {
+          "baseline": 0.0,
+          "enhanced": 0.0,
+          "diagnostic": 75.0,
+          "repair": 0.0
+        },
+        "improvements": {
+          "baseline_to_enhanced": 0.0,
+          "baseline_to_repair": 0.0,
+          "enhanced_to_repair": 0.0
+        },
+        "issues_analysis": {
+          "total_issues": 1,
+          "issues_per_region": 1.0
+        },
+        "overall_assessment": "无明显改进"
+      },
+      "total_processing_time": 2.690398931503296,
+      "timestamp": "2025-06-20 14:25:24"
+    },
+    {
+      "image_path": "test_images\\IMG20241003103246_jpg.rf.e90c0b529b7c23ccea970e9b60910bbd.jpg",
+      "image_info": {
+        "size": [
+          640,
+          640,
+          3
+        ],
+        "channels": 3
+      },
+      "baseline_ocr": {
+        "result": {
+          "barcodes": [],
+          "nutrition_info": {
+            "energy": null,
+            "protein": null,
+            "fat": null,
+            "carbohydrate": null,
+            "sodium": null,
+            "sugar": null,
+            "raw_texts": [
+              "1, ||\n\nBe"
+            ]
+          },
+          "text_info": [
+            {
+              "text": "1, ||\n\nBe",
+              "bbox": [
+                0,
+                0,
+                640,
+                640
+              ],
+              "confidence": 0.8,
+              "engine": "tesseract_simple"
+            }
+          ],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": true,
+            "text_regions_count": 1,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "statistics": {
+          "regions_detected": 0,
+          "total_text_length": 0,
+          "average_confidence": 0,
+          "processing_time": 0.4904332160949707
+        }
+      },
+      "enhanced_ocr": {
+        "result": {
+          "barcodes": [],
+          "nutrition_info": {
+            "energy": null,
+            "protein": null,
+            "fat": null,
+            "carbohydrate": null,
+            "sodium": null,
+            "sugar": null,
+            "raw_texts": [
+              "1, ||\n\nBe"
+            ]
+          },
+          "text_info": [
+            {
+              "text": "1, ||\n\nBe",
+              "bbox": [
+                0,
+                0,
+                640,
+                640
+              ],
+              "confidence": 0.8,
+              "engine": "tesseract_simple"
+            }
+          ],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": true,
+            "text_regions_count": 1,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          },
+          "text_regions": []
+        },
+        "statistics": {
+          "regions_detected": 0,
+          "total_text_length": 0,
+          "average_confidence": 0,
+          "chinese_char_count": 0,
+          "processing_time": 0.4768998622894287
+        }
+      },
+      "diagnostic": {
+        "image_path": "test_images\\IMG20241003103246_jpg.rf.e90c0b529b7c23ccea970e9b60910bbd.jpg",
+        "image_size": [
+          640,
+          640,
+          3
+        ],
+        "processing_time": 0.44957399368286133,
+        "quality_score": 75.0,
+        "issues_detected": 1,
+        "issues": [
+          {
+            "issue_type": "no_regions_detected",
+            "severity": "critical",
+            "description": "未检测到任何文本区域",
+            "suggested_fix": "检查YOLO模型配置，降低检测阈值",
+            "region_id": null,
+            "confidence_impact": 0.0
+          }
+        ],
+        "fixes": {
+          "immediate_fixes": [],
+          "parameter_adjustments": [],
+          "preprocessing_improvements": [],
+          "model_optimizations": []
+        },
+        "extraction_result": {
+          "barcodes": [],
+          "nutrition_info": {
+            "energy": null,
+            "protein": null,
+            "fat": null,
+            "carbohydrate": null,
+            "sodium": null,
+            "sugar": null,
+            "raw_texts": [
+              "1, ||\n\nBe"
+            ]
+          },
+          "text_info": [
+            {
+              "text": "1, ||\n\nBe",
+              "bbox": [
+                0,
+                0,
+                640,
+                640
+              ],
+              "confidence": 0.8,
+              "engine": "tesseract_simple"
+            }
+          ],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": true,
+            "text_regions_count": 1,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "timestamp": "2025-06-20 14:25:27"
+      },
+      "repair": {
+        "image_path": "test_images\\IMG20241003103246_jpg.rf.e90c0b529b7c23ccea970e9b60910bbd.jpg",
+        "original_result": {
+          "barcodes": [],
+          "nutrition_info": {
+            "energy": null,
+            "protein": null,
+            "fat": null,
+            "carbohydrate": null,
+            "sodium": null,
+            "sugar": null,
+            "raw_texts": [
+              "1, ||\n\nBe"
+            ]
+          },
+          "text_info": [
+            {
+              "text": "1, ||\n\nBe",
+              "bbox": [
+                0,
+                0,
+                640,
+                640
+              ],
+              "confidence": 0.8,
+              "engine": "tesseract_simple"
+            }
+          ],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": true,
+            "text_regions_count": 1,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "repaired_result": {
+          "barcodes": [],
+          "nutrition_info": {
+            "energy": null,
+            "protein": null,
+            "fat": null,
+            "carbohydrate": null,
+            "sodium": null,
+            "sugar": null,
+            "raw_texts": [
+              "1, ||\n\nBe"
+            ]
+          },
+          "text_info": [
+            {
+              "text": "1, ||\n\nBe",
+              "bbox": [
+                0,
+                0,
+                640,
+                640
+              ],
+              "confidence": 0.8,
+              "engine": "tesseract_simple"
+            }
+          ],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": true,
+            "text_regions_count": 1,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          },
+          "text_regions": [],
+          "repair_summary": {
+            "total_regions": 0,
+            "repaired_regions": 0,
+            "repair_methods_used": [],
+            "average_confidence_improvement": 0.0
+          },
+          "repair_time": 0.0
+        },
+        "comparison": {
+          "text_length_change": 0,
+          "confidence_improvement": 0,
+          "regions_repaired": 0,
+          "total_regions": 0,
+          "repair_rate": 0,
+          "improvement_percentage": 0.0
+        },
+        "timestamp": "2025-06-20 14:25:27"
+      },
+      "coordinate_validation": {
+        "image_path": "test_images\\IMG20241003103246_jpg.rf.e90c0b529b7c23ccea970e9b60910bbd.jpg",
+        "image_size": [
+          640,
+          640,
+          3
+        ],
+        "processing_time": 0.4528682231903076,
+        "coordinate_validation": {
+          "total_regions": 0,
+          "valid_coordinates": 0,
+          "coordinate_accuracy": 0,
+          "bbox_coverage": 0,
+          "precise_bbox_improvement": 0,
+          "coordinate_issues": [
+            "未检测到任何文本区域"
+          ]
+        },
+        "parsing_analysis": {
+          "total_text_length": 0,
+          "chinese_char_count": 0,
+          "english_char_count": 0,
+          "number_count": 0,
+          "special_char_count": 0,
+          "empty_regions": 0,
+          "low_confidence_regions": 0,
+          "parsing_success_rate": 0,
+          "average_confidence": 0,
+          "text_distribution": {},
+          "parsing_issues": [
+            "没有文本区域可分析"
+          ]
+        },
+        "extraction_result": {
+          "barcodes": [],
+          "nutrition_info": {
+            "energy": null,
+            "protein": null,
+            "fat": null,
+            "carbohydrate": null,
+            "sodium": null,
+            "sugar": null,
+            "raw_texts": [
+              "1, ||\n\nBe"
+            ]
+          },
+          "text_info": [
+            {
+              "text": "1, ||\n\nBe",
+              "bbox": [
+                0,
+                0,
+                640,
+                640
+              ],
+              "confidence": 0.8,
+              "engine": "tesseract_simple"
+            }
+          ],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": true,
+            "text_regions_count": 1,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "timestamp": "2025-06-20 14:25:28",
+        "visualization_path": "coordinate_validation_IMG20241003103246_jpg.rf.e90c0b529b7c23ccea970e9b60910bbd_1750400728.png"
+      },
+      "performance_comparison": {
+        "text_length_improvement": {
+          "baseline_to_enhanced": 0,
+          "enhanced_percentage": 0.0,
+          "repair_improvement": 0
+        },
+        "confidence_improvement": {
+          "baseline_to_enhanced": 0,
+          "enhanced_percentage": 0.0,
+          "repair_improvement": 0
+        },
+        "processing_time": {
+          "baseline": 0.4904332160949707,
+          "enhanced": 0.4768998622894287,
+          "time_overhead": -0.013533353805541992,
+          "overhead_percentage": -2.7594692531839655
+        },
+        "chinese_recognition": {
+          "chinese_chars_detected": 0
+        }
+      },
+      "quality_assessment": {
+        "quality_scores": {
+          "baseline": 0.0,
+          "enhanced": 0.0,
+          "diagnostic": 75.0,
+          "repair": 0.0
+        },
+        "improvements": {
+          "baseline_to_enhanced": 0.0,
+          "baseline_to_repair": 0.0,
+          "enhanced_to_repair": 0.0
+        },
+        "issues_analysis": {
+          "total_issues": 1,
+          "issues_per_region": 1.0
+        },
+        "overall_assessment": "无明显改进"
+      },
+      "total_processing_time": 2.8848302364349365,
+      "timestamp": "2025-06-20 14:25:28"
+    },
+    {
+      "image_path": "test_images\\IMG20241003103255_jpg.rf.35b2b9371325d355b7b8fe52abfbec77.jpg",
+      "image_info": {
+        "size": [
+          640,
+          640,
+          3
+        ],
+        "channels": 3
+      },
+      "baseline_ocr": {
+        "result": {
+          "barcodes": [],
+          "nutrition_info": {
+            "energy": null,
+            "protein": null,
+            "fat": null,
+            "carbohydrate": null,
+            "sodium": null,
+            "sugar": null,
+            "raw_texts": [
+              "ek 1 NTN CT ATT"
+            ]
+          },
+          "text_info": [
+            {
+              "text": "ek 1 NTN CT ATT",
+              "bbox": [
+                0,
+                0,
+                640,
+                640
+              ],
+              "confidence": 0.8,
+              "engine": "tesseract_simple"
+            }
+          ],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": true,
+            "text_regions_count": 1,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "statistics": {
+          "regions_detected": 0,
+          "total_text_length": 0,
+          "average_confidence": 0,
+          "processing_time": 0.41638660430908203
+        }
+      },
+      "enhanced_ocr": {
+        "result": {
+          "barcodes": [],
+          "nutrition_info": {
+            "energy": null,
+            "protein": null,
+            "fat": null,
+            "carbohydrate": null,
+            "sodium": null,
+            "sugar": null,
+            "raw_texts": [
+              "ek 1 NTN CT ATT"
+            ]
+          },
+          "text_info": [
+            {
+              "text": "ek 1 NTN CT ATT",
+              "bbox": [
+                0,
+                0,
+                640,
+                640
+              ],
+              "confidence": 0.8,
+              "engine": "tesseract_simple"
+            }
+          ],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": true,
+            "text_regions_count": 1,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          },
+          "text_regions": []
+        },
+        "statistics": {
+          "regions_detected": 0,
+          "total_text_length": 0,
+          "average_confidence": 0,
+          "chinese_char_count": 0,
+          "processing_time": 0.4325141906738281
+        }
+      },
+      "diagnostic": {
+        "image_path": "test_images\\IMG20241003103255_jpg.rf.35b2b9371325d355b7b8fe52abfbec77.jpg",
+        "image_size": [
+          640,
+          640,
+          3
+        ],
+        "processing_time": 0.41521215438842773,
+        "quality_score": 75.0,
+        "issues_detected": 1,
+        "issues": [
+          {
+            "issue_type": "no_regions_detected",
+            "severity": "critical",
+            "description": "未检测到任何文本区域",
+            "suggested_fix": "检查YOLO模型配置，降低检测阈值",
+            "region_id": null,
+            "confidence_impact": 0.0
+          }
+        ],
+        "fixes": {
+          "immediate_fixes": [],
+          "parameter_adjustments": [],
+          "preprocessing_improvements": [],
+          "model_optimizations": []
+        },
+        "extraction_result": {
+          "barcodes": [],
+          "nutrition_info": {
+            "energy": null,
+            "protein": null,
+            "fat": null,
+            "carbohydrate": null,
+            "sodium": null,
+            "sugar": null,
+            "raw_texts": [
+              "ek 1 NTN CT ATT"
+            ]
+          },
+          "text_info": [
+            {
+              "text": "ek 1 NTN CT ATT",
+              "bbox": [
+                0,
+                0,
+                640,
+                640
+              ],
+              "confidence": 0.8,
+              "engine": "tesseract_simple"
+            }
+          ],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": true,
+            "text_regions_count": 1,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "timestamp": "2025-06-20 14:25:31"
+      },
+      "repair": {
+        "image_path": "test_images\\IMG20241003103255_jpg.rf.35b2b9371325d355b7b8fe52abfbec77.jpg",
+        "original_result": {
+          "barcodes": [],
+          "nutrition_info": {
+            "energy": null,
+            "protein": null,
+            "fat": null,
+            "carbohydrate": null,
+            "sodium": null,
+            "sugar": null,
+            "raw_texts": [
+              "ek 1 NTN CT ATT"
+            ]
+          },
+          "text_info": [
+            {
+              "text": "ek 1 NTN CT ATT",
+              "bbox": [
+                0,
+                0,
+                640,
+                640
+              ],
+              "confidence": 0.8,
+              "engine": "tesseract_simple"
+            }
+          ],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": true,
+            "text_regions_count": 1,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "repaired_result": {
+          "barcodes": [],
+          "nutrition_info": {
+            "energy": null,
+            "protein": null,
+            "fat": null,
+            "carbohydrate": null,
+            "sodium": null,
+            "sugar": null,
+            "raw_texts": [
+              "ek 1 NTN CT ATT"
+            ]
+          },
+          "text_info": [
+            {
+              "text": "ek 1 NTN CT ATT",
+              "bbox": [
+                0,
+                0,
+                640,
+                640
+              ],
+              "confidence": 0.8,
+              "engine": "tesseract_simple"
+            }
+          ],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": true,
+            "text_regions_count": 1,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          },
+          "text_regions": [],
+          "repair_summary": {
+            "total_regions": 0,
+            "repaired_regions": 0,
+            "repair_methods_used": [],
+            "average_confidence_improvement": 0.0
+          },
+          "repair_time": 0.0
+        },
+        "comparison": {
+          "text_length_change": 0,
+          "confidence_improvement": 0,
+          "regions_repaired": 0,
+          "total_regions": 0,
+          "repair_rate": 0,
+          "improvement_percentage": 0.0
+        },
+        "timestamp": "2025-06-20 14:25:31"
+      },
+      "coordinate_validation": {
+        "image_path": "test_images\\IMG20241003103255_jpg.rf.35b2b9371325d355b7b8fe52abfbec77.jpg",
+        "image_size": [
+          640,
+          640,
+          3
+        ],
+        "processing_time": 0.40580177307128906,
+        "coordinate_validation": {
+          "total_regions": 0,
+          "valid_coordinates": 0,
+          "coordinate_accuracy": 0,
+          "bbox_coverage": 0,
+          "precise_bbox_improvement": 0,
+          "coordinate_issues": [
+            "未检测到任何文本区域"
+          ]
+        },
+        "parsing_analysis": {
+          "total_text_length": 0,
+          "chinese_char_count": 0,
+          "english_char_count": 0,
+          "number_count": 0,
+          "special_char_count": 0,
+          "empty_regions": 0,
+          "low_confidence_regions": 0,
+          "parsing_success_rate": 0,
+          "average_confidence": 0,
+          "text_distribution": {},
+          "parsing_issues": [
+            "没有文本区域可分析"
+          ]
+        },
+        "extraction_result": {
+          "barcodes": [],
+          "nutrition_info": {
+            "energy": null,
+            "protein": null,
+            "fat": null,
+            "carbohydrate": null,
+            "sodium": null,
+            "sugar": null,
+            "raw_texts": [
+              "ek 1 NTN CT ATT"
+            ]
+          },
+          "text_info": [
+            {
+              "text": "ek 1 NTN CT ATT",
+              "bbox": [
+                0,
+                0,
+                640,
+                640
+              ],
+              "confidence": 0.8,
+              "engine": "tesseract_simple"
+            }
+          ],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": true,
+            "text_regions_count": 1,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "timestamp": "2025-06-20 14:25:31",
+        "visualization_path": "coordinate_validation_IMG20241003103255_jpg.rf.35b2b9371325d355b7b8fe52abfbec77_1750400731.png"
+      },
+      "performance_comparison": {
+        "text_length_improvement": {
+          "baseline_to_enhanced": 0,
+          "enhanced_percentage": 0.0,
+          "repair_improvement": 0
+        },
+        "confidence_improvement": {
+          "baseline_to_enhanced": 0,
+          "enhanced_percentage": 0.0,
+          "repair_improvement": 0
+        },
+        "processing_time": {
+          "baseline": 0.41638660430908203,
+          "enhanced": 0.4325141906738281,
+          "time_overhead": 0.016127586364746094,
+          "overhead_percentage": 3.8732241138032997
+        },
+        "chinese_recognition": {
+          "chinese_chars_detected": 0
+        }
+      },
+      "quality_assessment": {
+        "quality_scores": {
+          "baseline": 0.0,
+          "enhanced": 0.0,
+          "diagnostic": 75.0,
+          "repair": 0.0
+        },
+        "improvements": {
+          "baseline_to_enhanced": 0.0,
+          "baseline_to_repair": 0.0,
+          "enhanced_to_repair": 0.0
+        },
+        "issues_analysis": {
+          "total_issues": 1,
+          "issues_per_region": 1.0
+        },
+        "overall_assessment": "无明显改进"
+      },
+      "total_processing_time": 2.5902624130249023,
+      "timestamp": "2025-06-20 14:25:32"
+    },
+    {
+      "image_path": "test_images\\IMG20241003103524_jpg.rf.21bcda01a3eb6e1629122cf290f7b2e4 - 副本.jpg",
+      "image_info": {
+        "size": [
+          640,
+          640,
+          3
+        ],
+        "channels": 3
+      },
+      "baseline_ocr": {
+        "result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "statistics": {
+          "regions_detected": 0,
+          "total_text_length": 0,
+          "average_confidence": 0,
+          "processing_time": 0.44003987312316895
+        }
+      },
+      "enhanced_ocr": {
+        "result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          },
+          "text_regions": []
+        },
+        "statistics": {
+          "regions_detected": 0,
+          "total_text_length": 0,
+          "average_confidence": 0,
+          "chinese_char_count": 0,
+          "processing_time": 0.4503648281097412
+        }
+      },
+      "diagnostic": {
+        "image_path": "test_images\\IMG20241003103524_jpg.rf.21bcda01a3eb6e1629122cf290f7b2e4 - 副本.jpg",
+        "image_size": [
+          640,
+          640,
+          3
+        ],
+        "processing_time": 0.40975165367126465,
+        "quality_score": 75.0,
+        "issues_detected": 1,
+        "issues": [
+          {
+            "issue_type": "no_regions_detected",
+            "severity": "critical",
+            "description": "未检测到任何文本区域",
+            "suggested_fix": "检查YOLO模型配置，降低检测阈值",
+            "region_id": null,
+            "confidence_impact": 0.0
+          }
+        ],
+        "fixes": {
+          "immediate_fixes": [],
+          "parameter_adjustments": [],
+          "preprocessing_improvements": [],
+          "model_optimizations": []
+        },
+        "extraction_result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "timestamp": "2025-06-20 14:25:34"
+      },
+      "repair": {
+        "image_path": "test_images\\IMG20241003103524_jpg.rf.21bcda01a3eb6e1629122cf290f7b2e4 - 副本.jpg",
+        "original_result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "repaired_result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          },
+          "text_regions": [],
+          "repair_summary": {
+            "total_regions": 0,
+            "repaired_regions": 0,
+            "repair_methods_used": [],
+            "average_confidence_improvement": 0.0
+          },
+          "repair_time": 0.0
+        },
+        "comparison": {
+          "text_length_change": 0,
+          "confidence_improvement": 0,
+          "regions_repaired": 0,
+          "total_regions": 0,
+          "repair_rate": 0,
+          "improvement_percentage": 0.0
+        },
+        "timestamp": "2025-06-20 14:25:35"
+      },
+      "coordinate_validation": {
+        "image_path": "test_images\\IMG20241003103524_jpg.rf.21bcda01a3eb6e1629122cf290f7b2e4 - 副本.jpg",
+        "image_size": [
+          640,
+          640,
+          3
+        ],
+        "processing_time": 0.4133930206298828,
+        "coordinate_validation": {
+          "total_regions": 0,
+          "valid_coordinates": 0,
+          "coordinate_accuracy": 0,
+          "bbox_coverage": 0,
+          "precise_bbox_improvement": 0,
+          "coordinate_issues": [
+            "未检测到任何文本区域"
+          ]
+        },
+        "parsing_analysis": {
+          "total_text_length": 0,
+          "chinese_char_count": 0,
+          "english_char_count": 0,
+          "number_count": 0,
+          "special_char_count": 0,
+          "empty_regions": 0,
+          "low_confidence_regions": 0,
+          "parsing_success_rate": 0,
+          "average_confidence": 0,
+          "text_distribution": {},
+          "parsing_issues": [
+            "没有文本区域可分析"
+          ]
+        },
+        "extraction_result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "timestamp": "2025-06-20 14:25:35",
+        "visualization_path": "coordinate_validation_IMG20241003103524_jpg.rf.21bcda01a3eb6e1629122cf290f7b2e4 - 副本_1750400735.png"
+      },
+      "performance_comparison": {
+        "text_length_improvement": {
+          "baseline_to_enhanced": 0,
+          "enhanced_percentage": 0.0,
+          "repair_improvement": 0
+        },
+        "confidence_improvement": {
+          "baseline_to_enhanced": 0,
+          "enhanced_percentage": 0.0,
+          "repair_improvement": 0
+        },
+        "processing_time": {
+          "baseline": 0.44003987312316895,
+          "enhanced": 0.4503648281097412,
+          "time_overhead": 0.010324954986572266,
+          "overhead_percentage": 2.3463680491704597
+        },
+        "chinese_recognition": {
+          "chinese_chars_detected": 0
+        }
+      },
+      "quality_assessment": {
+        "quality_scores": {
+          "baseline": 0.0,
+          "enhanced": 0.0,
+          "diagnostic": 75.0,
+          "repair": 0.0
+        },
+        "improvements": {
+          "baseline_to_enhanced": 0.0,
+          "baseline_to_repair": 0.0,
+          "enhanced_to_repair": 0.0
+        },
+        "issues_analysis": {
+          "total_issues": 1,
+          "issues_per_region": 1.0
+        },
+        "overall_assessment": "无明显改进"
+      },
+      "total_processing_time": 2.685983896255493,
+      "timestamp": "2025-06-20 14:25:36"
+    }
+  ]
+}

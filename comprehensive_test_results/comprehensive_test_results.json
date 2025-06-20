@@ -1,0 +1,145 @@
+{
+  "batch_statistics": {
+    "total_images": 5,
+    "average_scores": {
+      "baseline": 0.0,
+      "enhanced": 0.0,
+      "repair": 0.0
+    },
+    "score_improvements": {
+      "baseline_to_enhanced": 0.0,
+      "baseline_to_repair": 0.0
+    },
+    "average_improvements": {
+      "confidence": 0.0,
+      "text_length": 0.0
+    },
+    "performance": {
+      "average_processing_time": 3.0770962715148924,
+      "total_processing_time": 15.385481357574463
+    },
+    "success_rate": 1.0
+  },
+  "detailed_results": [
+    {
+      "image_path": "test_images\\IMG20241003102238_jpg.rf.9a6966b52fc1c76446417f806008f465.jpg",
+      "image_info": {
+        "size": [
+          640,
+          640,
+          3
+        ],
+        "channels": 3
+      },
+      "baseline_ocr": {
+        "result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "statistics": {
+          "regions_detected": 0,
+          "total_text_length": 0,
+          "average_confidence": 0,
+          "processing_time": 0.4112057685852051
+        }
+      },
+      "enhanced_ocr": {
+        "result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          },
+          "text_regions": []
+        },
+        "statistics": {
+          "regions_detected": 0,
+          "total_text_length": 0,
+          "average_confidence": 0,
+          "chinese_char_count": 0,
+          "processing_time": 0.4071686267852783
+        }
+      },
+      "diagnostic": {
+        "image_path": "test_images\\IMG20241003102238_jpg.rf.9a6966b52fc1c76446417f806008f465.jpg",
+        "image_size": [
+          640,
+          640,
+          3
+        ],
+        "processing_time": 0.39023828506469727,
+        "quality_score": 75.0,
+        "issues_detected": 1,
+        "issues": [
+          {
+            "issue_type": "no_regions_detected",
+            "severity": "critical",
+            "description": "未检测到任何文本区域",
+            "suggested_fix": "检查YOLO模型配置，降低检测阈值",
+            "region_id": null,
+            "confidence_impact": 0.0
+          }
+        ],
+        "fixes": {
+          "immediate_fixes": [],
+          "parameter_adjustments": [],
+          "preprocessing_improvements": [],
+          "model_optimizations": []
+        },
+        "extraction_result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "timestamp": "2025-06-20 14:23:51"
+      },
+      "repair": {
+        "image_path": "test_images\\IMG20241003102238_jpg.rf.9a6966b52fc1c76446417f806008f465.jpg",
+        "original_result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          }
+        },
+        "repaired_result": {
+          "barcodes": [],
+          "nutrition_info": {},
+          "text_info": [],
+          "extraction_summary": {
+            "barcode_count": 0,
+            "has_nutrition_info": false,
+            "text_regions_count": 0,
+            "yolo_text_regions": 0,
+            "ocr_extraction_method": "full_image"
+          },
+          "text_regions": [],
+          "repair_summary": {
+            "total_regions": 0,
+            "repaired_regions": 0,
+            "repair_methods_used": 

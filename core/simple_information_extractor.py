@@ -25,6 +25,7 @@ except ImportError:
     PYTESSERACT_AVAILABLE = False
 
 from .image_processor import ImageProcessor
+from .chinese_ocr_optimizer import ChineseOCROptimizer
 
 class SimpleInformationExtractor:
     """简化的信息提取器，避免PaddleOCR初始化问题"""
@@ -33,12 +34,23 @@ class SimpleInformationExtractor:
         """初始化简化信息提取器"""
         self.logger = logging.getLogger(__name__)
         self.image_processor = ImageProcessor()
+        
+        # 初始化中文OCR优化器
+        try:
+            self.chinese_ocr_optimizer = ChineseOCROptimizer()
+            chinese_ocr_available = True
+        except Exception as e:
+            self.logger.warning(f"中文OCR优化器初始化失败: {e}")
+            self.chinese_ocr_optimizer = None
+            chinese_ocr_available = False
+        
         self.logger.info("初始化简化信息提取器...")
         
         # 检查可用的功能
         self.features = {
             'barcode': PYZBAR_AVAILABLE,
             'tesseract_ocr': PYTESSERACT_AVAILABLE,
+            'chinese_ocr_optimization': chinese_ocr_available,
             'image_processing': True
         }
         
@@ -167,12 +179,13 @@ class SimpleInformationExtractor:
                 bbox = region['bbox']
                 x1, y1, x2, y2 = map(int, bbox)
                 
-                # 确保边界框在图像范围内
+                # 确保边界框在图像范围内并添加边距
                 h, w = image.shape[:2]
-                x1 = max(0, x1)
-                y1 = max(0, y1) 
-                x2 = min(w, x2)
-                y2 = min(h, y2)
+                margin = 5  # 添加5像素边距
+                x1 = max(0, x1 - margin)
+                y1 = max(0, y1 - margin) 
+                x2 = min(w, x2 + margin)
+                y2 = min(h, y2 + margin)
                 
                 # 裁剪文本区域
                 text_region_img = image[y1:y2, x1:x2]
@@ -181,49 +194,58 @@ class SimpleInformationExtractor:
                     self.logger.warning(f"文本区域 {i+1} 为空，跳过")
                     continue
                 
-                # 预处理文本区域图像以提高OCR准确性
-                processed_img = self._preprocess_text_region(text_region_img)
+                # 优先使用中文OCR优化器
+                if self.chinese_ocr_optimizer and self.features['chinese_ocr_optimization']:
+                    try:
+                        # 使用优化器进行高精度识别
+                        optimized_results = self.chinese_ocr_optimizer.optimize_chinese_text_recognition(
+                            text_region_img, region
+                        )
+                        
+                        if optimized_results:
+                            # 选择最佳结果
+                            best_result = max(optimized_results, key=lambda x: x['confidence'])
+                            
+                            # 调整坐标到原图坐标系
+                            adjusted_bbox = [
+                                best_result['bbox'][0] + x1,
+                                best_result['bbox'][1] + y1,
+                                best_result['bbox'][2] + x1,
+                                best_result['bbox'][3] + y1
+                            ]
+                            
+                            result = {
+                                'region_id': i + 1,
+                                'text': best_result['text'],
+                                'bbox': bbox,  # YOLO检测的原始边界框
+                                'precise_bbox': adjusted_bbox,  # OCR精确定位的边界框
+                                'region_bbox': (x1, y1, x2, y2),  # 裁剪区域在原图中的位置
+                                'confidence': best_result['confidence'],
+                                'engine': 'chinese_ocr_optimizer',
+                                'config_type': best_result.get('config_type', 'unknown'),
+                                'chinese_char_count': best_result.get('chinese_char_count', 0),
+                                'scale_used': best_result.get('scale_used', 'original'),
+                                'yolo_region': region  # 保存原始YOLO检测信息
+                            }
+                            
+                            # 如果有原始文本，也保存
+                            if 'original_text' in best_result:
+                                result['original_text'] = best_result['original_text']
+                            
+                            extracted_texts.append(result)
+                            self.logger.info(f"区域 {i+1} 优化识别: '{best_result['text']}' (置信度: {best_result['confidence']:.3f})")
+                            continue
+                        
+                    except Exception as e:
+                        self.logger.warning(f"中文OCR优化器处理区域 {i+1} 失败: {e}，回退到传统方法")
                 
-                # 使用Tesseract进行OCR识别
-                # 优化OCR参数以提高中文识别准确性
-                # 移除字符白名单限制，允许识别所有中文字符
-                custom_config = r'--oem 3 --psm 6'
-
-                # 提取文本 - 优先使用中文简体，然后是英文
-                text = pytesseract.image_to_string(
-                    processed_img,
-                    lang='chi_sim+eng',  # 调整语言优先级，中文优先
-                    config=custom_config
-                ).strip()
+                # 回退到传统OCR方法
+                fallback_result = self._fallback_text_recognition(
+                    text_region_img, region, i, bbox, (x1, y1, x2, y2)
+                )
                 
-                if text:
-                    # 获取详细的OCR结果，包括置信度
-                    data = pytesseract.image_to_data(
-                        processed_img,
-                        config=custom_config,
-                        lang='chi_sim+eng',  # 保持与上面一致的语言优先级
-                        output_type=pytesseract.Output.DICT
-                    )
-                    
-                    # 计算平均置信度
-                    confidences = [int(conf) for conf in data['conf'] if int(conf) > 0]
-                    avg_confidence = sum(confidences) / len(confidences) / 100.0 if confidences else 0.5
-                    
-                    # 构建结果
-                    result = {
-                        'region_id': i + 1,
-                        'text': text,
-                        'bbox': bbox,  # 原图中的位置
-                        'region_bbox': (x1, y1, x2, y2),  # 裁剪区域在原图中的位置
-                        'confidence': avg_confidence,
-                        'engine': 'tesseract_region',
-                        'yolo_region': region  # 保存原始YOLO检测信息
-                    }
-                    
-                    extracted_texts.append(result)
-                    self.logger.info(f"区域 {i+1} 识别文本: '{text}' (置信度: {avg_confidence:.3f})")
-                else:
-                    self.logger.warning(f"区域 {i+1} 未识别到文本")
+                if fallback_result:
+                    extracted_texts.append(fallback_result)
                     
             except Exception as e:
                 self.logger.error(f"处理文本区域 {i+1} 时出错: {e}")
@@ -389,14 +411,156 @@ class SimpleInformationExtractor:
         
         return nutrition_info
     
+    def _fallback_text_recognition(self, text_region_img: np.ndarray, region: Dict, 
+                                 region_index: int, bbox: Tuple, region_bbox: Tuple) -> Optional[Dict]:
+        """
+        回退文本识别方法（当优化器失败时使用）
+        
+        Args:
+            text_region_img: 文本区域图像
+            region: 区域信息
+            region_index: 区域索引
+            bbox: 边界框
+            region_bbox: 区域边界框
+            
+        Returns:
+            识别结果或None
+        """
+        try:
+            # 预处理文本区域图像
+            processed_img = self._preprocess_text_region(text_region_img)
+            
+            # 判断是否为营养成分表区域
+            is_nutrition = self._is_nutrition_table_region(region)
+            
+            # 选择合适的OCR配置
+            if is_nutrition:
+                # 营养成分表专用配置
+                custom_config = r'--oem 3 --psm 6 -c tessedit_char_whitelist=0123456789.%克毫微千焦卡能量蛋白质脂肪碳水化合物糖钠钙铁锌维生素膳食纤维胆固醇反式饱和不参考值含量营养素成分表每份NRV'
+            else:
+                # 普通文本配置
+                custom_config = r'--oem 3 --psm 6'
+            
+            # 提取文本
+            text = pytesseract.image_to_string(
+                processed_img,
+                lang='chi_sim+eng',
+                config=custom_config
+            ).strip()
+            
+            if text:
+                # 获取详细的OCR结果，包括置信度和坐标
+                try:
+                    data = pytesseract.image_to_data(
+                        processed_img,
+                        config=custom_config,
+                        lang='chi_sim+eng',
+                        output_type=pytesseract.Output.DICT
+                    )
+                    
+                    # 计算平均置信度
+                    confidences = [int(conf) for conf in data['conf'] if int(conf) > 0]
+                    avg_confidence = sum(confidences) / len(confidences) / 100.0 if confidences else 0.5
+                    
+                    # 获取文本的精确边界框
+                    text_boxes = []
+                    for i in range(len(data['text'])):
+                        if data['text'][i].strip() and int(data['conf'][i]) > 30:
+                            x, y, w, h = data['left'][i], data['top'][i], data['width'][i], data['height'][i]
+                            text_boxes.append([x, y, x + w, y + h])
+                    
+                    # 计算整体文本边界框
+                    if text_boxes:
+                        min_x = min(box[0] for box in text_boxes)
+                        min_y = min(box[1] for box in text_boxes)
+                        max_x = max(box[2] for box in text_boxes)
+                        max_y = max(box[3] for box in text_boxes)
+                        
+                        # 映射到原图坐标
+                        precise_bbox = [
+                            min_x + region_bbox[0],
+                            min_y + region_bbox[1],
+                            max_x + region_bbox[0],
+                            max_y + region_bbox[1]
+                        ]
+                    else:
+                        precise_bbox = list(bbox)
+                    
+                except Exception as e:
+                    self.logger.warning(f"获取详细OCR数据失败: {e}")
+                    avg_confidence = 0.5
+                    precise_bbox = list(bbox)
+                
+                # 构建结果
+                result = {
+                    'region_id': region_index + 1,
+                    'text': text,
+                    'bbox': bbox,  # YOLO检测的原始边界框
+                    'precise_bbox': precise_bbox,  # OCR精确定位的边界框
+                    'region_bbox': region_bbox,  # 裁剪区域在原图中的位置
+                    'confidence': avg_confidence,
+                    'engine': 'tesseract_fallback',
+                    'config_type': 'nutrition' if is_nutrition else 'default',
+                    'yolo_region': region  # 保存原始YOLO检测信息
+                }
+                
+                self.logger.info(f"区域 {region_index+1} 回退识别: '{text}' (置信度: {avg_confidence:.3f})")
+                return result
+            else:
+                self.logger.warning(f"区域 {region_index+1} 回退方法未识别到文本")
+                return None
+                
+        except Exception as e:
+            self.logger.error(f"回退文本识别失败: {e}")
+            return None
+    
+    def _is_nutrition_table_region(self, region: Dict) -> bool:
+        """
+        判断检测到的区域是否为营养成分表
+        
+        Args:
+            region: 区域信息字典
+            
+        Returns:
+            是否为营养成分表区域
+        """
+        try:
+            # 检查类别名称
+            class_name = region.get('class_name', '').lower()
+            nutrition_keywords = ['nutrition', 'table', '营养', '成分', '表格']
+            
+            for keyword in nutrition_keywords:
+                if keyword in class_name:
+                    return True
+            
+            # 检查区域大小和宽高比（营养成分表通常是矩形且面积较大）
+            bbox = region.get('bbox', [])
+            if len(bbox) >= 4:
+                width = bbox[2] - bbox[0]
+                height = bbox[3] - bbox[1]
+                aspect_ratio = width / height if height > 0 else 0
+                
+                # 营养成分表通常宽高比在0.5-2.0之间，且面积较大
+                area = width * height
+                if 0.5 <= aspect_ratio <= 2.0 and area > 10000:
+                    return True
+                    
+            return False
+             
+        except Exception as e:
+            self.logger.error(f"判断营养成分表区域失败: {e}")
+            return False
+    
     def get_feature_status(self) -> Dict:
         """获取功能状态"""
         return {
             'barcode_extraction': self.features['barcode'],
             'text_extraction': self.features['tesseract_ocr'],
+            'chinese_ocr_optimization': self.features['chinese_ocr_optimization'],
             'image_processing': self.features['image_processing'],
             'available_engines': [
                 'pyzbar' if self.features['barcode'] else None,
-                'tesseract' if self.features['tesseract_ocr'] else None
+                'tesseract' if self.features['tesseract_ocr'] else None,
+                'chinese_ocr_optimizer' if self.features['chinese_ocr_optimization'] else None
             ]
         }

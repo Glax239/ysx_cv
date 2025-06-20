@@ -175,3 +175,454 @@
     {"original": "OZz", "corrected": "oz", "reason": "单位 'OZz' 应为 'oz' (盎司)"},
     {"original": "Te", "corrected": "g", "reason": "'Dietary Fiber' 后面应为单位 'g' (克)，'Te' 应为
 2025-06-20 03:03:38 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['ocr_corrections', 'detected_ingredients', 'nutrition_facts', 'overall_score', 'analysis', 'recommendations', 'health_warnings']
+2025-06-20 13:30:51 - core.gemini_health_analyzer - INFO - Gemini健康分析器初始化完成，状态: 启用
+2025-06-20 13:30:58 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 13:30:58 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1535
+2025-06-20 13:30:58 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "Traris", "corrected": "Trans", "reason": "拼写错误，应为Trans fat (反式脂肪)"},
+    {"original": "Drotain", "corrected": "Protein", "reason": "拼写错误，应为Protein (蛋白质)"},
+    {"original": "4A%", "corrected": "4g", "reason": "字符识别错误，根据上下文应为克数，而非百分比"},
+    {"original": "510mq", "corrected": "510mg", "reason": "字符识别错误，应为毫克(mg)"},
+    {"original": "6ma", "corrected": "6mg", "reason": "字符识别错误，应为毫克(mg)"},
+    {"original": "2人90C", "corrected": "290kcal", "reason": "
+2025-06-20 13:30:58 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1535
+2025-06-20 13:30:58 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "Traris", "corrected": "Trans", "reason": "拼写错误，应为Trans fat (反式脂肪)"},
+    {"original": "Drotain", "corrected": "Protein", "reason": "拼写错误，应为Protein (蛋
+2025-06-20 13:30:58 - core.gemini_health_analyzer - INFO - 从代码块中找到JSON字符串，长度: 1522
+2025-06-20 13:30:58 - core.gemini_health_analyzer - INFO - JSON字符串前300字符: {
+  "ocr_corrections": [
+    {"original": "Traris", "corrected": "Trans", "reason": "拼写错误，应为Trans fat (反式脂肪)"},
+    {"original": "Drotain", "corrected": "Protein", "reason": "拼写错误，应为Protein (蛋白质)"},
+    {"original": "4A%", "corrected": "4g", "reason": "字符识别错误，根据上下文应为克数，而非百分比"},
+    {"original": "510
+2025-06-20 13:30:58 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['ocr_corrections', 'detected_ingredients', 'nutrition_facts', 'overall_score', 'analysis', 'recommendations', 'health_warnings']
+2025-06-20 13:33:42 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 13:33:42 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1473
+2025-06-20 13:33:42 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "I贝目", "corrected": "1克目", "reason": "根据上下文和数字'10055'推测，'I'可能是'1'的误识别，'贝目'可能是'克目'的误识别，可能指每100克的营养成分"},
+    {"original": "Zab 旦.", "corrected": "日期", "reason": "推测'Zab'是日期的误识别，'旦.'可能是日期的一部分或其他无关信息"},
+    {"original": "792于人和售", "corrected": "792g/每份", "reason": "'792'可能是重量，'于人和售'可能是'每份'的误识别"},
+    {"original": "AS AA", "corrected": "氨基酸", "reason": "推测'AS AA'是'氨基酸'的缩写"},
+    {"original": "OE", "corrected": "油脂", "reason": "推测'OE'是'油脂'的缩写"},
+    {"
+2025-06-20 13:33:42 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1473
+2025-06-20 13:33:42 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "I贝目", "corrected": "1克目", "reason": "根据上下文和数字'10055'推测，'I'可能是'1'的误识别，'贝目'可能是'克目'的误识别，可能指每100克的营养成分"},
+    {"original": "Zab 旦.", "corrected": "日期", "
+2025-06-20 13:33:42 - core.gemini_health_analyzer - INFO - 从代码块中找到JSON字符串，长度: 1460
+2025-06-20 13:33:42 - core.gemini_health_analyzer - INFO - JSON字符串前300字符: {
+  "ocr_corrections": [
+    {"original": "I贝目", "corrected": "1克目", "reason": "根据上下文和数字'10055'推测，'I'可能是'1'的误识别，'贝目'可能是'克目'的误识别，可能指每100克的营养成分"},
+    {"original": "Zab 旦.", "corrected": "日期", "reason": "推测'Zab'是日期的误识别，'旦.'可能是日期的一部分或其他无关信息"},
+    {"original": "792于人和售", "corrected": "792g/每份", "reason
+2025-06-20 13:33:42 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['ocr_corrections', 'detected_ingredients', 'nutrition_facts', 'overall_score', 'analysis', 'recommendations', 'health_warnings']
+2025-06-20 13:40:30 - chinese_ocr_test - INFO - 开始中文OCR优化测试...
+2025-06-20 13:40:30 - chinese_ocr_test - INFO - 找到 7 个测试图像
+2025-06-20 13:40:30 - chinese_ocr_test - INFO - 
+处理图像: IMG20241003102238_jpg.rf.9a6966b52fc1c76446417f806008f465.jpg
+2025-06-20 13:40:30 - chinese_ocr_test - INFO - 图像尺寸: (640, 640, 3)
+2025-06-20 13:40:30 - chinese_ocr_test - INFO - 
+=== 传统OCR方法 ===
+2025-06-20 13:40:32 - chinese_ocr_test - INFO - 传统识别: 'ee     LES A/V,  AVS?
+BL ZE C4
+SID     Geli    Bor    SOK ote      ZN
+BSA a AEN ER
+x DS
+“fee Sie ONE SLB CZ
+LINE EN 2  MA iy
+2  SMEG WL
+WY)   ME Oo I tgs ty yo
+SOON ee oA g “yg Vi Gn' (置信度: 0.383)
+2025-06-20 13:40:32 - chinese_ocr_test - INFO - 
+=== 优化OCR方法 ===
+2025-06-20 13:40:34 - chinese_ocr_test - INFO - 优化识别: 'oa' (置信度: 0.550)
+2025-06-20 13:40:34 - chinese_ocr_test - INFO - 配置类型: single_char
+2025-06-20 13:40:34 - chinese_ocr_test - INFO - 中文字符数: 0
+2025-06-20 13:40:34 - chinese_ocr_test - INFO - 原始文本: 'oa'
+2025-06-20 13:40:34 - chinese_ocr_test - INFO - 
+=== 结果比较 ===
+2025-06-20 13:40:34 - chinese_ocr_test - INFO - 传统方法文本长度: 182
+2025-06-20 13:40:34 - chinese_ocr_test - INFO - 优化方法文本长度: 2
+2025-06-20 13:40:34 - chinese_ocr_test - INFO - 传统方法置信度: 0.383
+2025-06-20 13:40:34 - chinese_ocr_test - INFO - 优化方法置信度: 0.550
+2025-06-20 13:40:34 - chinese_ocr_test - INFO - 传统方法中文字符数: 0
+2025-06-20 13:40:34 - chinese_ocr_test - INFO - 优化方法中文字符数: 0
+2025-06-20 13:40:34 - chinese_ocr_test - INFO - ✅ 优化方法置信度更高
+2025-06-20 13:40:34 - chinese_ocr_test - INFO - 
+处理图像: IMG20241003102813_jpg.rf.640cf5ba41570bb356529df237e8eff9.jpg
+2025-06-20 13:40:34 - chinese_ocr_test - INFO - 图像尺寸: (640, 640, 3)
+2025-06-20 13:40:34 - chinese_ocr_test - INFO - 
+=== 传统OCR方法 ===
+2025-06-20 13:40:37 - chinese_ocr_test - INFO - 传统识别: 'SOS Vs LEIA     2
+区GZ    WY YY fd USOC LE    Yi,
+DIV SEGRE ENE GEE.
+Ka fegp LES OED LOU ea NN
+MY 和CN、， GE SSIS Zags  Ci
+OP       ”   Lea      ot Ey
+CS LLIIY LI YOM é     Qi 2
+Bai   NS id ke Lf fy     LLL
+Gh SING SS ig      Vy    Ky
+zx NY LM MB    LID   Y
+RY LLG Vf]      SEZ     U
+EGA ch iis gf
+SOOT la LO Ane' (置信度: 0.357)
+2025-06-20 13:40:37 - chinese_ocr_test - INFO - 
+=== 优化OCR方法 ===
+2025-06-20 13:40:39 - chinese_ocr_test - INFO - 优化识别: '' (置信度: 0.640)
+2025-06-20 13:40:39 - chinese_ocr_test - INFO - 配置类型: single_char
+2025-06-20 13:40:39 - chinese_ocr_test - INFO - 中文字符数: 0
+2025-06-20 13:40:39 - chinese_ocr_test - INFO - 原始文本: '='
+2025-06-20 13:40:39 - chinese_ocr_test - INFO - 
+=== 结果比较 ===
+2025-06-20 13:40:39 - chinese_ocr_test - INFO - 传统方法文本长度: 309
+2025-06-20 13:40:39 - chinese_ocr_test - INFO - 优化方法文本长度: 0
+2025-06-20 13:40:39 - chinese_ocr_test - INFO - 传统方法置信度: 0.357
+2025-06-20 13:40:39 - chinese_ocr_test - INFO - 优化方法置信度: 0.640
+2025-06-20 13:40:39 - chinese_ocr_test - INFO - 传统方法中文字符数: 2
+2025-06-20 13:40:39 - chinese_ocr_test - INFO - 优化方法中文字符数: 0
+2025-06-20 13:40:39 - chinese_ocr_test - INFO - ⚠️ 优化效果不明显
+2025-06-20 13:40:39 - chinese_ocr_test - INFO - 
+处理图像: IMG20241003103246_jpg.rf.e90c0b529b7c23ccea970e9b60910bbd.jpg
+2025-06-20 13:40:39 - chinese_ocr_test - INFO - 图像尺寸: (640, 640, 3)
+2025-06-20 13:40:39 - chinese_ocr_test - INFO - 
+=== 传统OCR方法 ===
+2025-06-20 13:40:40 - chinese_ocr_test - INFO - 传统识别: '.RAR大
+LEE. PRO NON IT SOI 7
+re  ens arr  NES  EAS  Yy
+Ay oe LEE NSS 2  NCES   Ne      ME
+WAS ORY 7,
+e   SS      »     GAN
+SNS Se de   WIR' (置信度: 0.343)
+2025-06-20 13:40:40 - chinese_ocr_test - INFO - 
+=== 优化OCR方法 ===
+2025-06-20 13:40:42 - chinese_ocr_test - INFO - 优化识别: '一 一   Below Ate aw  umm Y' (置信度: 0.590)
+2025-06-20 13:40:42 - chinese_ocr_test - INFO - 配置类型: standard
+2025-06-20 13:40:42 - chinese_ocr_test - INFO - 中文字符数: 2
+2025-06-20 13:40:42 - chinese_ocr_test - INFO - 原始文本: '一   一           :
+| Below “Ate   aw {   umm Y'
+2025-06-20 13:40:42 - chinese_ocr_test - INFO - 
+=== 结果比较 ===
+2025-06-20 13:40:42 - chinese_ocr_test - INFO - 传统方法文本长度: 137
+2025-06-20 13:40:42 - chinese_ocr_test - INFO - 优化方法文本长度: 25
+2025-06-20 13:40:42 - chinese_ocr_test - INFO - 传统方法置信度: 0.343
+2025-06-20 13:40:42 - chinese_ocr_test - INFO - 优化方法置信度: 0.590
+2025-06-20 13:40:42 - chinese_ocr_test - INFO - 传统方法中文字符数: 1
+2025-06-20 13:40:42 - chinese_ocr_test - INFO - 优化方法中文字符数: 2
+2025-06-20 13:40:42 - chinese_ocr_test - INFO - ✅ 优化方法识别出更多中文字符
+2025-06-20 13:40:42 - chinese_ocr_test - INFO - 
+处理图像: IMG20241003103255_jpg.rf.35b2b9371325d355b7b8fe52abfbec77.jpg
+2025-06-20 13:40:42 - chinese_ocr_test - INFO - 图像尺寸: (640, 640, 3)
+2025-06-20 13:40:42 - chinese_ocr_test - INFO - 
+=== 传统OCR方法 ===
+2025-06-20 13:40:44 - chinese_ocr_test - INFO - 传统识别: 'RSS
+RALLY) YR OLLIE GI YE:
+SAN On 7 \  YING ete ‘fe Lig
+5, OO SE I  Cie =
+LS ORE SESE OR IOI SSS
+INQOA VA ESING   “re   4   6    Cf 2S 0s   LE    rs
+t  GY JIS' (置信度: 0.327)
+2025-06-20 13:40:44 - chinese_ocr_test - INFO - 
+=== 优化OCR方法 ===
+2025-06-20 13:40:46 - chinese_ocr_test - INFO - 优化识别: 'ae  aS 7 Paes ra  Q  SHER .  at ced 7 一一一 aan ct 四 一 8 ESS I ee Po WooFF 一 四了 m Ee ort  PEN 25 Every' (置信度: 0.404)
+2025-06-20 13:40:46 - chinese_ocr_test - INFO - 配置类型: standard
+2025-06-20 13:40:46 - chinese_ocr_test - INFO - 中文字符数: 5
+2025-06-20 13:40:46 - chinese_ocr_test - INFO - 原始文本: 'ae <  aS 7 Paes  ra          -
+Q          - SHER           .    -
+at      ced  7    一一一
+aan    ct  四      一
+8 ESS I
+ee Po
+WooFF   -一   四了   /m Ee
+ort | PEN 25 Every'
+2025-06-20 13:40:46 - chinese_ocr_test - INFO - 
+=== 结果比较 ===
+2025-06-20 13:40:46 - chinese_ocr_test - INFO - 传统方法文本长度: 158
+2025-06-20 13:40:46 - chinese_ocr_test - INFO - 优化方法文本长度: 100
+2025-06-20 13:40:46 - chinese_ocr_test - INFO - 传统方法置信度: 0.327
+2025-06-20 13:40:46 - chinese_ocr_test - INFO - 优化方法置信度: 0.404
+2025-06-20 13:40:46 - chinese_ocr_test - INFO - 传统方法中文字符数: 0
+2025-06-20 13:40:46 - chinese_ocr_test - INFO - 优化方法中文字符数: 5
+2025-06-20 13:40:46 - chinese_ocr_test - INFO - ✅ 优化方法识别出更多中文字符
+2025-06-20 13:40:46 - chinese_ocr_test - INFO - 
+处理图像: IMG20241003103524_jpg.rf.21bcda01a3eb6e1629122cf290f7b2e4 - 副本.jpg
+2025-06-20 13:40:46 - chinese_ocr_test - INFO - 图像尺寸: (640, 640, 3)
+2025-06-20 13:40:46 - chinese_ocr_test - INFO - 
+=== 传统OCR方法 ===
+2025-06-20 13:40:48 - chinese_ocr_test - INFO - 传统识别: 'RN
+Ch YG ALN CLF SSS
+VEY    WE ee as ENON x      DIE       rack
+GENDERS is EO
+Penis RAO p04
+a RES E Pe GING SA LILY
+a   PP ore, 2 WNL ICT
+CS OG HN
+SE ISRO EEN' (置信度: 0.329)
+2025-06-20 13:40:48 - chinese_ocr_test - INFO - 
+=== 优化OCR方法 ===
+2025-06-20 13:40:50 - chinese_ocr_test - INFO - 优化识别: 'i eT ee NOT SYN' (置信度: 0.248)
+2025-06-20 13:40:50 - chinese_ocr_test - INFO - 配置类型: standard
+2025-06-20 13:40:50 - chinese_ocr_test - INFO - 中文字符数: 0
+2025-06-20 13:40:50 - chinese_ocr_test - INFO - 原始文本: 'i
+eT ee: NOT SYN'
+2025-06-20 13:40:50 - chinese_ocr_test - INFO - 
+=== 结果比较 ===
+2025-06-20 13:40:50 - chinese_ocr_test - INFO - 传统方法文本长度: 158
+2025-06-20 13:40:50 - chinese_ocr_test - INFO - 优化方法文本长度: 15
+2025-06-20 13:40:50 - chinese_ocr_test - INFO - 传统方法置信度: 0.329
+2025-06-20 13:40:50 - chinese_ocr_test - INFO - 优化方法置信度: 0.248
+2025-06-20 13:40:50 - chinese_ocr_test - INFO - 传统方法中文字符数: 0
+2025-06-20 13:40:50 - chinese_ocr_test - INFO - 优化方法中文字符数: 0
+2025-06-20 13:40:50 - chinese_ocr_test - INFO - ⚠️ 优化效果不明显
+2025-06-20 13:40:50 - chinese_ocr_test - INFO - 
+处理图像: f76766c2d9c10a936bae843df1e5ecf.png
+2025-06-20 13:40:50 - chinese_ocr_test - INFO - 图像尺寸: (774, 640, 3)
+2025-06-20 13:40:50 - chinese_ocr_test - INFO - 
+=== 传统OCR方法 ===
+2025-06-20 13:40:52 - chinese_ocr_test - INFO - 传统识别: 'SING
+DONC
+NENGNSRS
+AASCL
+NOD>      QONLS   OX Li,
+OW NO ACNNG: CoG
+DON KEXSNN ON
+ASR玉No  人 SN
+PLAX NONE DS        CE
+ROSS
+OVONSY KES        ox NS
+ON                   全
+,            xy              exe
+<
+NN                 On
+SC                  SN' (置信度: 0.411)
+2025-06-20 13:40:52 - chinese_ocr_test - INFO - 
+=== 优化OCR方法 ===
+2025-06-20 13:40:54 - chinese_ocr_test - INFO - 优化识别: 'LE和 Serving Size 3.5 oz(99g) 4 Sticks Servings Per Container 4.5 Calories 120 Calories from Fat 40 Total Fat 4.59 7% Saturated Fat 0.59 3% Trans Fat  Cholesterol 15mg 5% Sodium 620mg 26% Total Carbohydrate 15g 5% Dietary Fiber 1g 3% Sugars 4g Protein 6g NOT A SIGNIFICANT SOURCE OF TRANS FAT' (置信度: 0.904)
+2025-06-20 13:40:54 - chinese_ocr_test - INFO - 配置类型: standard
+2025-06-20 13:40:54 - chinese_ocr_test - INFO - 中文字符数: 1
+2025-06-20 13:40:54 - chinese_ocr_test - INFO - 原始文本: 'LE和
+Serving Size 3.5 oz(99g) 4 Sticks
+Servings Per Container 4.5
+Calories 120     Calories from Fat 40
+Total Fat 4.59                          7%
+Saturated Fat 0.59                 3%
+Trans Fat *
+Cholesterol 15mg                     5%
+Sodium 620mg                       26%
+Total Carbohydrate 15g              5%
+Dietary Fiber 1g                   3%
+Sugars 4g
+Protein 6g
+
+*NOT A SIGNIFICANT SOURCE OF TRANS FAT'
+2025-06-20 13:40:54 - chinese_ocr_test - INFO - 
+=== 结果比较 ===
+2025-06-20 13:40:54 - chinese_ocr_test - INFO - 传统方法文本长度: 248
+2025-06-20 13:40:54 - chinese_ocr_test - INFO - 优化方法文本长度: 291
+2025-06-20 13:40:54 - chinese_ocr_test - INFO - 传统方法置信度: 0.411
+2025-06-20 13:40:54 - chinese_ocr_test - INFO - 优化方法置信度: 0.904
+2025-06-20 13:40:54 - chinese_ocr_test - INFO - 传统方法中文字符数: 3
+2025-06-20 13:40:54 - chinese_ocr_test - INFO - 优化方法中文字符数: 1
+2025-06-20 13:40:54 - chinese_ocr_test - INFO - ✅ 优化方法识别出更多文本
+2025-06-20 13:40:54 - chinese_ocr_test - INFO - 
+处理图像: 屏幕截图 2025-06-20 133250.png
+2025-06-20 13:40:54 - chinese_ocr_test - INFO - 图像尺寸: (1312, 2140, 3)
+2025-06-20 13:40:54 - chinese_ocr_test - INFO - 
+=== 传统OCR方法 ===
+2025-06-20 13:40:55 - chinese_ocr_test - INFO - 传统识别: '人        EAN 2.9
+4   5   \VWAGRAC ;      于
+are “<
+Se Ke              “六   IN
+3  we  < ae
+a   Se  soy                %
+“  4S ~    Ge                    (  Or   Kise )' (置信度: 0.431)
+2025-06-20 13:40:55 - chinese_ocr_test - INFO - 
+=== 优化OCR方法 ===
+2025-06-20 13:40:58 - chinese_ocr_test - INFO - 优化识别: '二' (置信度: 0.525)
+2025-06-20 13:40:58 - chinese_ocr_test - INFO - 配置类型: single_char
+2025-06-20 13:40:58 - chinese_ocr_test - INFO - 中文字符数: 1
+2025-06-20 13:40:58 - chinese_ocr_test - INFO - 原始文本: '|二'
+2025-06-20 13:40:58 - chinese_ocr_test - INFO - 
+=== 结果比较 ===
+2025-06-20 13:40:58 - chinese_ocr_test - INFO - 传统方法文本长度: 165
+2025-06-20 13:40:58 - chinese_ocr_test - INFO - 优化方法文本长度: 1
+2025-06-20 13:40:58 - chinese_ocr_test - INFO - 传统方法置信度: 0.431
+2025-06-20 13:40:58 - chinese_ocr_test - INFO - 优化方法置信度: 0.525
+2025-06-20 13:40:58 - chinese_ocr_test - INFO - 传统方法中文字符数: 3
+2025-06-20 13:40:58 - chinese_ocr_test - INFO - 优化方法中文字符数: 1
+2025-06-20 13:40:58 - chinese_ocr_test - INFO - ⚠️ 优化效果不明显
+2025-06-20 13:40:58 - chinese_ocr_test - INFO - 
+中文OCR优化测试完成
+2025-06-20 13:40:58 - nutrition_test - INFO - 开始营养成分表识别测试...
+2025-06-20 13:40:58 - nutrition_test - INFO - 营养成分表识别测试完成
+2025-06-20 13:40:58 - test_report - INFO - 生成中文OCR优化测试报告...
+2025-06-20 13:40:58 - test_report - INFO - 测试报告已保存到: F:\F Download\cv_test\output\chinese_ocr_optimization_report.md
+2025-06-20 13:43:56 - core.gemini_health_analyzer - INFO - Gemini健康分析器初始化完成，状态: 启用
+2025-06-20 13:44:02 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 13:44:02 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1249
+2025-06-20 13:44:02 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "792于人和售", "corrected": "792千卡/每份", "reason": "根据上下文推断，'792于人和售'应为能量值和单位，'于人和售'很可能是OCR识别错误"},
+    {"original": "SRESAS", "corrected": "生产日期", "reason": "根据上下文推断，'SRESAS'很可能是生产日期或类似信息，由于OCR识别错误，无法确定具体日期"},
+    {"original": "下 5 by oS Se", "corrected": "生产日期 5月...", "reason": "'下 5 by oS Se' 无法确定具体含义，推测可能包含生产日期信息，但OCR识别错误严重，无法确定具体日期和月份"},
+    {"original": "仿9G", "corrected": "净含量9g", "reason": "根据上下文推断，'仿9G'应为净含量，'仿'很可能是OCR识别错误"}
+  ],
+  "detected_i
+2025-06-20 13:44:02 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1249
+2025-06-20 13:44:02 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "792于人和售", "corrected": "792千卡/每份", "reason": "根据上下文推断，'792于人和售'应为能量值和单位，'于人和售'很可能是OCR识别错误"},
+    {"original": "SRESAS", "corrected": "生产日期", "reason"
+2025-06-20 13:44:02 - core.gemini_health_analyzer - INFO - 从代码块中找到JSON字符串，长度: 1236
+2025-06-20 13:44:02 - core.gemini_health_analyzer - INFO - JSON字符串前300字符: {
+  "ocr_corrections": [
+    {"original": "792于人和售", "corrected": "792千卡/每份", "reason": "根据上下文推断，'792于人和售'应为能量值和单位，'于人和售'很可能是OCR识别错误"},
+    {"original": "SRESAS", "corrected": "生产日期", "reason": "根据上下文推断，'SRESAS'很可能是生产日期或类似信息，由于OCR识别错误，无法确定具体日期"},
+    {"original": "下 5 by oS Se", "corrected": "生产日期 5
+2025-06-20 13:44:02 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['ocr_corrections', 'detected_ingredients', 'nutrition_facts', 'overall_score', 'analysis', 'recommendations', 'health_warnings']
+2025-06-20 13:48:27 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 13:48:27 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1656
+2025-06-20 13:48:27 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "了tems", "corrected": "items", "reason": "英文单词拼写错误"},
+    {"original": "反式脂肪本trans", "corrected": "反式脂肪 trans", "reason": "多余的字符'本'，'trans'为英文单词"},
+    {"original": "铭carbohydrate", "corrected": "碳水化合物 carbohydrate", "reason": " '铭'为OCR识别错误，应为'碳水化合物'"},
+    {"original": "内sodium", "corrected": "钠 sodium", "reason": "'内'为OCR识别错误，应为'钠'或'钠含量'"},
+    {"original": "8.6克(d)", "corrected": "8.6克", "reason": "'(d)'为OCR识别错误，无实际意义"},
+    {"original": "1840
+2025-06-20 13:48:27 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1656
+2025-06-20 13:48:27 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "了tems", "corrected": "items", "reason": "英文单词拼写错误"},
+    {"original": "反式脂肪本trans", "corrected": "反式脂肪 trans", "reason": "多余的字符'本'，'trans'为英文单词"},
+  
+2025-06-20 13:48:27 - core.gemini_health_analyzer - INFO - 从代码块中找到JSON字符串，长度: 1643
+2025-06-20 13:48:27 - core.gemini_health_analyzer - INFO - JSON字符串前300字符: {
+  "ocr_corrections": [
+    {"original": "了tems", "corrected": "items", "reason": "英文单词拼写错误"},
+    {"original": "反式脂肪本trans", "corrected": "反式脂肪 trans", "reason": "多余的字符'本'，'trans'为英文单词"},
+    {"original": "铭carbohydrate", "corrected": "碳水化合物 carbohydrate", "reason": " '铭'为OCR识别错误，应为'碳水化合物'"},
+    
+2025-06-20 13:48:27 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['ocr_corrections', 'detected_ingredients', 'nutrition_facts', 'overall_score', 'analysis', 'recommendations', 'health_warnings']
+2025-06-20 13:59:48 - core.gemini_health_analyzer - INFO - Gemini健康分析器初始化完成，状态: 启用
+2025-06-20 13:59:54 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 13:59:54 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1284
+2025-06-20 13:59:54 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "AO", "corrected": "0", "reason": "根据上下文，'Calories from Fat' 后面应该是数值，'AO' 可能是OCR识别错误。"},
+    {"original": "OZz", "corrected": "oz", "reason": "单位'OZz'应为'oz' (盎司)"},
+    {"original": "Te", "corrected": "g", "reason": "'Te' 可能是OCR识别错误，根据上下文应为'g' (克)"},
+    {"original": "Aq", "corrected": "g", "reason": "'Aq' 可能是OCR识别错误，根据上下文应为'g' (克)"},
+    {"original": "《9", "corrected": "9", "reason": "可能是OCR识别错误，应为数字9"},
+    {"original": "sm", "corrected": " ", 
+2025-06-20 13:59:54 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1284
+2025-06-20 13:59:54 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "AO", "corrected": "0", "reason": "根据上下文，'Calories from Fat' 后面应该是数值，'AO' 可能是OCR识别错误。"},
+    {"original": "OZz", "corrected": "oz", "reason": "单位'OZz'
+2025-06-20 13:59:54 - core.gemini_health_analyzer - INFO - 从代码块中找到JSON字符串，长度: 1271
+2025-06-20 13:59:54 - core.gemini_health_analyzer - INFO - JSON字符串前300字符: {
+  "ocr_corrections": [
+    {"original": "AO", "corrected": "0", "reason": "根据上下文，'Calories from Fat' 后面应该是数值，'AO' 可能是OCR识别错误。"},
+    {"original": "OZz", "corrected": "oz", "reason": "单位'OZz'应为'oz' (盎司)"},
+    {"original": "Te", "corrected": "g", "reason": "'Te' 可能是OCR识别错误，根据上下文应为'g' (克)"},
+    {"o
+2025-06-20 13:59:54 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['ocr_corrections', 'detected_ingredients', 'nutrition_facts', 'overall_score', 'analysis', 'recommendations', 'health_warnings']
+2025-06-20 14:01:09 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 14:01:09 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1417
+2025-06-20 14:01:09 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "反式脂肪本/trans", "corrected": "反式脂肪/trans", "reason": "‘本’字为OCR识别错误"},
+    {"original": "1840于焦(KJ)", "corrected": "1840千焦(KJ)", "reason": "‘于’字为OCR识别错误，应为‘千’"},
+    {"original": "d/Items", "corrected": "每份/per serving", "reason": "推测为每份的含义"},
+    {"original": "te Fe EE HG", "corrected": "维生素和矿物质", "reason": "推测为维生素和矿物质的简写，具体成分无法确定"},
+    {"original": "aay,", "corrected": " ", "reason": "无法识别，可能是OCR错误"},
+    {"original": "PAY", "corrected": " ", "r
+2025-06-20 14:01:09 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1417
+2025-06-20 14:01:09 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "反式脂肪本/trans", "corrected": "反式脂肪/trans", "reason": "‘本’字为OCR识别错误"},
+    {"original": "1840于焦(KJ)", "corrected": "1840千焦(KJ)", "reason": "‘于’字为OCR识别错误
+2025-06-20 14:01:09 - core.gemini_health_analyzer - INFO - 从代码块中找到JSON字符串，长度: 1404
+2025-06-20 14:01:09 - core.gemini_health_analyzer - INFO - JSON字符串前300字符: {
+  "ocr_corrections": [
+    {"original": "反式脂肪本/trans", "corrected": "反式脂肪/trans", "reason": "‘本’字为OCR识别错误"},
+    {"original": "1840于焦(KJ)", "corrected": "1840千焦(KJ)", "reason": "‘于’字为OCR识别错误，应为‘千’"},
+    {"original": "d/Items", "corrected": "每份/per serving", "reason": "推测为每份的含义"},
+    {"original":
+2025-06-20 14:01:09 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['ocr_corrections', 'detected_ingredients', 'nutrition_facts', 'overall_score', 'analysis', 'recommendations', 'health_warnings']
+2025-06-20 14:02:26 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 14:02:26 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1465
+2025-06-20 14:02:26 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "反式脂肪本/trans", "corrected": "反式脂肪/trans", "reason": "‘本’字为OCR识别错误"},
+    {"original": "1840于焦(KJ)", "corrected": "1840千焦(KJ)", "reason": "‘于’字为OCR识别错误，应为‘千’"},
+    {"original": "d/Items", "corrected": "每份/per serving", "reason": "推测为每份的缩写，更正为更清晰的描述"},
+    {"original": "te Fe EE HG", "corrected": "维生素和矿物质信息(部分缺失)", "reason": "无法确定具体维生素和矿物质，仅能推测为相关信息"},
+    {"original": "aay,", "corrected": " ", "reason": "无法识别，可能是OCR错误"},
+    {"original": "PAY", "
+2025-06-20 14:02:26 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1465
+2025-06-20 14:02:26 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "反式脂肪本/trans", "corrected": "反式脂肪/trans", "reason": "‘本’字为OCR识别错误"},
+    {"original": "1840于焦(KJ)", "corrected": "1840千焦(KJ)", "reason": "‘于’字为OCR识别错误
+2025-06-20 14:02:26 - core.gemini_health_analyzer - INFO - 从代码块中找到JSON字符串，长度: 1452
+2025-06-20 14:02:26 - core.gemini_health_analyzer - INFO - JSON字符串前300字符: {
+  "ocr_corrections": [
+    {"original": "反式脂肪本/trans", "corrected": "反式脂肪/trans", "reason": "‘本’字为OCR识别错误"},
+    {"original": "1840于焦(KJ)", "corrected": "1840千焦(KJ)", "reason": "‘于’字为OCR识别错误，应为‘千’"},
+    {"original": "d/Items", "corrected": "每份/per serving", "reason": "推测为每份的缩写，更正为更清晰的描述"},
+    {"
+2025-06-20 14:02:26 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['ocr_corrections', 'detected_ingredients', 'nutrition_facts', 'overall_score', 'analysis', 'recommendations', 'health_warnings']
+2025-06-20 14:44:35 - core.gemini_health_analyzer - INFO - Gemini健康分析器初始化完成，状态: 启用
+2025-06-20 14:44:40 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 14:44:40 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1233
+2025-06-20 14:44:40 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "nutriti0n", "corrected": "nutrition", "reason": "数字0误识别为字母o"},
+    {"original": "inf0rmati0n:", "corrected": "information:", "reason": "数字0误识别为字母o"},
+    {"original": "carb0hydrate", "corrected": "carbohydrate", "reason": "数字0误识别为字母o"},
+    {"original": "50dium", "corrected": "sodium", "reason": "数字0误识别为字母o"}
+  ],
+  "detected_ingredients": [
+    "蛋白质",
+    "脂肪",
+    "碳水化合物",
+    "钠"
+  ],
+  "nutrition_facts": {
+    "calories": "1840 千焦",
+    "pro
+2025-06-20 14:44:40 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1233
+2025-06-20 14:44:40 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "nutriti0n", "corrected": "nutrition", "reason": "数字0误识别为字母o"},
+    {"original": "inf0rmati0n:", "corrected": "information:", "reason": "数字0误识别为字母o"},
+2025-06-20 14:44:40 - core.gemini_health_analyzer - INFO - 从代码块中找到JSON字符串，长度: 1220
+2025-06-20 14:44:40 - core.gemini_health_analyzer - INFO - JSON字符串前300字符: {
+  "ocr_corrections": [
+    {"original": "nutriti0n", "corrected": "nutrition", "reason": "数字0误识别为字母o"},
+    {"original": "inf0rmati0n:", "corrected": "information:", "reason": "数字0误识别为字母o"},
+    {"original": "carb0hydrate", "corrected": "carbohydrate", "reason": "数字0误识别为字母o"},
+    {"original": "50
+2025-06-20 14:44:40 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['ocr_corrections', 'detected_ingredients', 'nutrition_facts', 'overall_score', 'analysis', 'recommendations', 'health_warnings']

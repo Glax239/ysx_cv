@@ -1,0 +1,321 @@
+{
+  "statistics": {
+    "total_images_processed": 5,
+    "average_confidence_improvement": 0.0,
+    "average_text_length_change": 0.0,
+    "total_regions_repaired": 0,
+    "total_regions": 0,
+    "overall_repair_rate": 0,
+    "success_rate": 1.0
+  },
+  "detailed_results": [
+    {
+      "image_path": "test_images\\IMG20241003102238_jpg.rf.9a6966b52fc1c76446417f806008f465.jpg",
+      "original_result": {
+        "barcodes": [],
+        "nutrition_info": {},
+        "text_info": [],
+        "extraction_summary": {
+          "barcode_count": 0,
+          "has_nutrition_info": false,
+          "text_regions_count": 0,
+          "yolo_text_regions": 0,
+          "ocr_extraction_method": "full_image"
+        }
+      },
+      "repaired_result": {
+        "barcodes": [],
+        "nutrition_info": {},
+        "text_info": [],
+        "extraction_summary": {
+          "barcode_count": 0,
+          "has_nutrition_info": false,
+          "text_regions_count": 0,
+          "yolo_text_regions": 0,
+          "ocr_extraction_method": "full_image"
+        },
+        "text_regions": [],
+        "repair_summary": {
+          "total_regions": 0,
+          "repaired_regions": 0,
+          "repair_methods_used": [],
+          "average_confidence_improvement": 0.0
+        },
+        "repair_time": 0.0
+      },
+      "comparison": {
+        "text_length_change": 0,
+        "confidence_improvement": 0,
+        "regions_repaired": 0,
+        "total_regions": 0,
+        "repair_rate": 0,
+        "improvement_percentage": 0.0
+      },
+      "timestamp": "2025-06-20 14:25:16"
+    },
+    {
+      "image_path": "test_images\\IMG20241003102813_jpg.rf.640cf5ba41570bb356529df237e8eff9.jpg",
+      "original_result": {
+        "barcodes": [],
+        "nutrition_info": {},
+        "text_info": [],
+        "extraction_summary": {
+          "barcode_count": 0,
+          "has_nutrition_info": false,
+          "text_regions_count": 0,
+          "yolo_text_regions": 0,
+          "ocr_extraction_method": "full_image"
+        }
+      },
+      "repaired_result": {
+        "barcodes": [],
+        "nutrition_info": {},
+        "text_info": [],
+        "extraction_summary": {
+          "barcode_count": 0,
+          "has_nutrition_info": false,
+          "text_regions_count": 0,
+          "yolo_text_regions": 0,
+          "ocr_extraction_method": "full_image"
+        },
+        "text_regions": [],
+        "repair_summary": {
+          "total_regions": 0,
+          "repaired_regions": 0,
+          "repair_methods_used": [],
+          "average_confidence_improvement": 0.0
+        },
+        "repair_time": 0.0
+      },
+      "comparison": {
+        "text_length_change": 0,
+        "confidence_improvement": 0,
+        "regions_repaired": 0,
+        "total_regions": 0,
+        "repair_rate": 0,
+        "improvement_percentage": 0.0
+      },
+      "timestamp": "2025-06-20 14:25:16"
+    },
+    {
+      "image_path": "test_images\\IMG20241003103246_jpg.rf.e90c0b529b7c23ccea970e9b60910bbd.jpg",
+      "original_result": {
+        "barcodes": [],
+        "nutrition_info": {
+          "energy": null,
+          "protein": null,
+          "fat": null,
+          "carbohydrate": null,
+          "sodium": null,
+          "sugar": null,
+          "raw_texts": [
+            "1, ||\n\nBe"
+          ]
+        },
+        "text_info": [
+          {
+            "text": "1, ||\n\nBe",
+            "bbox": [
+              0,
+              0,
+              640,
+              640
+            ],
+            "confidence": 0.8,
+            "engine": "tesseract_simple"
+          }
+        ],
+        "extraction_summary": {
+          "barcode_count": 0,
+          "has_nutrition_info": true,
+          "text_regions_count": 1,
+          "yolo_text_regions": 0,
+          "ocr_extraction_method": "full_image"
+        }
+      },
+      "repaired_result": {
+        "barcodes": [],
+        "nutrition_info": {
+          "energy": null,
+          "protein": null,
+          "fat": null,
+          "carbohydrate": null,
+          "sodium": null,
+          "sugar": null,
+          "raw_texts": [
+            "1, ||\n\nBe"
+          ]
+        },
+        "text_info": [
+          {
+            "text": "1, ||\n\nBe",
+            "bbox": [
+              0,
+              0,
+              640,
+              640
+            ],
+            "confidence": 0.8,
+            "engine": "tesseract_simple"
+          }
+        ],
+        "extraction_summary": {
+          "barcode_count": 0,
+          "has_nutrition_info": true,
+          "text_regions_count": 1,
+          "yolo_text_regions": 0,
+          "ocr_extraction_method": "full_image"
+        },
+        "text_regions": [],
+        "repair_summary": {
+          "total_regions": 0,
+          "repaired_regions": 0,
+          "repair_methods_used": [],
+          "average_confidence_improvement": 0.0
+        },
+        "repair_time": 0.0
+      },
+      "comparison": {
+        "text_length_change": 0,
+        "confidence_improvement": 0,
+        "regions_repaired": 0,
+        "total_regions": 0,
+        "repair_rate": 0,
+        "improvement_percentage": 0.0
+      },
+      "timestamp": "2025-06-20 14:25:17"
+    },
+    {
+      "image_path": "test_images\\IMG20241003103255_jpg.rf.35b2b9371325d355b7b8fe52abfbec77.jpg",
+      "original_result": {
+        "barcodes": [],
+        "nutrition_info": {
+          "energy": null,
+          "protein": null,
+          "fat": null,
+          "carbohydrate": null,
+          "sodium": null,
+          "sugar": null,
+          "raw_texts": [
+            "ek 1 NTN CT ATT"
+          ]
+        },
+        "text_info": [
+          {
+            "text": "ek 1 NTN CT ATT",
+            "bbox": [
+              0,
+              0,
+              640,
+              640
+            ],
+            "confidence": 0.8,
+            "engine": "tesseract_simple"
+          }
+        ],
+        "extraction_summary": {
+          "barcode_count": 0,
+          "has_nutrition_info": true,
+          "text_regions_count": 1,
+          "yolo_text_regions": 0,
+          "ocr_extraction_method": "full_image"
+        }
+      },
+      "repaired_result": {
+        "barcodes": [],
+        "nutrition_info": {
+          "energy": null,
+          "protein": null,
+          "fat": null,
+          "carbohydrate": null,
+          "sodium": null,
+          "sugar": null,
+          "raw_texts": [
+            "ek 1 NTN CT ATT"
+          ]
+        },
+        "text_info": [
+          {
+            "text": "ek 1 NTN CT ATT",
+            "bbox": [
+              0,
+              0,
+              640,
+              640
+            ],
+            "confidence": 0.8,
+            "engine": "tesseract_simple"
+          }
+        ],
+        "extraction_summary": {
+          "barcode_count": 0,
+          "has_nutrition_info": true,
+          "text_regions_count": 1,
+          "yolo_text_regions": 0,
+          "ocr_extraction_method": "full_image"
+        },
+        "text_regions": [],
+        "repair_summary": {
+          "total_regions": 0,
+          "repaired_regions": 0,
+          "repair_methods_used": [],
+          "average_confidence_improvement": 0.0
+        },
+        "repair_time": 0.0
+      },
+      "comparison": {
+        "text_length_change": 0,
+        "confidence_improvement": 0,
+        "regions_repaired": 0,
+        "total_regions": 0,
+        "repair_rate": 0,
+        "improvement_percentage": 0.0
+      },
+      "timestamp": "2025-06-20 14:25:17"
+    },
+    {
+      "image_path": "test_images\\IMG20241003103524_jpg.rf.21bcda01a3eb6e1629122cf290f7b2e4 - 副本.jpg",
+      "original_result": {
+        "barcodes": [],
+        "nutrition_info": {},
+        "text_info": [],
+        "extraction_summary": {
+          "barcode_count": 0,
+          "has_nutrition_info": false,
+          "text_regions_count": 0,
+          "yolo_text_regions": 0,
+          "ocr_extraction_method": "full_image"
+        }
+      },
+      "repaired_result": {
+        "barcodes": [],
+        "nutrition_info": {},
+        "text_info": [],
+        "extraction_summary": {
+          "barcode_count": 0,
+          "has_nutrition_info": false,
+          "text_regions_count": 0,
+          "yolo_text_regions": 0,
+          "ocr_extraction_method": "full_image"
+        },
+        "text_regions": [],
+        "repair_summary": {
+          "total_regions": 0,
+          "repaired_regions": 0,
+          "repair_methods_used": [],
+          "average_confidence_improvement": 0.0
+        },
+        "repair_time": 0.0
+      },
+      "comparison": {
+        "text_length_change": 0,
+        "confidence_improvement": 0,
+        "regions_repaired": 0,
+        "total_regions": 0,
+        "repair_rate": 0,
+        "improvement_percentage": 0.0
+      },
+      "timestamp": "2025-06-20 14:25:17"
+    }
+  ]
+}

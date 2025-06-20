@@ -23,8 +23,6 @@
 11. [性能优化策略](#11-性能优化策略)
 12. [扩展功能与未来规划](#12-扩展功能与未来规划)
 13. [常见问题与故障排除](#13-常见问题与故障排除)
-14. [开发者指南](#14-开发者指南)
-15. [项目维护与更新](#15-项目维护与更新)
 
 ---
 
@@ -66,7 +64,6 @@
 - **速度快**: 优化的推理流程，单张图片处理时间控制在2-5秒内
 - **功能全**: 不仅识别商品类别，还提供详细的营养分析和健康建议
 - **易使用**: 图形化界面操作简单，命令行工具功能强大
-- **可定制**: 支持自定义商品类别、检测参数和输出格式
 
 ## 2. 技术背景与研究意义
 
@@ -78,7 +75,6 @@
 
 目前市场上的商品识别系统主要面临以下挑战：
 - **识别精度有限**: 特别是在复杂背景和光照条件下
-- **中文支持不足**: 大多数开源方案对中文标签支持较差
 - **功能单一**: 仅提供识别功能，缺乏深度分析能力
 - **部署复杂**: 技术门槛高，不易于实际应用
 
@@ -873,7 +869,7 @@ class OptimizedInference:
 #### 10.3.2 解决方案
 ```python
 import gc
-import torch
+import torch    
 
 class MemoryManager:
     def __init__(self):
@@ -1313,262 +1309,6 @@ class PerformanceMonitor:
         return wrapper
 ```
 
-## 14. 开发者指南
-
-### 14.1 代码贡献指南
-
-#### 14.1.1 开发环境搭建
-```bash
-# 1. Fork项目到个人仓库
-git clone https://github.com/your-username/cv_test.git
-
-# 2. 创建开发分支
-git checkout -b feature/new-feature
-
-# 3. 安装开发依赖
-pip install -r requirements-dev.txt
-
-# 4. 安装pre-commit钩子
-pre-commit install
-```
-
-#### 14.1.2 代码规范
-```python
-# 示例：符合规范的代码结构
-class ProductDetector:
-    """商品检测器
-    
-    Args:
-        model_path (str): 模型文件路径
-        confidence_threshold (float): 置信度阈值，默认0.25
-        device (str): 运行设备，'cpu'或'cuda'
-    
-    Example:
-        >>> detector = ProductDetector('model.pt', confidence_threshold=0.3)
-        >>> results = detector.detect('image.jpg')
-        >>> print(f"检测到 {len(results)} 个商品")
-    """
-    
-    def __init__(self, model_path: str, confidence_threshold: float = 0.25, 
-                 device: str = 'auto'):
-        self.model_path = model_path
-        self.confidence_threshold = confidence_threshold
-        self.device = self._select_device(device)
-        self.model = self._load_model()
-    
-    def detect(self, image_path: str) -> List[Dict]:
-        """检测图像中的商品
-        
-        Args:
-            image_path: 图像文件路径
-            
-        Returns:
-            检测结果列表，每个元素包含bbox、class、confidence等信息
-            
-        Raises:
-            FileNotFoundError: 图像文件不存在
-            ValueError: 图像格式不支持
-        """
-        # 实现代码...
-        pass
-```
-
-#### 14.1.3 测试规范
-```python
-# test_detector.py
-import unittest
-import tempfile
-import numpy as np
-from core.simple_detection_engine import DetectionEngine
-
-class TestDetectionEngine(unittest.TestCase):
-    """检测引擎测试类"""
-    
-    @classmethod
-    def setUpClass(cls):
-        """类级别的设置"""
-        cls.engine = DetectionEngine()
-        cls.test_image = cls._create_test_image()
-    
-    def setUp(self):
-        """每个测试方法的设置"""
-        self.temp_dir = tempfile.mkdtemp()
-    
-    def test_model_loading(self):
-        """测试模型加载"""
-        self.assertTrue(self.engine.models)
-        self.assertIn('product_detector', self.engine.models)
-    
-    def test_image_detection(self):
-        """测试图像检测功能"""
-        results = self.engine.detect(self.test_image)
-        self.assertIsInstance(results, list)
-        
-        if results:  # 如果有检测结果
-            result = results[0]
-            self.assertIn('bbox', result)
-            self.assertIn('confidence', result)
-            self.assertIn('category', result)
-    
-    @staticmethod
-    def _create_test_image():
-        """创建测试图像"""
-        image = np.random.randint(0, 255, (640, 640, 3), dtype=np.uint8)
-        return image
-
-if __name__ == '__main__':
-    unittest.main()
-```
-
-### 14.2 API文档
-
-#### 14.2.1 核心API接口
-```python
-from core.simple_detection_engine import DetectionEngine
-
-# 初始化检测引擎
-engine = DetectionEngine(config={
-    'confidence_threshold': 0.25,
-    'device': 'auto'
-})
-
-# 单张图像检测
-results = engine.detect('path/to/image.jpg')
-
-# 批量检测
-batch_results = engine.batch_detect(['img1.jpg', 'img2.jpg'])
-
-# 获取支持的商品类别
-categories = engine.get_supported_categories()
-
-# 更新检测参数
-engine.update_config({'confidence_threshold': 0.5})
-```
-
-#### 14.2.2 GUI集成API
-```python
-from gui.pyqt5_main_window import MainWindow
-from PyQt5.QtWidgets import QApplication
-
-# 创建应用实例
-app = QApplication([])
-
-# 创建主窗口
-window = MainWindow()
-
-# 设置回调函数
-window.set_detection_callback(custom_detection_handler)
-window.set_result_callback(custom_result_handler)
-
-# 显示窗口
-window.show()
-app.exec_()
-```
-
-## 15. 项目维护与更新
-
-### 15.1 版本管理
-
-#### 15.1.1 语义化版本控制
-```
-版本格式: MAJOR.MINOR.PATCH
-- MAJOR: 不兼容的API修改
-- MINOR: 向后兼容的功能性新增  
-- PATCH: 向后兼容的问题修正
-
-示例:
-v1.0.0 - 初始稳定版本
-v1.1.0 - 新增批处理功能
-v1.1.1 - 修复内存泄漏问题
-v2.0.0 - 重构API接口
-```
-
-#### 15.1.2 发布流程
-```bash
-# 1. 更新版本号
-echo "2.1.0" > VERSION
-
-# 2. 更新CHANGELOG
-git add CHANGELOG.md
-
-# 3. 创建发布分支
-git checkout -b release/v2.1.0
-
-# 4. 打标签
-git tag -a v2.1.0 -m "Release version 2.1.0"
-
-# 5. 推送到远程
-git push origin v2.1.0
-```
-
-### 15.2 持续集成/持续部署
-
-#### 15.2.1 GitHub Actions配置
-```yaml
-# .github/workflows/ci.yml
-name: CI/CD Pipeline
-
-on:
-  push:
-    branches: [main, develop]
-  pull_request:
-    branches: [main]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.9, 3.10, 3.11]
-    
-    steps:
-    - uses: actions/checkout@v3
-    
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
-      with:
-        python-version: ${{ matrix.python-version }}
-    
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install -r requirements-dev.txt
-    
-    - name: Run tests
-      run: |
-        pytest tests/ --cov=core --cov-report=xml
-    
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
-
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    
-    steps:
-    - name: Deploy to production
-      run: |
-        echo "Deploying to production..."
-```
-
-### 15.3 社区支持
-
-#### 15.3.1 问题反馈渠道
-- **GitHub Issues**: 功能请求和Bug报告
-- **讨论区**: 技术交流和使用心得
-- **邮件列表**: 重要公告和安全通知
-- **微信群**: 实时技术支持
-
-#### 15.3.2 贡献者激励
-- **代码贡献**: 提交PR获得贡献者认证
-- **文档改进**: 完善文档获得文档贡献者认证  
-- **测试反馈**: 提供测试用例获得测试贡献者认证
-- **社区建设**: 积极参与讨论获得社区活跃者认证
-
----
-
 ## 🎯 项目总结
 
 智能商品识别与健康分析系统作为一个综合性的计算机视觉项目，成功集成了多项前沿技术，实现了从商品检测到健康分析的完整解决方案。项目在技术创新、实用性和用户体验方面都达到了较高水准，为相关领域的研究和应用提供了重要参考。
@@ -1581,24 +1321,3 @@ jobs:
 
 ### 🚀 未来展望
 项目将继续朝着更智能、更实用的方向发展，计划在实时处理、移动端适配、云端部署等方面进行深入探索，致力于成为商品识别领域的标杆性开源项目。
-
----
-
-## 📄 许可证
-
-本项目采用 [MIT License](LICENSE) 开源许可证。
-
-## 🙏 致谢
-
-- 感谢 [Ultralytics](https://github.com/ultralytics/yolov5) 提供优秀的YOLOv5框架
-- 感谢PyTorch、OpenCV等开源项目的技术支持
-- 感谢所有贡献者和测试用户的宝贵意见
-
----
-
-**📞 联系方式**
-- 项目主页: https://github.com/your-username/cv_test
-- 问题反馈: https://github.com/your-username/cv_test/issues
-- 技术交流: cv-test@example.com
-
-**⭐ 如果本项目对您有帮助，请给我们一个Star！**
