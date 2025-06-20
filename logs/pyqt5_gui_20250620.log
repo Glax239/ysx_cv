@@ -702,3 +702,83 @@
 2025-06-20 14:44:40,835 - __main__ - INFO - 健康分析结果内容: {'status': 'success', 'timestamp': '2025-06-20T14:44:40.834834', 'overall_score': 4, 'analysis': '这份营养成分表显示该产品能量较高(1840千焦)，碳水化合物含量很高(72.3克)，脂肪含量中等(12.9克)，蛋白质含量相对较低(8.6克)。钠含量(253毫克，假设单位为毫克)也需要关注，具体是否过高取决于每日推荐摄入量和个体情况。由于缺乏糖分信息以及其他营养成分（如维生素、矿物质）的信息，无法进行全面的营养价值评估。高碳水化合物和高能量摄入可能导致体重增加和血糖波动，而钠含量过高则可能增加患高血压的风险。目前信息不足以判断是否存在添加剂、防腐剂或人工色素。', 'recommendations': ['建议控制该产品的摄入量，避免过量食用，以控制能量和碳水化合物的摄入。', '建议搭配富含蛋白质和纤维的食物一起食用，以平衡营养，增强饱腹感，并减缓血糖上升速度。', '建议关注每日钠的总摄入量，减少其他高钠食物的摄入，以降低高血压风险。', '建议查看完整的产品标签，了解糖分、其他营养成分以及添加剂等信息，以便更全面地评估其健康程度。'], 'detected_ingredients': ['蛋白质', '脂肪', '碳水化合物', '钠'], 'nutrition_facts': {'calories': '1840 千焦', 'protein': '8.6 克', 'fat': '12.9 克', 'carbohydrates': '72.3 克', 'sodium': '253 毫克 (假设单位为毫克，信息不足)', 'sugar': '未知 (信息不足)'}, 'ocr_corrections': [{'original': 'nutriti0n', 'corrected': 'nutrition', 'reason': '数字0误识别为字母o'}, {'original': 'inf0rmati0n:', 'corrected': 'information:', 'reason': '数字0误识别为字母o'}, {'original': 'carb0hydrate', 'corrected': 'carbohydrate', 'reason': '数字0误识别为字母o'}, {'original': '50dium', 'corrected': 'sodium', 'reason': '数字0误识别为字母o'}], 'health_warnings': ['高碳水化合物和高能量摄入可能导致体重增加和血糖波动。', '高钠摄入可能增加患高血压的风险。(需确认钠含量单位及每日推荐摄入量)']}
 2025-06-20 14:44:57,892 - __main__ - INFO - 健康分析完成
 2025-06-20 14:44:57,892 - __main__ - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 21:39:45,060 - __main__ - INFO - 已加载ICO图标: f:\F Download\cv_test\assets\icons\app_icon_32x32.ico
+2025-06-20 21:39:45,060 - __main__ - INFO - 已设置窗口和应用程序图标
+2025-06-20 21:39:47,075 - __main__ - INFO - 已设置状态栏图标: f:\F Download\cv_test\assets\icons\status_icon_16x16.png
+2025-06-20 21:39:47,078 - __main__ - INFO - 正在初始化检测引擎...
+2025-06-20 21:39:51,022 - __main__ - INFO - 检测引擎初始化完成
+2025-06-20 21:40:15,686 - __main__ - INFO - 结果已清除
+2025-06-20 21:40:15,686 - __main__ - INFO - 已加载图像: IMG20241003102238_jpg.rf.9a6966b52fc1c76446417f806008f465.jpg
+2025-06-20 21:40:16,970 - __main__ - INFO - 进度条已显示
+2025-06-20 21:40:16,972 - __main__ - INFO - 正在进行商品检测...
+2025-06-20 21:40:17,238 - __main__ - INFO - 正在绘制检测结果...
+2025-06-20 21:40:17,278 - __main__ - INFO - 正在提取信息...
+2025-06-20 21:41:08,667 - __main__ - INFO - 检测完成
+2025-06-20 21:41:08,669 - __main__ - INFO - 进度条已隐藏
+2025-06-20 21:41:31,184 - __main__ - INFO - 结果已清除
+2025-06-20 21:41:31,184 - __main__ - INFO - 已加载图像: IMG20241003102813_jpg.rf.640cf5ba41570bb356529df237e8eff9.jpg
+2025-06-20 21:41:32,518 - __main__ - INFO - 进度条已显示
+2025-06-20 21:41:32,520 - __main__ - INFO - 正在进行商品检测...
+2025-06-20 21:41:32,625 - __main__ - INFO - 正在绘制检测结果...
+2025-06-20 21:41:32,664 - __main__ - INFO - 正在提取信息...
+2025-06-20 21:42:13,001 - __main__ - INFO - 检测完成
+2025-06-20 21:42:13,001 - __main__ - INFO - 进度条已隐藏
+2025-06-20 21:43:01,754 - __main__ - INFO - 结果已清除
+2025-06-20 21:43:01,754 - __main__ - INFO - 已加载图像: IMG20241003102238_jpg.rf.9a6966b52fc1c76446417f806008f465.jpg
+2025-06-20 21:44:12,691 - __main__ - INFO - 进度条已显示
+2025-06-20 21:44:12,693 - __main__ - INFO - 正在进行商品检测...
+2025-06-20 21:44:12,755 - __main__ - INFO - 正在绘制检测结果...
+2025-06-20 21:44:12,794 - __main__ - INFO - 正在提取信息...
+2025-06-20 21:45:01,848 - __main__ - INFO - 检测完成
+2025-06-20 21:45:01,848 - __main__ - INFO - 进度条已隐藏
+2025-06-20 21:45:13,360 - __main__ - INFO - 结果已清除
+2025-06-20 21:45:13,360 - __main__ - INFO - 已加载图像: IMG20241003102813_jpg.rf.640cf5ba41570bb356529df237e8eff9.jpg
+2025-06-20 21:45:16,105 - __main__ - INFO - 进度条已显示
+2025-06-20 21:45:16,107 - __main__ - INFO - 正在进行商品检测...
+2025-06-20 21:45:16,169 - __main__ - INFO - 正在绘制检测结果...
+2025-06-20 21:45:16,209 - __main__ - INFO - 正在提取信息...
+2025-06-20 21:45:56,084 - __main__ - INFO - 检测完成
+2025-06-20 21:45:56,084 - __main__ - INFO - 进度条已隐藏
+2025-06-20 21:46:09,578 - __main__ - INFO - 结果已清除
+2025-06-20 21:46:09,578 - __main__ - INFO - 已加载图像: IMG20241003103246_jpg.rf.e90c0b529b7c23ccea970e9b60910bbd.jpg
+2025-06-20 21:46:12,807 - __main__ - INFO - 进度条已显示
+2025-06-20 21:46:12,809 - __main__ - INFO - 正在进行商品检测...
+2025-06-20 21:46:12,869 - __main__ - INFO - 正在绘制检测结果...
+2025-06-20 21:46:12,918 - __main__ - INFO - 正在提取信息...
+2025-06-20 21:48:07,988 - __main__ - INFO - 检测完成
+2025-06-20 21:48:07,988 - __main__ - INFO - 进度条已隐藏
+2025-06-20 21:48:16,125 - __main__ - INFO - 结果已清除
+2025-06-20 21:48:16,125 - __main__ - INFO - 已加载图像: IMG20241003103255_jpg.rf.35b2b9371325d355b7b8fe52abfbec77.jpg
+2025-06-20 21:48:16,959 - __main__ - INFO - 结果已清除
+2025-06-20 21:48:16,959 - __main__ - INFO - 已加载图像: IMG20241003103524_jpg.rf.21bcda01a3eb6e1629122cf290f7b2e4 - 副本.jpg
+2025-06-20 21:48:18,117 - __main__ - INFO - 结果已清除
+2025-06-20 21:48:18,117 - __main__ - INFO - 已加载图像: f76766c2d9c10a936bae843df1e5ecf.png
+2025-06-20 21:48:22,820 - __main__ - INFO - 结果已清除
+2025-06-20 21:48:24,948 - __main__ - INFO - 进度条已显示
+2025-06-20 21:48:24,949 - __main__ - INFO - 正在进行商品检测...
+2025-06-20 21:48:25,036 - __main__ - INFO - 正在绘制检测结果...
+2025-06-20 21:48:25,204 - __main__ - INFO - 正在提取信息...
+2025-06-20 21:57:46,382 - __main__ - INFO - 检测完成
+2025-06-20 21:57:46,382 - __main__ - INFO - 进度条已隐藏
+2025-06-20 21:58:29,469 - __main__ - INFO - 正在进行健康分析...
+2025-06-20 21:58:29,470 - __main__ - INFO - 健康分析进度条已显示
+2025-06-20 21:58:39,607 - __main__ - INFO - 健康分析结果类型: <class 'dict'>
+2025-06-20 21:58:39,607 - __main__ - INFO - 健康分析结果内容: {'status': 'success', 'timestamp': '2025-06-20T21:58:39.606204', 'overall_score': 5, 'analysis': '```json\n{\n  "ocr_corrections": [\n    {"original": "5ervin克", "corrected": "serving", "reason": "英文单词拼写错误"},\n    {"original": "5ervin克5", "corrected": "servings", "reason": "英文单词拼写错误，并根据上下文判断为复数"},\n    {"original": "5ize", "corrected": "Size", "reason": "英文单词首字母大小写错误"},\n    {"original": "5tick5", "corrected": "sticks", "reason": "英文单词拼写错误"},\n    {"original": "C0ntainer", "corrected": "Container", "reason": "英文单词拼写错误"},\n    {"original": "Ca10rie5", "corrected": "Calories", "reason": "英文单词拼写错误"},\n    {"original": "Ca10rie5:", "corrected": "Calories:", "reason": "英文单词拼写错误"},\n    {"original": "fr0m", "corrected": "from", "reason": "英文单词拼写错误"},\n    {"original": "Fat", "corrected": "Fat", "reason": "英文单词拼写正确"},\n    {"original": "T0ta1", "corrected": "Total", "reason": "英文单词拼写错误"},\n    {"original": "T%", "corrected": "%DV", "reason": "推断为每日建议摄入量百分比"},\n    {"original": "5aturated", "corrected": "Saturated", "reason": "英文单词拼写错误"},\n    {"original": "Tran5", "corrected": "Trans", "reason": "英文单词拼写错误"},\n    {"original": "Ch01e5ter01", "corrected": "Cholesterol", "reason": "英文单词拼写错误"},\n    {"original": "50dium", "corrected": "Sodium", "reason": "英文单词拼写错误"},\n    {"original": "Carb0hydrate", "corrected": "Carbohydrate", "reason": "英文单词拼写错误"},\n    {"original": "Dietary", "corrected": "Dietary", "reason": "英文单词拼写正确"},\n    {"original": "Fiber", "corrected": "Fiber", "reason": "英文单词拼写正确"},\n    {"original": "5u克ar5", "corrected": "Sugars", "reason": "英文单词拼写错误"},\n    {"original": "5u克ar5:", "corrected": "Sugars:", "reason": "英文单词拼写错误"},\n    {"original": "Pr0tein", "corrected": "Protein", "reason": "英文单词拼写错误"},\n    {"original": "51GN1F1CANT", "corrected": "SIGNIFICANT", "reason": "英文单词拼写错误"},\n    {"original": "50URCE", "corrected": "SOURCE", "reason": "英文单词拼写错误"},\n    {"original": "0F", "corrected": "of", "reason": "英文单词首字母大小写错误"},\n    {"original": "TRAN5", "corrected": "Trans", "reason": "英文单词拼写错误"},\n    {"original": "FAT:", "corrected": "Fat:", "reason": "英文单词首字母大小写错误"},\n    {"original": "克", "corrected": "g", "reason": "克转换为g"},\n    {"original": "m克", "corrected": "mg", "reason": "毫克转换为mg"},\n    {"original": "0z(99克)", "corrected": "oz (99g)", "reason": "单位换算和英文拼写修正"},\n    {"original": "‘Ag", "corrected": "Added Sugars", "reason": "推断为添加糖"},\n    {"original": "5Y", "corrected": "%DV", "reason": "推断为每日建议摄入量百分比"},\n\n\n  ],\n  "detected_ingredients": [],\n  "nutrition_facts": {\n    "calories": "120",\n    "protein": "6g",\n    "fat": "4.59g",\n    "carbohydrates": "15g",\n    "sodium": "620mg",\n    "sugar": "Added Sugars"\n  },\n  "overall_score": 4,\n  "analysis": "该产品每份含有120卡路里，脂肪含量较高(4.59g)，其中饱和脂肪0.5g，反式脂肪含量不显著。钠含量(620mg)也偏高。碳水化合物含量为15g，膳食纤维含量为1g。蛋白质含量为6g。添加糖的含量未明确说明，但需要关注。总的来说，该产品的脂肪和钠含量较高，健康评分较低。缺乏关于添加糖的具体信息，这会影响最终的健康评估。",\n  "recommendations": [\n    "减少该产品的摄入频率，将其作为偶尔享用的零食，而非日常饮食的一部分。",\n    "选择脂肪和钠含量更低的替代品。",\n    "关注添加糖的含量，选择添加糖含量更低的食品。",\n    "阅读完整的产品营养成分表，以获取更全面的营养信息。"\n  ],\n  "health_warnings": [\n    "高脂肪和高钠含量可能增加患心血管疾病的风险。",\n    "过量摄入添加糖可能导致体重增加和血糖控制问题。具体添加糖含量不明，需谨慎。"\n  ]\n}\n```\n', 'recommendations': [], 'detected_ingredients': [], 'nutrition_facts': {}, 'ocr_corrections': [], 'health_warnings': []}
+2025-06-20 21:59:08,527 - __main__ - INFO - 健康分析完成
+2025-06-20 21:59:08,527 - __main__ - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 21:59:09,834 - __main__ - INFO - 结果已清除
+2025-06-20 21:59:09,835 - __main__ - INFO - 已加载图像: 屏幕截图 2025-06-20 134606.png
+2025-06-20 21:59:11,537 - __main__ - INFO - 结果已清除
+2025-06-20 21:59:12,978 - __main__ - INFO - 进度条已显示
+2025-06-20 21:59:12,980 - __main__ - INFO - 正在进行商品检测...
+2025-06-20 21:59:13,045 - __main__ - INFO - 正在绘制检测结果...
+2025-06-20 21:59:13,376 - __main__ - INFO - 正在提取信息...
+2025-06-20 22:04:17,164 - __main__ - INFO - 检测完成
+2025-06-20 22:04:17,165 - __main__ - INFO - 进度条已隐藏
+2025-06-20 22:04:30,790 - __main__ - INFO - 正在进行健康分析...
+2025-06-20 22:04:30,790 - __main__ - INFO - 健康分析进度条已显示
+2025-06-20 22:04:36,998 - __main__ - INFO - 健康分析结果类型: <class 'dict'>
+2025-06-20 22:04:36,998 - __main__ - INFO - 健康分析结果内容: {'status': 'success', 'timestamp': '2025-06-20T22:04:36.998119', 'overall_score': 4, 'analysis': '这份营养成分表显示该产品能量较高(1840千焦)，碳水化合物含量非常高(72.3克)，这可能导致血糖波动较大，增加肥胖和相关疾病的风险。脂肪含量(12.9克)也相对较高，需要关注脂肪的类型(饱和脂肪、不饱和脂肪等)以及反式脂肪的含量，这些信息在提供的文本中缺失。蛋白质含量(8.6克)相对较低。钠含量(253毫克，假设单位为毫克)也需要进一步评估，过高的钠摄入量会增加高血压的风险。由于缺乏糖分等其他关键营养信息，无法进行更全面的评估。总的来说，该产品的营养成分比例不均衡，健康程度较低。', 'recommendations': ['减少该产品的摄入量，控制每日总能量摄入。', '选择更均衡的饮食，增加水果、蔬菜、全谷物等富含纤维和营养素的食物摄入，以平衡该产品带来的高碳水化合物和高脂肪的摄入。', '如果需要食用该产品，建议少量食用，并搭配富含蛋白质的食物，以改善营养均衡。', '查看产品的完整营养成分表，特别是饱和脂肪、不饱和脂肪、反式脂肪和糖分的含量，以便更准确地评估其健康程度。'], 'detected_ingredients': ['蛋白质', '脂肪', '碳水化合物', '钠'], 'nutrition_facts': {'calories': '1840 千焦', 'protein': '8.6 克', 'fat': '12.9 克', 'carbohydrates': '72.3 克', 'sodium': '253 毫克 (假设单位为毫克，信息不足)', 'sugar': '未知 (信息不足)'}, 'ocr_corrections': [{'original': 'nutriti0n', 'corrected': 'nutrition', 'reason': '数字0误识别为字母o'}, {'original': 'inf0rmati0n:', 'corrected': 'information:', 'reason': '数字0误识别为字母o'}, {'original': 'carb0hydrate', 'corrected': 'carbohydrate', 'reason': '数字0误识别为字母o'}, {'original': '50dium', 'corrected': 'sodium', 'reason': '数字0误识别为字母o'}], 'health_warnings': ['高碳水化合物和高脂肪含量可能导致体重增加、血糖波动和心血管疾病风险增加。', '钠含量较高，可能增加高血压风险。', '缺乏糖分等关键营养信息，无法进行更全面的健康风险评估。']}
+2025-06-20 22:05:43,027 - __main__ - INFO - 健康分析完成
+2025-06-20 22:05:43,027 - __main__ - INFO - 健康分析完成，进度条已隐藏
+2025-06-20 22:05:52,352 - __main__ - INFO - 结果已保存到: F:\F Download\cv_test (6个文件)

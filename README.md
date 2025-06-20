@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/Python-3.9+-green.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-1.10+-orange.svg)
-![YOLOv5](https://img.shields.io/badge/YOLOv5-Latest-red.svg)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Latest-red.svg)
 ![PyQt5](https://img.shields.io/badge/PyQt5-5.15+-purple.svg)
 
 ---
@@ -34,7 +34,7 @@
 
 ### 1.2 核心价值
 
-- **智能化程度高**: 基于YOLOv5深度学习架构，实现毫秒级商品识别
+- **智能化程度高**: 基于YOLOv8深度学习架构，实现商品精确识别
 - **多场景适应**: 支持个人购物和商业货架审计两大应用场景
 - **用户体验优秀**: 提供直观的PyQt5图形界面和强大的命令行工具
 - **可扩展性强**: 模块化架构设计，便于功能扩展和二次开发
@@ -256,14 +256,14 @@ def draw_chinese_text(image, text, position, font_size=20):
 
 ## 5. 深度学习模型详解
 
-### 5.1 YOLOv5架构优化
+### 5.1 YOLOv8架构优化
 
-本项目基于YOLOv5进行了针对性优化：
+本项目基于YOLOv8进行了针对性优化：
 
 #### 5.1.1 网络结构改进
-- **骨干网络**: 采用CSPDarknet53作为特征提取器
-- **颈部网络**: 使用PANet进行多尺度特征融合
-- **检测头**: 三个不同尺度的检测分支，适应不同大小的目标
+- **骨干网络**: 采用改进的CSPDarknet作为特征提取器
+- **颈部网络**: 使用增强的PANet进行多尺度特征融合
+- **检测头**: Anchor-free检测头设计，提升小目标检测性能
 
 #### 5.1.2 训练策略
 ```python
@@ -299,7 +299,47 @@ training_config = {
 - **场景覆盖**: 超市、便利店、货架、购物车等多种场景
 - **质量保证**: 人工筛选和质量检查流程
 
-#### 5.2.2 标注规范
+#### 5.2.2 开源框架与数据集引用
+
+**🔧 核心开源框架**
+
+- **[YOLOv8 (Ultralytics)](https://github.com/ultralytics/ultralytics)**: 最新一代YOLO目标检测框架
+  - **开源许可**: AGPL-3.0 License
+  - **项目地址**: https://github.com/ultralytics/ultralytics
+  - **官方文档**: https://docs.ultralytics.com/
+  - **引用格式**:
+    ```bibtex
+    @software{yolov8_ultralytics,
+      author = {Glenn Jocher and Ayush Chaurasia and Jing Qiu},
+      title = {Ultralytics YOLOv8},
+      url = {https://github.com/ultralytics/ultralytics},
+      version = {8.0.0},
+      year = {2023}
+    }
+    ```
+  - **核心特性**: Anchor-free检测、多任务学习、高效推理
+  - **模型变体**: YOLOv8n, YOLOv8s, YOLOv8m, YOLOv8l, YOLOv8x
+
+**📊 使用的公开数据集**
+
+本项目使用了以下高质量的公开数据集进行模型训练和验证：
+
+- **[COCO Dataset](https://cocodataset.org/)**: 大规模目标检测、分割和图像标注数据集
+  - 包含330K图像，超过200K标注图像
+  - 80个目标类别，1.5M目标实例
+  - 用于通用目标检测模型的预训练
+
+- **LogoDet-3K Dataset**: 专业的Logo检测数据集
+  - 包含3,000+品牌Logo的高质量标注
+  - 涵盖食品、饮料、日用品等多个商品类别
+  - 用于品牌识别和Logo检测模型训练
+
+- **COCO-Text Train2014**: 专门的文本检测数据集
+  - 基于COCO 2014训练集的文本区域标注
+  - 包含场景文本检测和识别的精确标注
+  - 用于商品包装文本信息提取模型训练
+
+#### 5.2.3 标注规范
 ```json
 {
     "image_id": "IMG_001",
@@ -320,7 +360,7 @@ training_config = {
 }
 ```
 
-#### 5.2.3 数据增强技术
+#### 5.2.4 数据增强技术
 实现了多种数据增强方法提升模型泛化能力：
 - **几何变换**: 旋转、翻转、缩放、剪切
 - **颜色调整**: 亮度、对比度、饱和度、色调
@@ -475,162 +515,53 @@ class TestDetectionEngine(unittest.TestCase):
 - **结果展示**: 检测结果5秒内完成渲染
 
 ## 8. 安装部署指南
-
-### 8.1 系统要求
-
-#### 8.1.1 硬件要求
-- **CPU**: Intel i3及以上或同等性能AMD处理器
-- **内存**: 最低4GB RAM，推荐8GB或更多
-- **存储**: 至少2GB可用空间（含模型文件）
-- **GPU**: 可选，NVIDIA显卡可大幅提升处理速度
-
-#### 8.1.2 软件要求
-- **操作系统**: Windows 10+, macOS 10.14+, Ubuntu 18.04+
-- **Python**: 3.9或更高版本
-- **CUDA**: 可选，支持GPU加速需要CUDA 11.0+
-
-### 8.2 安装步骤
-
-#### 8.2.1 环境准备
-```bash
-# 1. 克隆项目仓库
-git clone https://github.com/your-username/cv_test.git
-cd cv_test
-
-# 2. 创建虚拟环境（推荐）
-python -m venv venv
-
-# 3. 激活虚拟环境
-# Windows
-venv\Scripts\activate
-# macOS/Linux  
-source venv/bin/activate
-
-# 4. 升级pip
-pip install --upgrade pip
-```
-
-#### 8.2.2 依赖安装
-```bash
-# 安装基础依赖
-pip install -r requirements.txt
-
-# 如果需要GPU支持，安装CUDA版本的PyTorch
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-
-# 验证安装
-python -c "import torch; print(f'PyTorch版本: {torch.__version__}')"
-python -c "import cv2; print(f'OpenCV版本: {cv2.__version__}')"
-```
-
-#### 8.2.3 配置文件设置
-```python
-# config.py 关键配置项
-import os
-
-# 基础路径
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-# 模型文件路径
-MODEL_PATHS = {
-    'product_detector': os.path.join(BASE_DIR, 'weight/product_detector_best.pt'),
-    'region_detector': os.path.join(BASE_DIR, 'weight/region_detector_best.pt'),
-    'brand_detector': os.path.join(BASE_DIR, 'weight/selected_brands_best.pt'),
-    'text_detector': os.path.join(BASE_DIR, 'weight/cocotext_best.pt')
-}
-
-# 字体配置
-FONT_PATH = os.path.join(BASE_DIR, 'assets/fonts/msyh.ttc')
-
-# 检测参数
-DETECTION_CONFIG = {
-    'confidence_threshold': 0.25,
-    'iou_threshold': 0.45,
-    'max_detections': 100,
-    'input_size': 640
-}
-```
-
-### 8.3 Docker部署
-
-#### 8.3.1 Dockerfile
-```dockerfile
-FROM python:3.9-slim
-
-# 设置工作目录
-WORKDIR /app
-
-# 复制项目文件
-COPY . /app/
-
-# 安装系统依赖
-RUN apt-get update && apt-get install -y \
-    libgl1-mesa-glx \
-    libglib2.0-0 \
-    libsm6 \
-    libxext6 \
-    libxrender-dev \
-    libgomp1 \
-    && rm -rf /var/lib/apt/lists/*
-
-# 安装Python依赖
-RUN pip install --no-cache-dir -r requirements.txt
-
-# 暴露端口
-EXPOSE 8000
-
-# 启动命令
-CMD ["python", "start_pyqt5_gui.py"]
-```
-
-#### 8.3.2 Docker Compose
-```yaml
-version: '3.8'
-services:
-  cv-app:
-    build: .
-    ports:
-      - "8000:8000"
-    volumes:
-      - ./output:/app/output
-      - ./logs:/app/logs
-    environment:
-      - PYTHONPATH=/app
-    restart: unless-stopped
-```
-
-### 8.4 技术栈详解
-
-#### 8.4.1 核心依赖
-```text
-# requirements.txt 主要依赖
-torch>=1.10.0
-torchvision>=0.11.0
-opencv-python>=4.5.0
-PyQt5>=5.15.0
-Pillow>=8.0.0
-numpy>=1.21.0
-pandas>=1.3.0
-pyyaml>=6.0
-requests>=2.25.0
-ultralytics>=8.0.0
-```
-
-#### 8.4.2 技术选型理由
-
-| 技术组件 | 选择理由 | 替代方案 |
-|---------|---------|----------|
-| PyTorch | 灵活性强，社区活跃 | TensorFlow, ONNX |
-| YOLOv5 | 速度和精度平衡，易于部署 | YOLOX, YOLOv8 |
-| PyQt5 | 跨平台GUI，功能丰富 | Tkinter, PySide |
-| OpenCV | 图像处理标准库 | PIL, scikit-image |
-| Pillow | 中文字体渲染支持 | matplotlib |
+参考本目录下有专门的DEVELOPMENT_GUIDE.md文件
 
 ## 9. 使用说明与操作流程
 
-### 9.1 快速开始
+### 9.1 基于YOLOv8的核心功能清单
 
-#### 9.1.1 启动应用
+#### 9.1.1 图像处理基本功能
+
+**📊 图像预处理技术**
+- **图像去噪**: 采用高斯滤波、双边滤波和非局部均值去噪算法，有效去除图像中的高斯噪声和脉冲噪声
+- **图像锐化**: 使用拉普拉斯算子、高通滤波器增强图像边缘和细节信息
+- **对比度增强**: 通过直方图均衡化和Gamma校正优化图像对比度
+- **亮度调节**: 自适应亮度调整算法，根据图像内容智能调节曝光度和明暗平衡
+- **色彩校正**: HSV色彩空间调整，白平衡校正，确保颜色还原准确性
+- **几何变换**: 支持旋转、缩放、平移、透视变换等几何校正操作
+- **边缘检测**: 集成Canny、Sobel、Laplacian等多种边缘检测算法
+- **形态学操作**: 腐蚀、膨胀、开运算、闭运算等形态学处理技术
+
+#### 9.1.2 货架审计与分析
+
+**🛒 商品检测与识别**
+- **多类别商品识别**: 基于YOLOv8的实时商品检测，支持1000+商品类别
+- **库存状态分析**: 实时监测商品库存数量，便于用户识别缺货、补货需求
+
+**📊 货架布局分析**
+- **货架区域分割**: 智能分割货架不同区域和层级
+- **商品摆放检测**: 检测商品摆放是否规范，是否符合陈列标准
+
+#### 9.1.3 健康评分与营养分析
+
+**🏥 营养成分表识别**
+- **OCR文字识别**: 高精度识别营养成分表中的文字和数字信息
+- **表格结构解析**: 智能解析营养成分表的表格结构和层次关系
+- **营养素提取**: 自动提取蛋白质、脂肪、碳水化合物、维生素等营养成分数据
+
+**⚖️ 健康评分算法**
+- **营养均衡性评估**: 基于中国居民膳食指南的营养均衡性评分
+- **综合健康评分**: 综合多维度指标，给出0-100分的健康评分
+
+**📈 个性化建议**
+- **膳食建议**: 基于营养分析结果提供个性化膳食建议
+- **替代产品推荐**: 推荐营养更均衡的替代产品
+- **摄入量建议**: 根据用户特征提供合理的摄入量建议
+
+### 9.2 快速开始
+
+#### 9.2.1 启动应用
 ```bash
 # 方法一：图形界面模式
 python start_pyqt5_gui.py
@@ -642,144 +573,12 @@ python detect.py --source "path/to/image.jpg"
 python detect.py --source "path/to/images/" --batch
 ```
 
-#### 9.1.2 基本操作流程
-1. **选择场景**: 个人购物 或 货架审计
-2. **加载图像**: 点击"打开图像"按钮选择文件
-3. **开始检测**: 点击"开始检测"等待处理完成
-4. **查看结果**: 在结果标签页查看详细信息
-5. **保存结果**: 点击"保存结果"导出分析报告
-
-### 9.2 高级功能
-
-#### 9.2.1 批量处理
-```python
-# 批量处理脚本示例
-import os
-from core.simple_detection_engine import DetectionEngine
-
-def batch_process(image_folder, output_folder):
-    """批量处理图像文件夹"""
-    engine = DetectionEngine()
-    
-    for filename in os.listdir(image_folder):
-        if filename.lower().endswith(('.jpg', '.jpeg', '.png')):
-            image_path = os.path.join(image_folder, filename)
-            results = engine.detect(image_path)
-            
-            # 保存结果
-            output_path = os.path.join(output_folder, f"{filename}_results.json")
-            engine.save_results(results, output_path)
-            
-            print(f"处理完成: {filename}")
-
-# 使用示例
-batch_process("input_images/", "output_results/")
-```
-
-#### 9.2.2 自定义检测参数
-```python
-# 调整检测参数
-config = {
-    'confidence_threshold': 0.3,  # 降低置信度阈值
-    'iou_threshold': 0.5,         # 调整IoU阈值
-    'max_detections': 50,         # 限制检测数量
-    'target_size': 800            # 增大输入尺寸
-}
-
-engine = DetectionEngine(config)
-results = engine.detect("image.jpg")
-```
-
-### 9.3 输出格式说明
-
-#### 9.3.1 JSON输出格式
-```json
-{
-    "image_info": {
-        "filename": "shopping_cart.jpg",
-        "size": [1920, 1080],
-        "timestamp": "2024-12-19 15:30:45"
-    },
-    "detections": [
-        {
-            "bbox": [245, 167, 123, 89],
-            "category": "可口可乐",
-            "confidence": 0.89,
-            "brand": "Coca-Cola",
-            "attributes": {
-                "size": "330ml",
-                "type": "罐装"
-            }
-        }
-    ],
-    "statistics": {
-        "total_products": 12,
-        "total_categories": 8,
-        "processing_time": 2.34
-    },
-    "health_analysis": {
-        "total_calories": 1250,
-        "sugar_content": "偏高",
-        "nutritional_score": 6.5,
-        "recommendations": [
-            "建议减少含糖饮料摄入",
-            "增加蔬果类商品"
-        ]
-    }
-}
-```
-
-#### 9.3.2 CSV输出格式
-| 商品名称 | 品牌 | 置信度 | 数量 | 卡路里 | 建议 |
-|---------|------|-------|------|-------|------|
-| 可口可乐 | Coca-Cola | 0.89 | 2 | 280 | 减少摄入 |
-| 薯片 | 乐事 | 0.92 | 1 | 350 | 偶尔食用 |
-
-### 9.4 命令行工具详解
-
-#### 9.4.1 基本命令
-```bash
-# 基本检测
-python detect.py --source image.jpg
-
-# 指定输出目录
-python detect.py --source image.jpg --output results/
-
-# 调整置信度
-python detect.py --source image.jpg --conf 0.5
-
-# 使用指定模型
-python detect.py --source image.jpg --weights custom_model.pt
-
-# 批量处理
-python detect.py --source images_folder/ --batch-size 4
-
-# 静默模式
-python detect.py --source image.jpg --quiet
-
-# 详细输出
-python detect.py --source image.jpg --verbose
-```
-
-#### 9.4.2 高级参数
-```bash
-# 完整参数列表
-python detect.py \
-    --source "input.jpg" \
-    --weights "weight/product_detector_best.pt" \
-    --img-size 640 \
-    --conf-thres 0.25 \
-    --iou-thres 0.45 \
-    --device "0" \
-    --output "results/" \
-    --name "experiment_1" \
-    --save-txt \
-    --save-conf \
-    --nosave \
-    --view-img \
-    --augment \
-    --update
-```
+#### 9.2.2 基本操作流程
+1. **加载图像**: 点击"打开图像"按钮选择文件
+2. **开始检测**: 点击"开始检测"等待处理完成
+3. **查看结果**: 在结果标签页查看详细信息
+4. **健康分析**: 针对营养成分表识别可点击健康分析按钮，进行健康程度评分
+4. **保存结果**: 点击"保存结果"导出分析报告
 
 ## 10. 技术挑战与解决方案
 
@@ -902,114 +701,6 @@ class MemoryManager:
             # 确保资源释放
             gc.collect()
 ```
-
-## 5. 安装与设置
-
-**第一步：克隆或下载项目**
-
-```bash
-git clone <your-repository-url>
-cd cv_test
-```
-
-**第二步：创建虚拟环境（推荐）**
-
-为了避免包版本冲突，建议在虚拟环境中安装。
-
-```bash
-# 创建虚拟环境
-python -m venv venv
-
-# 激活虚拟环境
-# Windows
-.\venv\Scripts\activate
-# macOS/Linux
-source venv/bin/activate
-```
-
-**第三步：安装依赖**
-
-项目的所有依赖都记录在 `requirements.txt` 文件中。
-
-```bash
-pip install -r requirements.txt
-```
-
-**第四步：检查配置文件**
-
-- **`config.py`**: 打开此文件，确保 `BASE_DIR` 路径正确。通常情况下，它会自动设置为当前项目根目录，无需修改。检查其他路径（如模型、输出目录）是否符合你的需求。
-- **`product_name_mapping.json`**: 此文件定义了模型识别出的标签（如 `coke`）与你希望展示的中文名称（如 `可口可乐`）之间的映射。你可以根据自己的模型和需求进行修改。
-
-## 6. 如何使用
-
-### 6.1 图形用户界面 (GUI)
-
-这是最推荐的使用方式。
-
-**启动GUI:**
-
-```bash
-python start_pyqt5_gui.py
-```
-
-**界面操作:**
-
-1.  **加载图片**: 点击 "加载图片" 按钮，选择一张需要识别的图片。
-2.  **开始识别**: 点击 "开始识别" 按钮，系统将调用模型进行分析。
-3.  **查看结果**:
-    - **图像显示区**: 左侧将显示标注了识别框和中文标签的结果图片。
-    - **信息输出区**: 右侧的文本框将显示详细的识别结果（JSON格式）。
-4.  **保存结果**: 点击 "保存结果" 按钮，系统会将本次识别的**标注图片**、**JSON文件**和**TXT文件**保存到 `output` 目录下，并按时间戳命名。
-5.  **清空**: 点击 "清空" 按钮，可以清除当前图片和结果，进行下一次识别。
-
-### 6.2 命令行模式
-
-如果你需要进行批量处理或集成到其他脚本中，可以使用 `detect.py`。
-
-**基本用法:**
-
-```bash
-python detect.py --source <image_path>
-```
-
-**参数说明:**
-
-- `--source`: **必需参数**。指定要识别的图片路径。
-- `--weights`: 指定模型权重文件路径。默认为 `config.py` 中配置的 `BEST_PT_PATH`。
-- `--conf`: 置信度阈值。默认为0.25。
-- `--img-size`: 图像缩放尺寸。默认为640。
-- `--device`: 指定运行设备（如 `cpu`, `0` for GPU 0）。默认为空，自动选择。
-- `--name`: 指定输出结果的保存目录名，位于 `output/` 下。默认为 `exp`。
-- `--no-save`: 添加此参数后，将不保存结果图片和标签文件。
-
-**示例:**
-
-```bash
-# 识别单张图片并保存结果
-python detect.py --source "coke.jpg"
-
-# 使用不同的置信度阈值，并且不保存结果
-python detect.py --source "oreo.jpg" --conf 0.5 --no-save
-```
-
-## 7. 常见问题 (FAQ)
-
-**Q1: 识别结果中标注的中文显示为问号或乱码。**
-**A1:** 此问题已通过引入 `Pillow` 库解决。请确保：
-1.  `utils/font_utils.py` 文件存在且代码正确。
-2.  `core/simple_detection_engine.py` 和 `detect.py` 已正确调用 `draw_chinese_text_on_image` 函数。
-3.  系统中存在可用的中文字体（`config.py` 中的 `FONT_PATH` 指向一个有效的 `.ttf` 或 `.otf` 字体文件，如 `C:/Windows/Fonts/msyh.ttc`）。
-
-**Q2: 程序启动时报错 `FileNotFoundError`，找不到模型文件或配置文件。**
-**A2:** 这是路径问题。请检查 `config.py` 中的路径配置是否正确，特别是 `BASE_DIR` 和模型权重文件的路径。确保所有路径都是相对于 `BASE_DIR` 的正确相对路径。
-
-**Q3: 如何添加或修改我自己的商品识别类别？**
-**A3:** 这需要两步：
-1.  **重新训练模型**: 你需要使用标注了新类别的数据集来重新训练或微调你的YOLOv5模型，生成一个新的 `.pt` 权重文件。
-2.  **更新名称映射**: 在 `product_name_mapping.json` 文件中，添加新的类别标签和对应的中文名称。例如，如果你的新类别是 `pepsi`，可以添加 `"pepsi": "百事可乐"`。
-
-**Q4: GUI界面卡住或无响应。**
-**A4:** 如果正在处理一张非常大的图片或者模型较大，识别过程可能会花费一些时间。请耐心等待。如果长时间无响应，请检查命令行的日志输出，看是否有错误信息。
 
 ## 11. 性能优化策略
 
@@ -1315,9 +1006,78 @@ class PerformanceMonitor:
 
 ### 🏆 主要成就
 - ✅ **技术突破**: 解决了中文标签显示、多模型融合等关键技术难题
-- ✅ **性能优异**: 识别准确率达95%+，处理速度控制在秒级
+- ✅ **性能优异**: 识别准确率达90%+，处理速度控制在秒级
 - ✅ **用户友好**: 提供直观的GUI界面和强大的命令行工具
 - ✅ **扩展性强**: 模块化架构支持功能扩展和定制化开发
 
 ### 🚀 未来展望
 项目将继续朝着更智能、更实用的方向发展，计划在实时处理、移动端适配、云端部署等方面进行深入探索，致力于成为商品识别领域的标杆性开源项目。
+
+---
+
+## 📄 许可证
+
+本项目采用 [MIT 许可证](LICENSE) 开源。
+
+```
+MIT License
+
+Copyright (c) 2025 Smart Product Detection System
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+### 使用条款
+
+- ✅ **商业使用**: 允许在商业项目中使用
+- ✅ **修改**: 允许修改源代码
+- ✅ **分发**: 允许分发原始或修改后的代码
+- ✅ **私人使用**: 允许私人使用
+- ✅ **专利使用**: 提供专利使用权
+
+### 限制条款
+
+- ❌ **责任**: 作者不承担任何责任
+- ❌ **保证**: 不提供任何形式的保证
+
+### 条件
+
+- 📋 **许可证和版权声明**: 在所有副本中包含许可证和版权声明
+
+---
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request 来改进这个项目！
+
+### 贡献指南
+
+1. Fork 本仓库
+2. 创建您的特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交您的更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 打开一个 Pull Request
+
+### 开发者
+
+感谢所有为这个项目做出贡献的开发者！
+
+---
+
+**⭐ 如果这个项目对您有帮助，请给我们一个 Star！**

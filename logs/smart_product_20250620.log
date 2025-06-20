@@ -626,3 +626,64 @@ a   Se  soy                %
     {"original": "carb0hydrate", "corrected": "carbohydrate", "reason": "数字0误识别为字母o"},
     {"original": "50
 2025-06-20 14:44:40 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['ocr_corrections', 'detected_ingredients', 'nutrition_facts', 'overall_score', 'analysis', 'recommendations', 'health_warnings']
+2025-06-20 21:58:29 - core.gemini_health_analyzer - INFO - Gemini健康分析器初始化完成，状态: 启用
+2025-06-20 21:58:39 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 21:58:39 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 3005
+2025-06-20 21:58:39 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "5ervin克", "corrected": "serving", "reason": "英文单词拼写错误"},
+    {"original": "5ervin克5", "corrected": "servings", "reason": "英文单词拼写错误，并根据上下文判断为复数"},
+    {"original": "5ize", "corrected": "Size", "reason": "英文单词首字母大小写错误"},
+    {"original": "5tick5", "corrected": "sticks", "reason": "英文单词拼写错误"},
+    {"original": "C0ntainer", "corrected": "Container", "reason": "英文单词拼写错误"},
+    {"original": "Ca10rie5", "corrected": "Calories", "reason": "英文单词拼写错误"},
+ 
+2025-06-20 21:58:39 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 3005
+2025-06-20 21:58:39 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "5ervin克", "corrected": "serving", "reason": "英文单词拼写错误"},
+    {"original": "5ervin克5", "corrected": "servings", "reason": "英文单词拼写错误，并根据上下文判断为复数"},
+   
+2025-06-20 21:58:39 - core.gemini_health_analyzer - INFO - 从代码块中找到JSON字符串，长度: 2992
+2025-06-20 21:58:39 - core.gemini_health_analyzer - INFO - JSON字符串前300字符: {
+  "ocr_corrections": [
+    {"original": "5ervin克", "corrected": "serving", "reason": "英文单词拼写错误"},
+    {"original": "5ervin克5", "corrected": "servings", "reason": "英文单词拼写错误，并根据上下文判断为复数"},
+    {"original": "5ize", "corrected": "Size", "reason": "英文单词首字母大小写错误"},
+    {"original": "5tick5", "corrected"
+2025-06-20 21:58:39 - core.gemini_health_analyzer - ERROR - JSON解析失败: Expecting value: line 36 column 3 (char 2329)，尝试文本解析
+2025-06-20 22:04:36 - core.gemini_health_analyzer - INFO - API响应结构: dict_keys(['candidates', 'usageMetadata', 'modelVersion', 'responseId'])
+2025-06-20 22:04:36 - core.gemini_health_analyzer - INFO - Gemini API调用成功，响应长度: 1282
+2025-06-20 22:04:36 - core.gemini_health_analyzer - INFO - 响应内容前500字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "nutriti0n", "corrected": "nutrition", "reason": "数字0误识别为字母o"},
+    {"original": "inf0rmati0n:", "corrected": "information:", "reason": "数字0误识别为字母o"},
+    {"original": "carb0hydrate", "corrected": "carbohydrate", "reason": "数字0误识别为字母o"},
+    {"original": "50dium", "corrected": "sodium", "reason": "数字0误识别为字母o"}
+  ],
+  "detected_ingredients": [
+    "蛋白质",
+    "脂肪",
+    "碳水化合物",
+    "钠"
+  ],
+  "nutrition_facts": {
+    "calories": "1840 千焦",
+    "pro
+2025-06-20 22:04:36 - core.gemini_health_analyzer - INFO - 开始解析响应，文本长度: 1282
+2025-06-20 22:04:36 - core.gemini_health_analyzer - INFO - 响应文本前200字符: ```json
+{
+  "ocr_corrections": [
+    {"original": "nutriti0n", "corrected": "nutrition", "reason": "数字0误识别为字母o"},
+    {"original": "inf0rmati0n:", "corrected": "information:", "reason": "数字0误识别为字母o"},
+2025-06-20 22:04:36 - core.gemini_health_analyzer - INFO - 从代码块中找到JSON字符串，长度: 1269
+2025-06-20 22:04:36 - core.gemini_health_analyzer - INFO - JSON字符串前300字符: {
+  "ocr_corrections": [
+    {"original": "nutriti0n", "corrected": "nutrition", "reason": "数字0误识别为字母o"},
+    {"original": "inf0rmati0n:", "corrected": "information:", "reason": "数字0误识别为字母o"},
+    {"original": "carb0hydrate", "corrected": "carbohydrate", "reason": "数字0误识别为字母o"},
+    {"original": "50
+2025-06-20 22:04:36 - core.gemini_health_analyzer - INFO - JSON解析成功，包含字段: ['ocr_corrections', 'detected_ingredients', 'nutrition_facts', 'overall_score', 'analysis', 'recommendations', 'health_warnings']

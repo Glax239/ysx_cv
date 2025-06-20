@@ -1,0 +1,2230 @@
+{
+  "timestamp": "2025-06-20T22:05:50.569074",
+  "image_path": "F:\\F Download\\cv_test\\image_test\\屏幕截图 2025-06-20 134606.png",
+  "extraction_results": {
+    "barcodes": [],
+    "nutrition_info": {
+      "energy": null,
+      "protein": null,
+      "fat": 22.0,
+      "carbohydrate": null,
+      "sodium": null,
+      "sugar": null,
+      "raw_texts": [
+        "考",
+        "8.6",
+        "(克)",
+        "脂肪",
+        "22%",
+        "nutriti0n",
+        "14%",
+        "NRV",
+        "inf0rmati0n:",
+        "100",
+        "12.9",
+        "22%",
+        "13%",
+        "50dium",
+        "质",
+        "24%",
+        "4/ltems",
+        "营养成分表",
+        "项",
+        "(克)",
+        "1840",
+        "每",
+        "per",
+        "253",
+        "carb0hydrate",
+        "fatty",
+        "72.3",
+        "acid",
+        "%",
+        "本",
+        "(千焦)"
+      ]
+    },
+    "text_info": [
+      {
+        "region_id": 1,
+        "text": "考",
+        "bbox": [
+          1468,
+          145,
+          1856,
+          211
+        ],
+        "precise_bbox": [
+          1861,
+          216,
+          1861,
+          216
+        ],
+        "region_bbox": [
+          1463,
+          140,
+          1861,
+          216
+        ],
+        "confidence": 0.92,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 1,
+        "scale_used": "scale_3_0",
+        "yolo_region": {
+          "bbox": [
+            1468,
+            145,
+            1856,
+            211
+          ],
+          "confidence": 0.8307315111160278,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "考"
+      },
+      {
+        "region_id": 2,
+        "text": "8.6",
+        "bbox": [
+          1075,
+          400,
+          1355,
+          472
+        ],
+        "precise_bbox": [
+          1360,
+          477,
+          1360,
+          477
+        ],
+        "region_bbox": [
+          1070,
+          395,
+          1360,
+          477
+        ],
+        "confidence": 0.92,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 0,
+        "scale_used": "original",
+        "yolo_region": {
+          "bbox": [
+            1075,
+            400,
+            1355,
+            472
+          ],
+          "confidence": 0.8291795253753662,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "8.6"
+      },
+      {
+        "region_id": 3,
+        "text": "(克)",
+        "bbox": [
+          1137,
+          630,
+          1355,
+          699
+        ],
+        "precise_bbox": [
+          1360,
+          704,
+          1360,
+          704
+        ],
+        "region_bbox": [
+          1132,
+          625,
+          1360,
+          704
+        ],
+        "confidence": 0.91,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 0,
+        "scale_used": "original",
+        "yolo_region": {
+          "bbox": [
+            1137,
+            630,
+            1355,
+            699
+          ],
+          "confidence": 0.7922509908676147,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "(g)"
+      },
+      {
+        "region_id": 4,
+        "text": "脂肪",
+        "bbox": [
+          138,
+          516,
+          365,
+          580
+        ],
+        "precise_bbox": [
+          280,
+          585,
+          337,
+          585
+        ],
+        "region_bbox": [
+          133,
+          511,
+          370,
+          585
+        ],
+        "confidence": 0.95,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 1,
+        "scale_used": "original",
+        "yolo_region": {
+          "bbox": [
+            138,
+            516,
+            365,
+            580
+          ],
+          "confidence": 0.7690548300743103,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "脂肪"
+      },
+      {
+        "region_id": 5,
+        "text": "22%",
+        "bbox": [
+          1817,
+          291,
+          1953,
+          345
+        ],
+        "precise_bbox": [
+          1958,
+          350,
+          1958,
+          350
+        ],
+        "region_bbox": [
+          1812,
+          286,
+          1958,
+          350
+        ],
+        "confidence": 0.94,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "numbers_only",
+        "chinese_char_count": 0,
+        "scale_used": "scale_2_0",
+        "yolo_region": {
+          "bbox": [
+            1817,
+            291,
+            1953,
+            345
+          ],
+          "confidence": 0.7563997507095337,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "22%"
+      },
+      {
+        "region_id": 6,
+        "text": "nutriti0n",
+        "bbox": [
+          1033,
+          22,
+          1256,
+          72
+        ],
+        "precise_bbox": [
+          1261,
+          44,
+          1261,
+          77
+        ],
+        "region_bbox": [
+          1028,
+          17,
+          1261,
+          77
+        ],
+        "confidence": 0.95,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "default",
+        "chinese_char_count": 0,
+        "scale_used": "scale_1_5",
+        "yolo_region": {
+          "bbox": [
+            1033,
+            22,
+            1256,
+            72
+          ],
+          "confidence": 0.7471266984939575,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "nutrition"
+      },
+      {
+        "region_id": 7,
+        "text": "14%",
+        "bbox": [
+          1822,
+          405,
+          1953,
+          456
+        ],
+        "precise_bbox": [
+          1958,
+          461,
+          1958,
+          461
+        ],
+        "region_bbox": [
+          1817,
+          400,
+          1958,
+          461
+        ],
+        "confidence": 0.96,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "default",
+        "chinese_char_count": 0,
+        "scale_used": "original",
+        "yolo_region": {
+          "bbox": [
+            1822,
+            405,
+            1953,
+            456
+          ],
+          "confidence": 0.7298139929771423,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "14%"
+      },
+      {
+        "region_id": 8,
+        "text": "NRV",
+        "bbox": [
+          2001,
+          155,
+          2124,
+          203
+        ],
+        "precise_bbox": [
+          2129,
+          208,
+          2129,
+          208
+        ],
+        "region_bbox": [
+          1996,
+          150,
+          2129,
+          208
+        ],
+        "confidence": 0.92,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "default",
+        "chinese_char_count": 0,
+        "scale_used": "scale_1_5",
+        "yolo_region": {
+          "bbox": [
+            2001,
+            155,
+            2124,
+            203
+          ],
+          "confidence": 0.729101836681366,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "NRV"
+      },
+      {
+        "region_id": 9,
+        "text": "inf0rmati0n:",
+        "bbox": [
+          1274,
+          22,
+          1582,
+          70
+        ],
+        "precise_bbox": [
+          1587,
+          42,
+          1587,
+          75
+        ],
+        "region_bbox": [
+          1269,
+          17,
+          1587,
+          75
+        ],
+        "confidence": 0.96,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "default",
+        "chinese_char_count": 0,
+        "scale_used": "scale_2_0",
+        "yolo_region": {
+          "bbox": [
+            1274,
+            22,
+            1582,
+            70
+          ],
+          "confidence": 0.7283980250358582,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "information:"
+      },
+      {
+        "region_id": 10,
+        "text": "100",
+        "bbox": [
+          1215,
+          156,
+          1308,
+          203
+        ],
+        "precise_bbox": [
+          1313,
+          208,
+          1313,
+          208
+        ],
+        "region_bbox": [
+          1210,
+          151,
+          1313,
+          208
+        ],
+        "confidence": 0.91,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "default",
+        "chinese_char_count": 0,
+        "scale_used": "original",
+        "yolo_region": {
+          "bbox": [
+            1215,
+            156,
+            1308,
+            203
+          ],
+          "confidence": 0.7271053194999695,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "100"
+      },
+      {
+        "region_id": 11,
+        "text": "12.9",
+        "bbox": [
+          1059,
+          515,
+          1354,
+          584
+        ],
+        "precise_bbox": [
+          1359,
+          589,
+          1359,
+          589
+        ],
+        "region_bbox": [
+          1054,
+          510,
+          1359,
+          589
+        ],
+        "confidence": 0.92,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 0,
+        "scale_used": "scale_1_5",
+        "yolo_region": {
+          "bbox": [
+            1059,
+            515,
+            1354,
+            584
+          ],
+          "confidence": 0.7179521322250366,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "12.9"
+      },
+      {
+        "region_id": 12,
+        "text": "22%",
+        "bbox": [
+          1818,
+          517,
+          1955,
+          573
+        ],
+        "precise_bbox": [
+          1960,
+          578,
+          1960,
+          578
+        ],
+        "region_bbox": [
+          1813,
+          512,
+          1960,
+          578
+        ],
+        "confidence": 0.95,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "default",
+        "chinese_char_count": 0,
+        "scale_used": "scale_2_0",
+        "yolo_region": {
+          "bbox": [
+            1818,
+            517,
+            1955,
+            573
+          ],
+          "confidence": 0.7036134600639343,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "22%"
+      },
+      {
+        "region_id": 13,
+        "text": "13%",
+        "bbox": [
+          1822,
+          861,
+          1954,
+          915
+        ],
+        "precise_bbox": [
+          1959,
+          920,
+          1959,
+          920
+        ],
+        "region_bbox": [
+          1817,
+          856,
+          1959,
+          920
+        ],
+        "confidence": 0.96,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "numbers_only",
+        "chinese_char_count": 0,
+        "scale_used": "scale_3_0",
+        "yolo_region": {
+          "bbox": [
+            1822,
+            861,
+            1954,
+            915
+          ],
+          "confidence": 0.6565030217170715,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "13%"
+      },
+      {
+        "region_id": 14,
+        "text": "50dium",
+        "bbox": [
+          154,
+          859,
+          445,
+          918
+        ],
+        "precise_bbox": [
+          380,
+          923,
+          450,
+          923
+        ],
+        "region_bbox": [
+          149,
+          854,
+          450,
+          923
+        ],
+        "confidence": 0.9,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 0,
+        "scale_used": "original",
+        "yolo_region": {
+          "bbox": [
+            154,
+            859,
+            445,
+            918
+          ],
+          "confidence": 0.646912157535553,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "/sodium"
+      },
+      {
+        "region_id": 15,
+        "text": "质",
+        "bbox": [
+          134,
+          399,
+          552,
+          467
+        ],
+        "precise_bbox": [
+          435,
+          472,
+          468,
+          472
+        ],
+        "region_bbox": [
+          129,
+          394,
+          557,
+          472
+        ],
+        "confidence": 0.92,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 1,
+        "scale_used": "original",
+        "yolo_region": {
+          "bbox": [
+            134,
+            399,
+            552,
+            467
+          ],
+          "confidence": 0.6412913203239441,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "质"
+      },
+      {
+        "region_id": 16,
+        "text": "24%",
+        "bbox": [
+          1817,
+          749,
+          1954,
+          801
+        ],
+        "precise_bbox": [
+          1959,
+          806,
+          1959,
+          806
+        ],
+        "region_bbox": [
+          1812,
+          744,
+          1959,
+          806
+        ],
+        "confidence": 0.95,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "default",
+        "chinese_char_count": 0,
+        "scale_used": "scale_1_5",
+        "yolo_region": {
+          "bbox": [
+            1817,
+            749,
+            1954,
+            801
+          ],
+          "confidence": 0.6373938918113708,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "24%"
+      },
+      {
+        "region_id": 17,
+        "text": "4/ltems",
+        "bbox": [
+          249,
+          147,
+          450,
+          204
+        ],
+        "precise_bbox": [
+          249,
+          147,
+          450,
+          204
+        ],
+        "region_bbox": [
+          244,
+          142,
+          455,
+          209
+        ],
+        "confidence": 0.29,
+        "engine": "tesseract_fallback",
+        "config_type": "default",
+        "yolo_region": {
+          "bbox": [
+            249,
+            147,
+            450,
+            204
+          ],
+          "confidence": 0.6298090815544128,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        }
+      },
+      {
+        "region_id": 18,
+        "text": "营养成分表",
+        "bbox": [
+          688,
+          16,
+          1021,
+          85
+        ],
+        "precise_bbox": [
+          693,
+          17,
+          1023,
+          90
+        ],
+        "region_bbox": [
+          683,
+          11,
+          1026,
+          90
+        ],
+        "confidence": 0.935,
+        "engine": "tesseract_fallback",
+        "config_type": "default",
+        "yolo_region": {
+          "bbox": [
+            688,
+            16,
+            1021,
+            85
+          ],
+          "confidence": 0.6291925311088562,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        }
+      },
+      {
+        "region_id": 19,
+        "text": "项",
+        "bbox": [
+          151,
+          152,
+          210,
+          203
+        ],
+        "precise_bbox": [
+          215,
+          208,
+          215,
+          208
+        ],
+        "region_bbox": [
+          146,
+          147,
+          215,
+          208
+        ],
+        "confidence": 0.96,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 1,
+        "scale_used": "scale_1_5",
+        "yolo_region": {
+          "bbox": [
+            151,
+            152,
+            210,
+            203
+          ],
+          "confidence": 0.617469847202301,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "项"
+      },
+      {
+        "region_id": 20,
+        "text": "(克)",
+        "bbox": [
+          994,
+          150,
+          1073,
+          217
+        ],
+        "precise_bbox": [
+          1078,
+          222,
+          1078,
+          222
+        ],
+        "region_bbox": [
+          989,
+          145,
+          1078,
+          222
+        ],
+        "confidence": 0.92,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "default",
+        "chinese_char_count": 0,
+        "scale_used": "original",
+        "yolo_region": {
+          "bbox": [
+            994,
+            150,
+            1073,
+            217
+          ],
+          "confidence": 0.6094130277633667,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "(g)"
+      },
+      {
+        "region_id": 21,
+        "text": "1840",
+        "bbox": [
+          949,
+          288,
+          1155,
+          347
+        ],
+        "precise_bbox": [
+          1160,
+          352,
+          1160,
+          352
+        ],
+        "region_bbox": [
+          944,
+          283,
+          1160,
+          352
+        ],
+        "confidence": 0.63,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "default",
+        "chinese_char_count": 0,
+        "scale_used": "original",
+        "yolo_region": {
+          "bbox": [
+            949,
+            288,
+            1155,
+            347
+          ],
+          "confidence": 0.5953159928321838,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "1840"
+      },
+      {
+        "region_id": 22,
+        "text": "每",
+        "bbox": [
+          751,
+          149,
+          970,
+          207
+        ],
+        "precise_bbox": [
+          975,
+          212,
+          975,
+          212
+        ],
+        "region_bbox": [
+          746,
+          144,
+          975,
+          212
+        ],
+        "confidence": 0.95,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 1,
+        "scale_used": "scale_1_5",
+        "yolo_region": {
+          "bbox": [
+            751,
+            149,
+            970,
+            207
+          ],
+          "confidence": 0.5874909162521362,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "每"
+      },
+      {
+        "region_id": 23,
+        "text": "per",
+        "bbox": [
+          1088,
+          148,
+          1199,
+          210
+        ],
+        "precise_bbox": [
+          1204,
+          215,
+          1204,
+          215
+        ],
+        "region_bbox": [
+          1083,
+          143,
+          1204,
+          215
+        ],
+        "confidence": 0.92,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 0,
+        "scale_used": "scale_1_5",
+        "yolo_region": {
+          "bbox": [
+            1088,
+            148,
+            1199,
+            210
+          ],
+          "confidence": 0.5858443379402161,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "/per"
+      },
+      {
+        "region_id": 24,
+        "text": "253",
+        "bbox": [
+          929,
+          858,
+          1354,
+          931
+        ],
+        "precise_bbox": [
+          1359,
+          936,
+          1359,
+          936
+        ],
+        "region_bbox": [
+          924,
+          853,
+          1359,
+          936
+        ],
+        "confidence": 0.96,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 0,
+        "scale_used": "original",
+        "yolo_region": {
+          "bbox": [
+            929,
+            858,
+            1354,
+            931
+          ],
+          "confidence": 0.5787037014961243,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "253"
+      },
+      {
+        "region_id": 25,
+        "text": "carb0hydrate",
+        "bbox": [
+          421,
+          752,
+          862,
+          808
+        ],
+        "precise_bbox": [
+          867,
+          813,
+          867,
+          813
+        ],
+        "region_bbox": [
+          416,
+          747,
+          867,
+          813
+        ],
+        "confidence": 0.84,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 0,
+        "scale_used": "scale_3_0",
+        "yolo_region": {
+          "bbox": [
+            421,
+            752,
+            862,
+            808
+          ],
+          "confidence": 0.5663110017776489,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "carbohydrate"
+      },
+      {
+        "region_id": 26,
+        "text": "fatty",
+        "bbox": [
+          782,
+          638,
+          1026,
+          693
+        ],
+        "precise_bbox": [
+          1031,
+          698,
+          1031,
+          698
+        ],
+        "region_bbox": [
+          777,
+          633,
+          1031,
+          698
+        ],
+        "confidence": 0.96,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 0,
+        "scale_used": "original",
+        "yolo_region": {
+          "bbox": [
+            782,
+            638,
+            1026,
+            693
+          ],
+          "confidence": 0.5126306414604187,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "fatty"
+      },
+      {
+        "region_id": 27,
+        "text": "72.3",
+        "bbox": [
+          1048,
+          745,
+          1355,
+          811
+        ],
+        "precise_bbox": [
+          1360,
+          816,
+          1360,
+          816
+        ],
+        "region_bbox": [
+          1043,
+          740,
+          1360,
+          816
+        ],
+        "confidence": 0.9,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 0,
+        "scale_used": "original",
+        "yolo_region": {
+          "bbox": [
+            1048,
+            745,
+            1355,
+            811
+          ],
+          "confidence": 0.4991808235645294,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "72.3"
+      },
+      {
+        "region_id": 28,
+        "text": "acid",
+        "bbox": [
+          913,
+          641,
+          1025,
+          687
+        ],
+        "precise_bbox": [
+          1030,
+          692,
+          1030,
+          692
+        ],
+        "region_bbox": [
+          908,
+          636,
+          1030,
+          692
+        ],
+        "confidence": 0.96,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "default",
+        "chinese_char_count": 0,
+        "scale_used": "original",
+        "yolo_region": {
+          "bbox": [
+            913,
+            641,
+            1025,
+            687
+          ],
+          "confidence": 0.4647761881351471,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "acid"
+      },
+      {
+        "region_id": 29,
+        "text": "%",
+        "bbox": [
+          2136,
+          154,
+          2184,
+          204
+        ],
+        "precise_bbox": [
+          2189,
+          209,
+          2189,
+          209
+        ],
+        "region_bbox": [
+          2131,
+          149,
+          2189,
+          209
+        ],
+        "confidence": 0.83,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "default",
+        "chinese_char_count": 0,
+        "scale_used": "original",
+        "yolo_region": {
+          "bbox": [
+            2136,
+            154,
+            2184,
+            204
+          ],
+          "confidence": 0.45422062277793884,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "%"
+      },
+      {
+        "region_id": 30,
+        "text": "本",
+        "bbox": [
+          278,
+          628,
+          769,
+          691
+        ],
+        "precise_bbox": [
+          774,
+          696,
+          774,
+          696
+        ],
+        "region_bbox": [
+          273,
+          623,
+          774,
+          696
+        ],
+        "confidence": 0.96,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 1,
+        "scale_used": "scale_3_0",
+        "yolo_region": {
+          "bbox": [
+            278,
+            628,
+            769,
+            691
+          ],
+          "confidence": 0.4498039484024048,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "本"
+      },
+      {
+        "region_id": 31,
+        "text": "(千焦)",
+        "bbox": [
+          948,
+          283,
+          1357,
+          357
+        ],
+        "precise_bbox": [
+          1362,
+          362,
+          1362,
+          362
+        ],
+        "region_bbox": [
+          943,
+          278,
+          1362,
+          362
+        ],
+        "confidence": 0.93,
+        "engine": "chinese_ocr_optimizer",
+        "config_type": "mixed_text",
+        "chinese_char_count": 0,
+        "scale_used": "scale_2_0",
+        "yolo_region": {
+          "bbox": [
+            948,
+            283,
+            1357,
+            357
+          ],
+          "confidence": 0.4021447002887726,
+          "class_id": 0,
+          "class_name": "文本区域",
+          "original_class_name": "text",
+          "type": "text",
+          "model": "text_detector"
+        },
+        "original_text": "(kJ)"
+      }
+    ],
+    "extraction_summary": {
+      "barcode_count": 0,
+      "has_nutrition_info": true,
+      "text_regions_count": 31,
+      "yolo_text_regions": 31,
+      "ocr_extraction_method": "yolo_regions"
+    }
+  },
+  "detection_results": {
+    "products": [],
+    "regions": [],
+    "texts": [
+      {
+        "bbox": [
+          1468,
+          145,
+          1856,
+          211
+        ],
+        "confidence": 0.8307315111160278,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1075,
+          400,
+          1355,
+          472
+        ],
+        "confidence": 0.8291795253753662,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1137,
+          630,
+          1355,
+          699
+        ],
+        "confidence": 0.7922509908676147,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          138,
+          516,
+          365,
+          580
+        ],
+        "confidence": 0.7690548300743103,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1817,
+          291,
+          1953,
+          345
+        ],
+        "confidence": 0.7563997507095337,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1033,
+          22,
+          1256,
+          72
+        ],
+        "confidence": 0.7471266984939575,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1822,
+          405,
+          1953,
+          456
+        ],
+        "confidence": 0.7298139929771423,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          2001,
+          155,
+          2124,
+          203
+        ],
+        "confidence": 0.729101836681366,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1274,
+          22,
+          1582,
+          70
+        ],
+        "confidence": 0.7283980250358582,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1215,
+          156,
+          1308,
+          203
+        ],
+        "confidence": 0.7271053194999695,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1059,
+          515,
+          1354,
+          584
+        ],
+        "confidence": 0.7179521322250366,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1818,
+          517,
+          1955,
+          573
+        ],
+        "confidence": 0.7036134600639343,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1822,
+          861,
+          1954,
+          915
+        ],
+        "confidence": 0.6565030217170715,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          154,
+          859,
+          445,
+          918
+        ],
+        "confidence": 0.646912157535553,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          134,
+          399,
+          552,
+          467
+        ],
+        "confidence": 0.6412913203239441,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1817,
+          749,
+          1954,
+          801
+        ],
+        "confidence": 0.6373938918113708,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          249,
+          147,
+          450,
+          204
+        ],
+        "confidence": 0.6298090815544128,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          688,
+          16,
+          1021,
+          85
+        ],
+        "confidence": 0.6291925311088562,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          151,
+          152,
+          210,
+          203
+        ],
+        "confidence": 0.617469847202301,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          994,
+          150,
+          1073,
+          217
+        ],
+        "confidence": 0.6094130277633667,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          949,
+          288,
+          1155,
+          347
+        ],
+        "confidence": 0.5953159928321838,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          751,
+          149,
+          970,
+          207
+        ],
+        "confidence": 0.5874909162521362,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1088,
+          148,
+          1199,
+          210
+        ],
+        "confidence": 0.5858443379402161,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          929,
+          858,
+          1354,
+          931
+        ],
+        "confidence": 0.5787037014961243,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          421,
+          752,
+          862,
+          808
+        ],
+        "confidence": 0.5663110017776489,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          782,
+          638,
+          1026,
+          693
+        ],
+        "confidence": 0.5126306414604187,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1048,
+          745,
+          1355,
+          811
+        ],
+        "confidence": 0.4991808235645294,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          913,
+          641,
+          1025,
+          687
+        ],
+        "confidence": 0.4647761881351471,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          2136,
+          154,
+          2184,
+          204
+        ],
+        "confidence": 0.45422062277793884,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          278,
+          628,
+          769,
+          691
+        ],
+        "confidence": 0.4498039484024048,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          948,
+          283,
+          1357,
+          357
+        ],
+        "confidence": 0.4021447002887726,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      }
+    ],
+    "hierarchical_results": [],
+    "all_detections": [
+      {
+        "bbox": [
+          1468,
+          145,
+          1856,
+          211
+        ],
+        "confidence": 0.8307315111160278,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1075,
+          400,
+          1355,
+          472
+        ],
+        "confidence": 0.8291795253753662,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1137,
+          630,
+          1355,
+          699
+        ],
+        "confidence": 0.7922509908676147,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          138,
+          516,
+          365,
+          580
+        ],
+        "confidence": 0.7690548300743103,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1817,
+          291,
+          1953,
+          345
+        ],
+        "confidence": 0.7563997507095337,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1033,
+          22,
+          1256,
+          72
+        ],
+        "confidence": 0.7471266984939575,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1822,
+          405,
+          1953,
+          456
+        ],
+        "confidence": 0.7298139929771423,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          2001,
+          155,
+          2124,
+          203
+        ],
+        "confidence": 0.729101836681366,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1274,
+          22,
+          1582,
+          70
+        ],
+        "confidence": 0.7283980250358582,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1215,
+          156,
+          1308,
+          203
+        ],
+        "confidence": 0.7271053194999695,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1059,
+          515,
+          1354,
+          584
+        ],
+        "confidence": 0.7179521322250366,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1818,
+          517,
+          1955,
+          573
+        ],
+        "confidence": 0.7036134600639343,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1822,
+          861,
+          1954,
+          915
+        ],
+        "confidence": 0.6565030217170715,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          154,
+          859,
+          445,
+          918
+        ],
+        "confidence": 0.646912157535553,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          134,
+          399,
+          552,
+          467
+        ],
+        "confidence": 0.6412913203239441,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1817,
+          749,
+          1954,
+          801
+        ],
+        "confidence": 0.6373938918113708,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          249,
+          147,
+          450,
+          204
+        ],
+        "confidence": 0.6298090815544128,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          688,
+          16,
+          1021,
+          85
+        ],
+        "confidence": 0.6291925311088562,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          151,
+          152,
+          210,
+          203
+        ],
+        "confidence": 0.617469847202301,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          994,
+          150,
+          1073,
+          217
+        ],
+        "confidence": 0.6094130277633667,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          949,
+          288,
+          1155,
+          347
+        ],
+        "confidence": 0.5953159928321838,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          751,
+          149,
+          970,
+          207
+        ],
+        "confidence": 0.5874909162521362,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1088,
+          148,
+          1199,
+          210
+        ],
+        "confidence": 0.5858443379402161,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          929,
+          858,
+          1354,
+          931
+        ],
+        "confidence": 0.5787037014961243,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          421,
+          752,
+          862,
+          808
+        ],
+        "confidence": 0.5663110017776489,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          782,
+          638,
+          1026,
+          693
+        ],
+        "confidence": 0.5126306414604187,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          1048,
+          745,
+          1355,
+          811
+        ],
+        "confidence": 0.4991808235645294,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          913,
+          641,
+          1025,
+          687
+        ],
+        "confidence": 0.4647761881351471,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          2136,
+          154,
+          2184,
+          204
+        ],
+        "confidence": 0.45422062277793884,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          278,
+          628,
+          769,
+          691
+        ],
+        "confidence": 0.4498039484024048,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      },
+      {
+        "bbox": [
+          948,
+          283,
+          1357,
+          357
+        ],
+        "confidence": 0.4021447002887726,
+        "class_id": 0,
+        "class_name": "文本区域",
+        "original_class_name": "text",
+        "type": "text",
+        "model": "text_detector"
+      }
+    ]
+  }
+}
